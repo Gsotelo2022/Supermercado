@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_Principal.Designer.cs">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Bienvenida.designer.cs">
+      <DependentUpon>Form_Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Principal.resx">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Bienvenida.resx">
+      <DependentUpon>Form_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +97,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TP Final\SistemaDia_Entidades\Entidades.csproj">
+      <Project>{07c0d69e-dcc1-473d-8efd-9610b2459c52}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TP Final\SistemaDia_Negocio\Negocio.csproj">
+      <Project>{63bb49d9-cd58-4671-9034-7c5e5d831ee6}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\cerrar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\entrar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Dia-Logo2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Dia-Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Dia-Logo-2009.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
