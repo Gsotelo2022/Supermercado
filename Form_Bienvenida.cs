@@ -10,21 +10,23 @@ using System.Windows.Forms;
 
 namespace Supermercado
 {
-    public partial class Form1 : Form
+    public partial class Form_Bienvenida : Form
     {
-        public Form1()
+        public Form_Bienvenida()
         {
             InitializeComponent();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
+            progressBar.Increment(1);
 
+            if (progressBar.Value == 100)
+            {
+                timer1.Stop();
+                this.Close();
+            }
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

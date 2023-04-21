@@ -1,6 +1,6 @@
 ﻿namespace Supermercado
 {
-    partial class Form1
+    partial class Form_Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
