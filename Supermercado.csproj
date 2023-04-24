@@ -99,16 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TP Final\SistemaDia_Entidades\Entidades.csproj">
-      <Project>{07c0d69e-dcc1-473d-8efd-9610b2459c52}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TP Final\SistemaDia_Negocio\Negocio.csproj">
-      <Project>{63bb49d9-cd58-4671-9034-7c5e5d831ee6}</Project>
-      <Name>Negocio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Recursos\usuario.png" />
   </ItemGroup>
   <ItemGroup>
