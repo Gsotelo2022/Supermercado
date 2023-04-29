@@ -69,11 +69,11 @@ namespace Supermercado
 
         #endregion
 
-        #endregion
+        #region Botón Ingresar
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Entidades.Usuario objUsuario = new Entidades.Usuario()
+            /*Entidades.Usuario objUsuario = new Entidades.Usuario()
             {
                 Nombre = txtBoxUser.Text,
                 Contraseña = txtBoxPass.Text
@@ -99,7 +99,61 @@ namespace Supermercado
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió una Exception: " + ex.Message);
+            }*/
+
+            string usuario, password;
+
+            usuario = txtBoxUser.Text;
+            password = txtBoxPass.Text;
+
+            if (string.IsNullOrEmpty(usuario))
+            {
+                MessageBox.Show("Debe completar el campo: Usuario.");
+            }
+            else if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Debe completar el campo: Clave.");
+            }
+            else
+            {
+                if (usuario == "GracielaFarias" && password == "gf123")
+                {
+                    iniciar_sesion(1);
+                }
+                else if (usuario == "DelfinaGomez" && password == "dg123")
+                {
+                    iniciar_sesion(2);
+                }
+                else if (usuario == "GabrielSotelo" && password == "gs123")
+                {
+                    iniciar_sesion(3);
+                }
+                else if (usuario == "GabrielDella" && password == "gd123")
+                {
+                    iniciar_sesion(4);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta.");
+                    //Application.Exit();
+                }
+
+                //this.Hide();
             }
         }
+
+        #endregion
+
+        #endregion
+
+        #region MÉTODOS PRIVADOS
+
+        private void iniciar_sesion(int codigo)
+        {
+            this.Hide();
+            new Form_Principal(codigo).Show();
+        }
+
+        #endregion
     }
 }
