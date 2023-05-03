@@ -99,16 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TP Final\SistemaDia_Entidades\Entidades.csproj">
-      <Project>{07c0d69e-dcc1-473d-8efd-9610b2459c52}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TP Final\SistemaDia_Negocio\Negocio.csproj">
-      <Project>{63bb49d9-cd58-4671-9034-7c5e5d831ee6}</Project>
-      <Name>Negocio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Recursos\usuario.png" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +118,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Dia-Logo-2009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{9047535b-887a-46d9-be91-aee79dc39bed}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{c706d8d7-940e-443e-a2d9-27e0a76282fd}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
