@@ -119,5 +119,15 @@
   <ItemGroup>
     <None Include="Recursos\Dia-Logo-2009.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{9047535b-887a-46d9-be91-aee79dc39bed}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{c706d8d7-940e-443e-a2d9-27e0a76282fd}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
