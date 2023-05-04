@@ -12,19 +12,52 @@ namespace Supermercado
 {
     public partial class Form_Principal : Form
     {
-        public Form_Principal()
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Form_Principal(int codigo)
         {
             InitializeComponent();
+
+            switch (codigo)
+            {
+                case 1:
+                    this.tabControl1.TabPages.Remove(tabGerente);
+                    this.tabControl1.TabPages.Remove(tabAdmin);
+                    this.tabControl1.TabPages.Remove(tabEncargado);
+                    break;
+                case 2:
+                    this.tabControl1.TabPages.Remove(tabVendedor);
+                    this.tabControl1.TabPages.Remove(tabAdmin);
+                    this.tabControl1.TabPages.Remove(tabEncargado);
+                    break;
+                case 3:
+                    this.tabControl1.TabPages.Remove(tabGerente);
+                    this.tabControl1.TabPages.Remove(tabVendedor);
+                    this.tabControl1.TabPages.Remove(tabAdmin);
+                    break;
+                case 4:
+                    this.tabControl1.TabPages.Remove(tabGerente);
+                    this.tabControl1.TabPages.Remove(tabVendedor);
+                    this.tabControl1.TabPages.Remove(tabEncargado);
+                    break;
+                default: break;
+            }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        #region EVENTOS
+
+        /// <summary>
+        /// Cuando el Formulario Principal se cierra, se cierra toda la aplicacion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form_Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

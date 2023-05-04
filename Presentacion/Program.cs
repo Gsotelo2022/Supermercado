@@ -18,7 +18,6 @@ namespace Supermercado
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Bienvenida());
             Application.Run(new Form_Login());
-            Application.Run(new Form_Principal());
         }
     }
 }
