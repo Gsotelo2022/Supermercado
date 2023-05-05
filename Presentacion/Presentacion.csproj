@@ -7,7 +7,7 @@
     <ProjectGuid>{48D100B3-334A-4F29-89D5-088919DEDD42}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Supermercado</RootNamespace>
-    <AssemblyName>Supermercado</AssemblyName>
+    <AssemblyName>Presentacion</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -85,6 +85,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,11 +123,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{9047535b-887a-46d9-be91-aee79dc39bed}</Project>
+      <Project>{23ccdcc9-b4b2-42c3-acac-d3e0f5041970}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
-      <Project>{c706d8d7-940e-443e-a2d9-27e0a76282fd}</Project>
+      <Project>{bb501b79-cd6b-432e-b24d-a8315ba421ee}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
