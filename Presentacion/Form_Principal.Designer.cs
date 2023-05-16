@@ -100,6 +100,7 @@
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -112,6 +113,7 @@
             this.tabEncargado.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage10.SuspendLayout();
@@ -338,6 +340,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(89, 20);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(336, 393);
@@ -851,6 +854,15 @@
             this.dataGridView8.Size = new System.Drawing.Size(869, 338);
             this.dataGridView8.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
             // Form_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -873,6 +885,8 @@
             this.tabEncargado.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage10.ResumeLayout(false);
@@ -976,6 +990,7 @@
         private System.Windows.Forms.GroupBox groupBox34;
         private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.GroupBox groupBox35;
+        private System.Windows.Forms.Label label1;
     }
 }
 
