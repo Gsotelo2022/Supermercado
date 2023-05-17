@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+//Incorporo el espacio de nombre System.Data.SqlClient
 using System.Data.SqlClient;
 using System.Data;
 
 namespace Datos
 {
-	class ConexionDB
+	public class Conexion
 	{
         private SqlConnection objConexion;
         private string strCadenaDeConexion = "";
@@ -22,7 +23,7 @@ namespace Datos
          */
         private void Conectar()
         {   // HACK: Cadena de conexión hardcodeada. Luego ponerla como parametro de configuración del proyecto u otra alternativa.
-            strCadenaDeConexion = @"Integrated Security = SSPI; Persist Security Info = False; Initial Catalog = CursosBBDD; Data Source = localhost\SQLEXPRESS";
+            strCadenaDeConexion = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SupermercadoDia;Data Source=GSOTELO\SQLEXPRESS01";
 
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();

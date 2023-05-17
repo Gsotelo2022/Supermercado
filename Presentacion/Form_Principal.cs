@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,12 +98,19 @@ namespace Supermercado
 
         private void btnBuscarProducto1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form_Principal_Load(object sender, EventArgs e)
+        {
+            N_Producto objProducto = new N_Producto();
+
+            dgvProductos.DataSource = objProducto.retornarProductos();
         }
     }
 }

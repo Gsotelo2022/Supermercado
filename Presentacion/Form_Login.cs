@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 
+//Incorporo el espacio de nombre System.Data.SqlClient
+using System.Data.SqlClient;
+using System.Data;
+
 namespace Supermercado
 {
     public partial class Form_Login : Form
@@ -155,5 +159,10 @@ namespace Supermercado
         }
 
         #endregion
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
