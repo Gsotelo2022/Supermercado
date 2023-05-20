@@ -38,9 +38,9 @@ namespace Entidades
 			set { _cantidad = value; }
 		}
 
-		private bool _habilitado;
+		private string _habilitado;
 
-		public bool Habilitado
+		public string Habilitado
 		{
 			get { return _habilitado; }
 			set { _habilitado = value; }

@@ -51,13 +51,13 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnLimpiar1 = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbHabilitado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
@@ -155,7 +155,7 @@
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.tabPage9.SuspendLayout();
             this.groupBox36.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -395,13 +395,13 @@
             // 
             this.groupBox4.Controls.Add(this.btnLimpiar1);
             this.groupBox4.Controls.Add(this.btnCrear);
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cmbHabilitado);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.txtPrecio);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.numericUpDown1);
+            this.groupBox4.Controls.Add(this.nudCantidad);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.txtDescripcion);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(6, 20);
             this.groupBox4.Name = "groupBox4";
@@ -428,14 +428,15 @@
             this.btnCrear.TabIndex = 8;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // comboBox1
+            // cmbHabilitado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(31, 295);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cmbHabilitado.FormattingEnabled = true;
+            this.cmbHabilitado.Location = new System.Drawing.Point(31, 295);
+            this.cmbHabilitado.Name = "cmbHabilitado";
+            this.cmbHabilitado.Size = new System.Drawing.Size(121, 21);
+            this.cmbHabilitado.TabIndex = 7;
             // 
             // label4
             // 
@@ -446,12 +447,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Habilitado";
             // 
-            // textBox2
+            // txtPrecio
             // 
-            this.textBox2.Location = new System.Drawing.Point(31, 212);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtPrecio.Location = new System.Drawing.Point(31, 212);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(120, 20);
+            this.txtPrecio.TabIndex = 5;
             // 
             // label3
             // 
@@ -462,12 +463,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Precio";
             // 
-            // numericUpDown1
+            // nudCantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(31, 144);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.nudCantidad.Location = new System.Drawing.Point(31, 144);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(120, 20);
+            this.nudCantidad.TabIndex = 3;
             // 
             // label2
             // 
@@ -478,12 +479,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cantidad";
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtDescripcion.Location = new System.Drawing.Point(26, 76);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(283, 20);
+            this.txtDescripcion.TabIndex = 1;
             // 
             // label1
             // 
@@ -1324,7 +1325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.tabPage9.ResumeLayout(false);
             this.groupBox36.ResumeLayout(false);
             this.groupBox36.PerformLayout();
@@ -1440,15 +1441,15 @@
         private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.GroupBox groupBox35;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLimpiar1;
         private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbHabilitado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.GroupBox groupBox36;
         private System.Windows.Forms.Button btnLimpiar2;
         private System.Windows.Forms.Button btnModificar;

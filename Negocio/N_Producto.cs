@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -21,5 +22,10 @@ namespace Negocio
             N_Carga_Stock objCarga = new N_Carga_Stock();
 			objCarga.cargarStock();
 		}
+
+        public void crearProducto(Producto objProducto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

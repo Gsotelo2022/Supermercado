@@ -1,5 +1,4 @@
-﻿using Negocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using Negocio;
 
 namespace Supermercado
 {
@@ -111,6 +112,18 @@ namespace Supermercado
             N_Producto objProducto = new N_Producto();
 
             dgvProductos.DataSource = objProducto.retornarProductos();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            Producto objProducto = new Producto();
+            objProducto.Descripcion = txtDescripcion.Text;
+            objProducto.Precio = double.Parse(txtPrecio.Text);
+            objProducto.Cantidad = int.Parse(nudCantidad.Text);
+            objProducto.Habilitado = cmbHabilitado.Text;
+
+            N_Producto objN_Producto = new N_Producto();
+            objN_Producto.crearProducto(objProducto);
         }
     }
 }
