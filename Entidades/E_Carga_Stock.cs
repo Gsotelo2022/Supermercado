@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Carga_Stock
+    public class E_Carga_Stock
     {
 		private int _id_Stock;
 
@@ -15,9 +15,9 @@ namespace Entidades
 			get { return _id_Stock; }
 			set { _id_Stock = value; }
 		}
-		private Producto Id_Producto;
+		private E_Producto Id_Producto;
 
-		public Producto MyProperty
+		public E_Producto MyProperty
 		{
 			get { return Id_Producto; }
 			set { Id_Producto = value; }

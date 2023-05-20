@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Producto
+    public class E_Producto
     {
 		private int _id_Prodcuto;
 
@@ -44,6 +44,6 @@ namespace Entidades
 		{
 			get { return _habilitado; }
 			set { _habilitado = value; }
-		}		
-	}
+		}
+    }
 }

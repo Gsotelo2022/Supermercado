@@ -1,10 +1,11 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
+using Datos;
 
 namespace Negocio
 {
@@ -12,7 +13,7 @@ namespace Negocio
     {
         /*Traigo los productos*/
         public DataTable retornarProductos() { 
-            Datos.Producto objDatos = new Datos.Producto();
+            Datos.D_Producto objDatos = new Datos.D_Producto();
             return objDatos.Listado();
         }
 
@@ -21,11 +22,8 @@ namespace Negocio
         public void actualizarCantidad() {
             N_Carga_Stock objCarga = new N_Carga_Stock();
 			objCarga.cargarStock();
-		}
-
-        public void crearProducto(Producto objProducto)
-        {
-            throw new NotImplementedException();
+            //D_Producto objProductoDatos = new D_Producto();
+            //objProductoDatos.recibirDatosProducto(objProducto);
         }
     }
 }

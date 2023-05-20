@@ -116,7 +116,7 @@ namespace Supermercado
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            Producto objProducto = new Producto();
+            E_Producto objProducto = new E_Producto();
             objProducto.Descripcion = txtDescripcion.Text;
             objProducto.Precio = double.Parse(txtPrecio.Text);
             objProducto.Cantidad = int.Parse(nudCantidad.Text);
