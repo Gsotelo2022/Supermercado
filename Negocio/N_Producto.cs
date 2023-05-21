@@ -21,9 +21,14 @@ namespace Negocio
         /*Metodo para actualizar cantidad*/
         public void actualizarCantidad() {
             N_Carga_Stock objCarga = new N_Carga_Stock();
-			objCarga.cargarStock();
-            //D_Producto objProductoDatos = new D_Producto();
-            //objProductoDatos.recibirDatosProducto(objProducto);
+			objCarga.cargarStock();            
+        }
+
+        public void crearProducto(E_Producto objProducto)
+        {
+            //throw new NotImplementedException();
+            D_Producto objProductoDatos = new D_Producto();
+            objProductoDatos.recibirDatosProducto(objProducto);
         }
     }
 }

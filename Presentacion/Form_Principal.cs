@@ -124,6 +124,18 @@ namespace Supermercado
 
             N_Producto objN_Producto = new N_Producto();
             objN_Producto.crearProducto(objProducto);
+            dgvProductos.DataSource = objN_Producto.retornarProductos();
+            //Limpio campos
+            txtDescripcion.Text = "";
+            txtPrecio.Text = "";
+            nudCantidad.Text = "";
+            cmbHabilitado.Text = "";
+        }
+
+        private void btnGenerarListado_Click(object sender, EventArgs e)
+        {
+            N_Producto objN_Producto = new N_Producto();
+            dgvStock.DataSource = objN_Producto.retornarProductos();
         }
     }
 }

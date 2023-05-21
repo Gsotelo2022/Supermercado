@@ -433,6 +433,9 @@
             // cmbHabilitado
             // 
             this.cmbHabilitado.FormattingEnabled = true;
+            this.cmbHabilitado.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
             this.cmbHabilitado.Location = new System.Drawing.Point(31, 295);
             this.cmbHabilitado.Name = "cmbHabilitado";
             this.cmbHabilitado.Size = new System.Drawing.Size(121, 21);
@@ -711,12 +714,18 @@
             this.btnGenerarListado.TabIndex = 1;
             this.btnGenerarListado.Text = "Generar Lista";
             this.btnGenerarListado.UseVisualStyleBackColor = true;
+            this.btnGenerarListado.Click += new System.EventHandler(this.btnGenerarListado_Click);
             // 
             // dgvStock
             // 
+            this.dgvStock.AllowUserToAddRows = false;
+            this.dgvStock.AllowUserToDeleteRows = false;
+            this.dgvStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStock.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStock.Location = new System.Drawing.Point(9, 84);
             this.dgvStock.Name = "dgvStock";
+            this.dgvStock.ReadOnly = true;
             this.dgvStock.Size = new System.Drawing.Size(869, 338);
             this.dgvStock.TabIndex = 10;
             // 
@@ -753,6 +762,7 @@
             // 
             // dgvAlerta
             // 
+            this.dgvAlerta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAlerta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlerta.Location = new System.Drawing.Point(9, 84);
             this.dgvAlerta.Name = "dgvAlerta";
@@ -923,6 +933,7 @@
             // 
             // dgvCargarStock
             // 
+            this.dgvCargarStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCargarStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCargarStock.Location = new System.Drawing.Point(351, 84);
             this.dgvCargarStock.Name = "dgvCargarStock";

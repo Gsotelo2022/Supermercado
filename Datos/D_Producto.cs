@@ -21,7 +21,8 @@ namespace Datos
         public void recibirDatosProducto(E_Producto objProducto)
         {
             //throw new NotImplementedException();
-            objConexion.EscribirPorComando("");
+            //objConexion.EscribirPorComando("insert into dbo.Producto (Descripcion,Precio,Cantidad,Habilitado) values ('Leche',200,300,'SI')");
+            objConexion.EscribirPorComando("insert into dbo.Producto (Descripcion,Precio,Cantidad,Habilitado) values ('"+objProducto.Descripcion+"',"+objProducto.Precio+","+objProducto.Cantidad+",'"+objProducto.Habilitado+"')");
         }
     }
 }
