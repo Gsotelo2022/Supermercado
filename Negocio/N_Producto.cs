@@ -16,7 +16,14 @@ namespace Negocio
             Datos.D_Producto objDatos = new Datos.D_Producto();
             return objDatos.Listado();
         }
+        //Busco Producto
+        public DataTable BuscarProducto(string descripcion)
+        {
+            //throw new NotImplementedException();
+            D_Producto objProductoDatos = new D_Producto();
 
+            return objProductoDatos.devuelvoProducto(descripcion);
+        }
 
         /*Metodo para actualizar cantidad*/
         public void actualizarCantidad() {

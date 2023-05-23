@@ -53,7 +53,6 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.cmbHabilitado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,7 +64,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,7 +73,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnBuscarProducto1 = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtDescripcionModificar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dgvModificarProducto = new System.Windows.Forms.DataGridView();
             this.tabPage10 = new System.Windows.Forms.TabPage();
@@ -88,7 +86,7 @@
             this.dgvAlerta = new System.Windows.Forms.DataGridView();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDescripcionBCargarStock = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.btnLimpiar3 = new System.Windows.Forms.Button();
@@ -97,7 +95,6 @@
             this.btnStock = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
@@ -141,6 +138,9 @@
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.nudPrecio = new System.Windows.Forms.NumericUpDown();
+            this.nudPrecioModicar = new System.Windows.Forms.NumericUpDown();
+            this.nudPrecioCargarStock = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -192,6 +192,9 @@
             this.tabPage18.SuspendLayout();
             this.tabPage19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioModicar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioCargarStock)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -393,11 +396,11 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.nudPrecio);
             this.groupBox4.Controls.Add(this.btnLimpiar1);
             this.groupBox4.Controls.Add(this.btnCrear);
             this.groupBox4.Controls.Add(this.cmbHabilitado);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.txtPrecio);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.nudCantidad);
             this.groupBox4.Controls.Add(this.label2);
@@ -450,17 +453,10 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Habilitado";
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(31, 212);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(120, 20);
-            this.txtPrecio.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 187);
+            this.label3.Location = new System.Drawing.Point(23, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 4;
@@ -468,7 +464,12 @@
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(31, 144);
+            this.nudCantidad.Location = new System.Drawing.Point(31, 220);
+            this.nudCantidad.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(120, 20);
             this.nudCantidad.TabIndex = 3;
@@ -476,7 +477,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 121);
+            this.label2.Location = new System.Drawing.Point(28, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2;
@@ -514,11 +515,11 @@
             // 
             // groupBox36
             // 
+            this.groupBox36.Controls.Add(this.nudPrecioModicar);
             this.groupBox36.Controls.Add(this.btnLimpiar2);
             this.groupBox36.Controls.Add(this.btnModificar);
             this.groupBox36.Controls.Add(this.comboBox2);
             this.groupBox36.Controls.Add(this.label5);
-            this.groupBox36.Controls.Add(this.textBox3);
             this.groupBox36.Controls.Add(this.label6);
             this.groupBox36.Controls.Add(this.numericUpDown2);
             this.groupBox36.Controls.Add(this.label7);
@@ -566,17 +567,10 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Habilitado";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(174, 146);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 20);
-            this.textBox3.TabIndex = 5;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(171, 121);
+            this.label6.Location = new System.Drawing.Point(28, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 4;
@@ -584,7 +578,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(31, 144);
+            this.numericUpDown2.Location = new System.Drawing.Point(179, 133);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 3;
@@ -592,7 +586,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 121);
+            this.label7.Location = new System.Drawing.Point(171, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 2;
@@ -648,7 +642,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.textBox7);
+            this.groupBox10.Controls.Add(this.txtDescripcionModificar);
             this.groupBox10.Controls.Add(this.label13);
             this.groupBox10.Location = new System.Drawing.Point(8, 9);
             this.groupBox10.Name = "groupBox10";
@@ -658,13 +652,13 @@
             this.groupBox10.Text = "Buscar Articulo";
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
-            // textBox7
+            // txtDescripcionModificar
             // 
-            this.textBox7.Location = new System.Drawing.Point(109, 29);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(283, 20);
-            this.textBox7.TabIndex = 3;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtDescripcionModificar.Location = new System.Drawing.Point(109, 29);
+            this.txtDescripcionModificar.Name = "txtDescripcionModificar";
+            this.txtDescripcionModificar.Size = new System.Drawing.Size(283, 20);
+            this.txtDescripcionModificar.TabIndex = 3;
+            this.txtDescripcionModificar.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label13
             // 
@@ -785,7 +779,7 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.textBox8);
+            this.groupBox13.Controls.Add(this.txtDescripcionBCargarStock);
             this.groupBox13.Controls.Add(this.label14);
             this.groupBox13.Location = new System.Drawing.Point(6, 9);
             this.groupBox13.Name = "groupBox13";
@@ -794,12 +788,12 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Buscar Articulo";
             // 
-            // textBox8
+            // txtDescripcionBCargarStock
             // 
-            this.textBox8.Location = new System.Drawing.Point(109, 29);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(283, 20);
-            this.textBox8.TabIndex = 3;
+            this.txtDescripcionBCargarStock.Location = new System.Drawing.Point(109, 29);
+            this.txtDescripcionBCargarStock.Name = "txtDescripcionBCargarStock";
+            this.txtDescripcionBCargarStock.Size = new System.Drawing.Size(283, 20);
+            this.txtDescripcionBCargarStock.TabIndex = 3;
             // 
             // label14
             // 
@@ -838,13 +832,14 @@
             this.btnBuscarProducto2.TabIndex = 0;
             this.btnBuscarProducto2.Text = "Buscar";
             this.btnBuscarProducto2.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto2.Click += new System.EventHandler(this.btnBuscarProducto2_Click);
             // 
             // groupBox37
             // 
+            this.groupBox37.Controls.Add(this.nudPrecioCargarStock);
             this.groupBox37.Controls.Add(this.btnStock);
             this.groupBox37.Controls.Add(this.comboBox3);
             this.groupBox37.Controls.Add(this.label9);
-            this.groupBox37.Controls.Add(this.textBox5);
             this.groupBox37.Controls.Add(this.label10);
             this.groupBox37.Controls.Add(this.numericUpDown3);
             this.groupBox37.Controls.Add(this.label11);
@@ -883,17 +878,10 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Habilitado";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(174, 146);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(120, 20);
-            this.textBox5.TabIndex = 5;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(171, 121);
+            this.label10.Location = new System.Drawing.Point(28, 117);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 4;
@@ -901,19 +889,21 @@
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(31, 144);
+            this.numericUpDown3.Location = new System.Drawing.Point(174, 140);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown3.TabIndex = 3;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 121);
+            this.label11.Location = new System.Drawing.Point(166, 117);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 13);
             this.label11.TabIndex = 2;
             this.label11.Text = "Cantidad";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // textBox6
             // 
@@ -1310,6 +1300,32 @@
             this.dataGridView8.Size = new System.Drawing.Size(869, 338);
             this.dataGridView8.TabIndex = 10;
             // 
+            // nudPrecio
+            // 
+            this.nudPrecio.Location = new System.Drawing.Point(26, 148);
+            this.nudPrecio.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPrecio.Name = "nudPrecio";
+            this.nudPrecio.Size = new System.Drawing.Size(120, 20);
+            this.nudPrecio.TabIndex = 10;
+            // 
+            // nudPrecioModicar
+            // 
+            this.nudPrecioModicar.Location = new System.Drawing.Point(31, 133);
+            this.nudPrecioModicar.Name = "nudPrecioModicar";
+            this.nudPrecioModicar.Size = new System.Drawing.Size(120, 20);
+            this.nudPrecioModicar.TabIndex = 10;
+            // 
+            // nudPrecioCargarStock
+            // 
+            this.nudPrecioCargarStock.Location = new System.Drawing.Point(31, 140);
+            this.nudPrecioCargarStock.Name = "nudPrecioCargarStock";
+            this.nudPrecioCargarStock.Size = new System.Drawing.Size(120, 20);
+            this.nudPrecioCargarStock.TabIndex = 9;
+            // 
             // Form_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1377,6 +1393,9 @@
             this.tabPage18.ResumeLayout(false);
             this.tabPage19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioModicar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecioCargarStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1458,7 +1477,6 @@
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.ComboBox cmbHabilitado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.GroupBox groupBox36;
@@ -1466,7 +1484,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label7;
@@ -1476,7 +1493,6 @@
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Label label11;
@@ -1484,10 +1500,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnBuscarProducto1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtDescripcionModificar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDescripcionBCargarStock;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Button btnBuscarProducto2;
@@ -1495,6 +1511,9 @@
         private System.Windows.Forms.Button btnGenerarListado;
         private System.Windows.Forms.Button btnGenerarAlerta;
         private System.Windows.Forms.Button btnLimpiar3;
+        private System.Windows.Forms.NumericUpDown nudPrecio;
+        private System.Windows.Forms.NumericUpDown nudPrecioModicar;
+        private System.Windows.Forms.NumericUpDown nudPrecioCargarStock;
     }
 }
 

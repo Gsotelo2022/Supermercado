@@ -64,7 +64,12 @@ namespace Supermercado
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //Limpio campos
+            txtDescripcion.Text = "";
+            //txtPrecio.Text = "";
+            nudPrecio.Text = "";
+            nudCantidad.Text = "";
+            cmbHabilitado.Text = "";
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -99,7 +104,15 @@ namespace Supermercado
 
         private void btnBuscarProducto1_Click(object sender, EventArgs e)
         {
-            
+            E_Producto objEProducto = new E_Producto();
+            objEProducto.Descripcion = txtDescripcionModificar.Text;
+
+            N_Producto objNProducto = new N_Producto();
+
+            dgvModificarProducto.DataSource = objNProducto.BuscarProducto(objEProducto.Descripcion);
+
+            //Limpio Campo
+            txtDescripcionModificar.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -118,7 +131,8 @@ namespace Supermercado
         {
             E_Producto objProducto = new E_Producto();
             objProducto.Descripcion = txtDescripcion.Text;
-            objProducto.Precio = double.Parse(txtPrecio.Text);
+            //objProducto.Precio = double.Parse(txtPrecio.Text);
+            objProducto.Precio = double.Parse(nudPrecio.Text);
             objProducto.Cantidad = int.Parse(nudCantidad.Text);
             objProducto.Habilitado = cmbHabilitado.Text;
 
@@ -127,7 +141,8 @@ namespace Supermercado
             dgvProductos.DataSource = objN_Producto.retornarProductos();
             //Limpio campos
             txtDescripcion.Text = "";
-            txtPrecio.Text = "";
+            //txtPrecio.Text = "";
+            nudPrecio.Text = "";
             nudCantidad.Text = "";
             cmbHabilitado.Text = "";
         }
@@ -136,6 +151,35 @@ namespace Supermercado
         {
             N_Producto objN_Producto = new N_Producto();
             dgvStock.DataSource = objN_Producto.retornarProductos();
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarProducto2_Click(object sender, EventArgs e)
+        {
+            E_Producto objEProducto = new E_Producto(); 
+            objEProducto.Descripcion=txtDescripcionBCargarStock.Text;
+
+            N_Producto objNProducto= new N_Producto();            
+            
+            dgvCargarStock.DataSource = objNProducto.BuscarProducto(objEProducto.Descripcion);
+
+            //Limpio Campo
+            txtDescripcionBCargarStock.Text = "";
+            //dgvStock.DataSource = objN_Producto.retornarProductos();
         }
     }
 }
