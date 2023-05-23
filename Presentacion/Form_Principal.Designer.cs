@@ -753,6 +753,7 @@
             this.btnGenerarAlerta.TabIndex = 0;
             this.btnGenerarAlerta.Text = "Generar Alerta";
             this.btnGenerarAlerta.UseVisualStyleBackColor = true;
+            this.btnGenerarAlerta.Click += new System.EventHandler(this.btnGenerarAlerta_Click);
             // 
             // dgvAlerta
             // 

@@ -181,5 +181,11 @@ namespace Supermercado
             txtDescripcionBCargarStock.Text = "";
             //dgvStock.DataSource = objN_Producto.retornarProductos();
         }
+
+        private void btnGenerarAlerta_Click(object sender, EventArgs e)
+        {
+            N_Producto objNProducto = new N_Producto();
+            dgvAlerta.DataSource = objNProducto.productoAlerta();
+        }
     }
 }

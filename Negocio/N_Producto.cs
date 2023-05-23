@@ -24,7 +24,14 @@ namespace Negocio
 
             return objProductoDatos.devuelvoProducto(descripcion);
         }
+        //Busco productos en alerta
+        public DataTable productoAlerta()
+        {
+            //throw new NotImplementedException();
+            D_Producto objProductoDatos = new D_Producto();
 
+            return objProductoDatos.devuelvoProductoEnAlerta();
+        }
         /*Metodo para actualizar cantidad*/
         public void actualizarCantidad() {
             N_Carga_Stock objCarga = new N_Carga_Stock();

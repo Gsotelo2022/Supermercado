@@ -24,6 +24,13 @@ namespace Datos
             return dtProductos;
         }
 
+        public DataTable devuelvoProductoEnAlerta()
+        {
+            //throw new NotImplementedException();
+            DataTable dtProductosEnAlerta = objConexion.LeerPorStoreProcedure("sp_ProductosAlerta");
+            return dtProductosEnAlerta;
+        }
+
         public DataTable Listado() {
             //DataTable dt = objConexion.LeerPorComando("Select * from dbo.Producto");
             DataTable dt = objConexion.LeerPorStoreProcedure("sp_ListarProductos");
