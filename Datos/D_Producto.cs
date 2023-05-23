@@ -12,8 +12,9 @@ namespace Datos
     {
         //Conecto con la logica de producto
         Conexion objConexion = new Conexion();
-        public DataTable Listado() {             
-            DataTable dt = objConexion.LeerPorComando("Select * from dbo.Producto");
+        public DataTable Listado() {
+            //DataTable dt = objConexion.LeerPorComando("Select * from dbo.Producto");
+            DataTable dt = objConexion.LeerPorStoreProcedure("sp_ListarProductos");
 
             return dt; 
         }
