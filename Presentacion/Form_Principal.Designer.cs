@@ -638,11 +638,6 @@
             this.nudCantidadModificar1.Name = "nudCantidadModificar1";
             this.nudCantidadModificar1.Size = new System.Drawing.Size(120, 20);
             this.nudCantidadModificar1.TabIndex = 3;
-            this.nudCantidadModificar1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // label7
             // 
