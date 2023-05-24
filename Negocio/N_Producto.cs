@@ -44,5 +44,19 @@ namespace Negocio
             D_Producto objProductoDatos = new D_Producto();
             objProductoDatos.recibirDatosProducto(objProducto);
         }
+
+        public void modificarProducto(E_Producto objE_Producto)
+        {
+            //throw new NotImplementedException();
+            D_Producto objProductosDatos= new D_Producto();
+            objProductosDatos.actualizarValores(objE_Producto);
+        }
+
+        public void cargarStock(E_Producto objEProducto)
+        {
+            //throw new NotImplementedException();
+            D_Producto objProductosDatos = new D_Producto();
+            objProductosDatos.actualizarStock(objEProducto);
+        }
     }
 }

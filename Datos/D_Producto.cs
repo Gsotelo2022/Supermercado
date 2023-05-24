@@ -14,6 +14,29 @@ namespace Datos
         //Conecto con la logica de producto
         Conexion objConexion = new Conexion();
 
+        public void actualizarStock(E_Producto objEProducto)
+        {
+            //throw new NotImplementedException();
+            SqlParameter[] parametrosNuevos = new SqlParameter[2];
+            parametrosNuevos[0] = objConexion.crearParametro("@pIdProducto", objEProducto.Id_Producto);
+            parametrosNuevos[1] = objConexion.crearParametro("@pCantidad", objEProducto.Cantidad);
+
+            objConexion.LeerPorStoreProcedure("sp_cargarStock", parametrosNuevos);
+        }
+
+        //Modifico valores del producto
+        public void actualizarValores(E_Producto objE_Producto)
+        {
+            //throw new NotImplementedException();
+            SqlParameter[] parametrosNuevos = new SqlParameter[4];
+            parametrosNuevos[0] = objConexion.crearParametro("@pIdProducto", objE_Producto.Id_Producto);
+            parametrosNuevos[1] = objConexion.crearParametro("@pDescripcion", objE_Producto.Descripcion);
+            parametrosNuevos[2] = objConexion.crearParametro("@pPrecio", objE_Producto.Precio);
+            parametrosNuevos[3] = objConexion.crearParametro("@pHabilitado", objE_Producto.Habilitado);
+
+            objConexion.LeerPorStoreProcedure("sp_ModificarProducto", parametrosNuevos);
+        }
+
         public DataTable devuelvoProducto(string descripcion)
         {
             //throw new NotImplementedException();
