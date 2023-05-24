@@ -194,7 +194,7 @@ namespace Supermercado
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            E_Producto objE_Producto = new E_Producto(); 
+            E_Producto objE_Producto = new E_Producto();
             objE_Producto.Id_Producto = int.Parse(txtIdModificar1.Text);
             objE_Producto.Descripcion = txtDescripcionModificar1.Text;
             objE_Producto.Precio = double.Parse(nudPrecioModificar1.Text);
