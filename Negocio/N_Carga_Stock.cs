@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datos;
+
 namespace Negocio
 {
-    public class N_Encargado
+    public  class N_Carga_Stock
     {
-        
+        /*Metodo para actualizar Stock*/
+        public int cargarStock() {
+            return 1;
+        }
     }
 }
