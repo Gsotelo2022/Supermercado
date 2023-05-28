@@ -293,9 +293,33 @@ namespace Supermercado
         private void btnStock_Click(object sender, EventArgs e)
         {
             E_Producto objEProducto = new E_Producto();
-            objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
-            objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);
+            //Excepcion Carga stock
+            try
+            {
+                //Excepciones
+                Negocio.ExcepcionesProductos.Exproductos.verificarCamposCargaStock(int.Parse(txtIdCargarStock1.Text), int.Parse(nudCantidadCargarStock1.Text));
+                objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
+                objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);
+                //Instancio Negocio
+                N_Producto objNProdcuto = new N_Producto();
+                objNProdcuto.cargarStock(objEProducto);
+                dgvCargarStock.DataSource = objNProdcuto.retornarProductos();
 
+                //Limpiar campos 
+                txtIdCargarStock1.Text = "";
+                txtDescripcionCargarStock1.Text = "";
+                nudCantidadCargarStock1.Text = "";
+                //Limpio campo descripcion de la busqueda
+                txtDescripcionBCargarStock.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
+            objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);*/
+            /*
             N_Producto objNProdcuto = new N_Producto();
             objNProdcuto.cargarStock(objEProducto);
             dgvCargarStock.DataSource = objNProdcuto.retornarProductos();
@@ -305,7 +329,7 @@ namespace Supermercado
             txtDescripcionCargarStock1.Text = "";
             nudCantidadCargarStock1.Text = "";
             //Limpio campo descripcion de la busqueda
-            txtDescripcionBCargarStock.Text = "";
+            txtDescripcionBCargarStock.Text = "";*/
         }
 
         private void btnLimpiar3_Click(object sender, EventArgs e)

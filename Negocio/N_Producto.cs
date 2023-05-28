@@ -32,12 +32,6 @@ namespace Negocio
 
             return objProductoDatos.devuelvoProductoEnAlerta();
         }
-        /*Metodo para actualizar cantidad*/
-        public void actualizarCantidad() {
-            N_Carga_Stock objCarga = new N_Carga_Stock();
-			objCarga.cargarStock();            
-        }
-
         public void crearProducto(E_Producto objProducto)
         {
             //throw new NotImplementedException();

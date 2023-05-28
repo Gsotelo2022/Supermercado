@@ -387,10 +387,11 @@
             // 
             // dgvProductos
             // 
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(358, 19);
+            this.dgvProductos.Location = new System.Drawing.Point(327, 19);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(527, 393);
+            this.dgvProductos.Size = new System.Drawing.Size(558, 393);
             this.dgvProductos.TabIndex = 1;
             // 
             // groupBox4
@@ -407,7 +408,7 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(6, 20);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(342, 393);
+            this.groupBox4.Size = new System.Drawing.Size(315, 393);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos del Producto";
@@ -426,7 +427,7 @@
             // 
             // btnLimpiar1
             // 
-            this.btnLimpiar1.Location = new System.Drawing.Point(21, 349);
+            this.btnLimpiar1.Location = new System.Drawing.Point(6, 349);
             this.btnLimpiar1.Name = "btnLimpiar1";
             this.btnLimpiar1.Size = new System.Drawing.Size(147, 27);
             this.btnLimpiar1.TabIndex = 9;
@@ -436,7 +437,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(174, 349);
+            this.btnCrear.Location = new System.Drawing.Point(159, 349);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(147, 27);
             this.btnCrear.TabIndex = 8;
@@ -540,7 +541,7 @@
             this.groupBox36.Controls.Add(this.label8);
             this.groupBox36.Location = new System.Drawing.Point(8, 84);
             this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Size = new System.Drawing.Size(342, 338);
+            this.groupBox36.Size = new System.Drawing.Size(319, 338);
             this.groupBox36.TabIndex = 13;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Datos del Producto";
@@ -576,7 +577,7 @@
             // 
             // btnLimpiar2
             // 
-            this.btnLimpiar2.Location = new System.Drawing.Point(26, 258);
+            this.btnLimpiar2.Location = new System.Drawing.Point(6, 258);
             this.btnLimpiar2.Name = "btnLimpiar2";
             this.btnLimpiar2.Size = new System.Drawing.Size(147, 27);
             this.btnLimpiar2.TabIndex = 9;
@@ -586,7 +587,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(174, 258);
+            this.btnModificar.Location = new System.Drawing.Point(162, 258);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(147, 27);
             this.btnModificar.TabIndex = 8;
@@ -725,10 +726,11 @@
             // 
             // dgvModificarProducto1
             // 
+            this.dgvModificarProducto1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvModificarProducto1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModificarProducto1.Location = new System.Drawing.Point(356, 84);
+            this.dgvModificarProducto1.Location = new System.Drawing.Point(333, 84);
             this.dgvModificarProducto1.Name = "dgvModificarProducto1";
-            this.dgvModificarProducto1.Size = new System.Drawing.Size(522, 338);
+            this.dgvModificarProducto1.Size = new System.Drawing.Size(545, 338);
             this.dgvModificarProducto1.TabIndex = 10;
             this.dgvModificarProducto1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
@@ -938,19 +940,9 @@
             // 
             this.nudCantidadCargarStock1.Enabled = false;
             this.nudCantidadCargarStock1.Location = new System.Drawing.Point(484, 51);
-            this.nudCantidadCargarStock1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.nudCantidadCargarStock1.Name = "nudCantidadCargarStock1";
             this.nudCantidadCargarStock1.Size = new System.Drawing.Size(120, 20);
             this.nudCantidadCargarStock1.TabIndex = 3;
-            this.nudCantidadCargarStock1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.nudCantidadCargarStock1.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // label11
@@ -965,6 +957,7 @@
             // 
             // txtDescripcionCargarStock1
             // 
+            this.txtDescripcionCargarStock1.Enabled = false;
             this.txtDescripcionCargarStock1.Location = new System.Drawing.Point(163, 53);
             this.txtDescripcionCargarStock1.Name = "txtDescripcionCargarStock1";
             this.txtDescripcionCargarStock1.Size = new System.Drawing.Size(283, 20);
