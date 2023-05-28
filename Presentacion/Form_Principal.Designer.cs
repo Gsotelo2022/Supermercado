@@ -135,11 +135,6 @@
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancUsu = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -151,6 +146,26 @@
             this.lblNombUsu = new System.Windows.Forms.Label();
             this.cBoxPermisos = new System.Windows.Forms.ComboBox();
             this.lblpermisos = new System.Windows.Forms.Label();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.btnRestContr = new System.Windows.Forms.Button();
+            this.btnModContr = new System.Windows.Forms.Button();
+            this.btnBloquear = new System.Windows.Forms.Button();
+            this.gbBuscarEmpl = new System.Windows.Forms.GroupBox();
+            this.btnAcepEmpl = new System.Windows.Forms.Button();
+            this.btnCancEmpl = new System.Windows.Forms.Button();
+            this.lblApeEmpl = new System.Windows.Forms.Label();
+            this.lblNombEmpl = new System.Windows.Forms.Label();
+            this.lblDNI = new System.Windows.Forms.Label();
+            this.txbApeEmpl = new System.Windows.Forms.TextBox();
+            this.txbNombEmpl = new System.Windows.Forms.TextBox();
+            this.txbDNI = new System.Windows.Forms.TextBox();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.Legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -203,6 +218,8 @@
             this.tabControl5.SuspendLayout();
             this.tabPage18.SuspendLayout();
             this.tabPage19.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.gbBuscarEmpl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1324,54 +1341,6 @@
             this.tabPage18.Text = "Crear Usuarios";
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
-            // groupBox17
-            // 
-            this.groupBox17.Location = new System.Drawing.Point(464, 3);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(336, 393);
-            this.groupBox17.TabIndex = 3;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Imagen";
-            // 
-            // tabPage19
-            // 
-            this.tabPage19.Controls.Add(this.groupBox19);
-            this.tabPage19.Controls.Add(this.groupBox20);
-            this.tabPage19.Controls.Add(this.dataGridView8);
-            this.tabPage19.Location = new System.Drawing.Point(4, 22);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage19.Size = new System.Drawing.Size(887, 424);
-            this.tabPage19.TabIndex = 1;
-            this.tabPage19.Text = "Modificar Usuarios";
-            this.tabPage19.UseVisualStyleBackColor = true;
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Location = new System.Drawing.Point(607, 6);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(270, 69);
-            this.groupBox19.TabIndex = 12;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Botones";
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Location = new System.Drawing.Point(8, 6);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(593, 69);
-            this.groupBox20.TabIndex = 11;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Buscar usuario";
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(9, 81);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(869, 338);
-            this.dataGridView8.TabIndex = 10;
-            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(341, 286);
@@ -1469,6 +1438,191 @@
             this.lblpermisos.TabIndex = 16;
             this.lblpermisos.Text = "Nivel de permisos";
             // 
+            // groupBox17
+            // 
+            this.groupBox17.Location = new System.Drawing.Point(464, 3);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(336, 393);
+            this.groupBox17.TabIndex = 3;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Imagen";
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.groupBox19);
+            this.tabPage19.Controls.Add(this.gbBuscarEmpl);
+            this.tabPage19.Controls.Add(this.dataGridView8);
+            this.tabPage19.Location = new System.Drawing.Point(4, 22);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage19.Size = new System.Drawing.Size(887, 424);
+            this.tabPage19.TabIndex = 1;
+            this.tabPage19.Text = "Modificar Usuarios";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.btnRestContr);
+            this.groupBox19.Controls.Add(this.btnModContr);
+            this.groupBox19.Controls.Add(this.btnBloquear);
+            this.groupBox19.Location = new System.Drawing.Point(558, 6);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(319, 69);
+            this.groupBox19.TabIndex = 15;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Botones";
+            // 
+            // btnRestContr
+            // 
+            this.btnRestContr.Location = new System.Drawing.Point(218, 21);
+            this.btnRestContr.Name = "btnRestContr";
+            this.btnRestContr.Size = new System.Drawing.Size(75, 35);
+            this.btnRestContr.TabIndex = 2;
+            this.btnRestContr.Text = "Restablecer Contraseña";
+            this.btnRestContr.UseVisualStyleBackColor = true;
+            // 
+            // btnModContr
+            // 
+            this.btnModContr.BackColor = System.Drawing.Color.Red;
+            this.btnModContr.Location = new System.Drawing.Point(120, 21);
+            this.btnModContr.Name = "btnModContr";
+            this.btnModContr.Size = new System.Drawing.Size(75, 36);
+            this.btnModContr.TabIndex = 1;
+            this.btnModContr.Text = "Modificar Contraseña";
+            this.btnModContr.UseVisualStyleBackColor = false;
+            // 
+            // btnBloquear
+            // 
+            this.btnBloquear.Location = new System.Drawing.Point(22, 19);
+            this.btnBloquear.Name = "btnBloquear";
+            this.btnBloquear.Size = new System.Drawing.Size(75, 37);
+            this.btnBloquear.TabIndex = 0;
+            this.btnBloquear.Text = "Bloquear Usuario";
+            this.btnBloquear.UseVisualStyleBackColor = true;
+            // 
+            // gbBuscarEmpl
+            // 
+            this.gbBuscarEmpl.Controls.Add(this.btnAcepEmpl);
+            this.gbBuscarEmpl.Controls.Add(this.btnCancEmpl);
+            this.gbBuscarEmpl.Controls.Add(this.lblApeEmpl);
+            this.gbBuscarEmpl.Controls.Add(this.lblNombEmpl);
+            this.gbBuscarEmpl.Controls.Add(this.lblDNI);
+            this.gbBuscarEmpl.Controls.Add(this.txbApeEmpl);
+            this.gbBuscarEmpl.Controls.Add(this.txbNombEmpl);
+            this.gbBuscarEmpl.Controls.Add(this.txbDNI);
+            this.gbBuscarEmpl.Location = new System.Drawing.Point(8, 6);
+            this.gbBuscarEmpl.Name = "gbBuscarEmpl";
+            this.gbBuscarEmpl.Size = new System.Drawing.Size(544, 69);
+            this.gbBuscarEmpl.TabIndex = 14;
+            this.gbBuscarEmpl.TabStop = false;
+            this.gbBuscarEmpl.Text = "Buscar empleado";
+            // 
+            // btnAcepEmpl
+            // 
+            this.btnAcepEmpl.Location = new System.Drawing.Point(460, 23);
+            this.btnAcepEmpl.Name = "btnAcepEmpl";
+            this.btnAcepEmpl.Size = new System.Drawing.Size(75, 23);
+            this.btnAcepEmpl.TabIndex = 7;
+            this.btnAcepEmpl.Text = "Aceptar";
+            this.btnAcepEmpl.UseVisualStyleBackColor = true;
+            // 
+            // btnCancEmpl
+            // 
+            this.btnCancEmpl.Location = new System.Drawing.Point(378, 22);
+            this.btnCancEmpl.Name = "btnCancEmpl";
+            this.btnCancEmpl.Size = new System.Drawing.Size(75, 23);
+            this.btnCancEmpl.TabIndex = 6;
+            this.btnCancEmpl.Text = "Cancelar";
+            this.btnCancEmpl.UseVisualStyleBackColor = true;
+            // 
+            // lblApeEmpl
+            // 
+            this.lblApeEmpl.AutoSize = true;
+            this.lblApeEmpl.Location = new System.Drawing.Point(260, 18);
+            this.lblApeEmpl.Name = "lblApeEmpl";
+            this.lblApeEmpl.Size = new System.Drawing.Size(44, 13);
+            this.lblApeEmpl.TabIndex = 5;
+            this.lblApeEmpl.Text = "Apellido";
+            // 
+            // lblNombEmpl
+            // 
+            this.lblNombEmpl.AutoSize = true;
+            this.lblNombEmpl.Location = new System.Drawing.Point(135, 19);
+            this.lblNombEmpl.Name = "lblNombEmpl";
+            this.lblNombEmpl.Size = new System.Drawing.Size(44, 13);
+            this.lblNombEmpl.TabIndex = 4;
+            this.lblNombEmpl.Text = "Nombre";
+            // 
+            // lblDNI
+            // 
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Location = new System.Drawing.Point(7, 19);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(26, 13);
+            this.lblDNI.TabIndex = 3;
+            this.lblDNI.Text = "DNI";
+            // 
+            // txbApeEmpl
+            // 
+            this.txbApeEmpl.Location = new System.Drawing.Point(260, 40);
+            this.txbApeEmpl.Name = "txbApeEmpl";
+            this.txbApeEmpl.Size = new System.Drawing.Size(100, 20);
+            this.txbApeEmpl.TabIndex = 2;
+            // 
+            // txbNombEmpl
+            // 
+            this.txbNombEmpl.Location = new System.Drawing.Point(132, 40);
+            this.txbNombEmpl.Name = "txbNombEmpl";
+            this.txbNombEmpl.Size = new System.Drawing.Size(100, 20);
+            this.txbNombEmpl.TabIndex = 1;
+            // 
+            // txbDNI
+            // 
+            this.txbDNI.Location = new System.Drawing.Point(6, 40);
+            this.txbDNI.Name = "txbDNI";
+            this.txbDNI.Size = new System.Drawing.Size(100, 20);
+            this.txbDNI.TabIndex = 0;
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.AllowUserToAddRows = false;
+            this.dataGridView8.AllowUserToDeleteRows = false;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Legajo,
+            this.DNI,
+            this.Apellido,
+            this.Nombre});
+            this.dataGridView8.Location = new System.Drawing.Point(9, 81);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.ReadOnly = true;
+            this.dataGridView8.Size = new System.Drawing.Size(869, 338);
+            this.dataGridView8.TabIndex = 13;
+            // 
+            // Legajo
+            // 
+            this.Legajo.HeaderText = "Legajo";
+            this.Legajo.Name = "Legajo";
+            this.Legajo.ReadOnly = true;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
             // Form_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1538,6 +1692,9 @@
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
             this.tabPage19.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.gbBuscarEmpl.ResumeLayout(false);
+            this.gbBuscarEmpl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.ResumeLayout(false);
 
@@ -1590,9 +1747,6 @@
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.DataGridView dataGridView9;
@@ -1667,6 +1821,24 @@
         private System.Windows.Forms.Label lblNombUsu;
         private System.Windows.Forms.ComboBox cBoxPermisos;
         private System.Windows.Forms.Label lblpermisos;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Button btnRestContr;
+        private System.Windows.Forms.Button btnModContr;
+        private System.Windows.Forms.Button btnBloquear;
+        private System.Windows.Forms.GroupBox gbBuscarEmpl;
+        private System.Windows.Forms.Button btnAcepEmpl;
+        private System.Windows.Forms.Button btnCancEmpl;
+        private System.Windows.Forms.Label lblApeEmpl;
+        private System.Windows.Forms.Label lblNombEmpl;
+        private System.Windows.Forms.Label lblDNI;
+        private System.Windows.Forms.TextBox txbApeEmpl;
+        private System.Windows.Forms.TextBox txbNombEmpl;
+        private System.Windows.Forms.TextBox txbDNI;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Legajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }
 
