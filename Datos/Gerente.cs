@@ -21,19 +21,20 @@ namespace Datos
         }
 
         /// <summary>
-        /// Consulta las ventas por mes.
+        /// Consulta las ventas por mes y año.
         /// </summary>
         /// <param name="mes"></param>
         /// <returns></returns>
-        public DataTable ConsultarReportePorMes(int mes)
+        public DataTable CrearReporteDeVentasPorMes(int mes, int año)
         {
             string query = @"SELECT T0.Id_Orden, T0.Fecha, T0.Id_Articulo, T1.Precio, T1.Cantidad, T1.Id_Usuario FROM Orden_Compra T0
                             INNER JOIN Orden_Detalle T1 ON T0.Id_Orden = T1.Id_Orden
-                            WHERE MONTH(T0.Fecha) = @mes";
+                            WHERE MONTH(T0.Fecha) = @mes AND YEAR(T0.Fecha) = @año";
 
-            SqlParameter[] parametros = new SqlParameter[1];
+            SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = this.conexion.CrearParametro("@mes", mes);
-            
+            parametros[1] = this.conexion.CrearParametro("@año", año);
+
             DataTable respuesta  = conexion.ObtenerResulatdoConsulta(query, false, parametros);
 
             return respuesta;
@@ -45,7 +46,7 @@ namespace Datos
         /// <param name="desde"></param>
         /// <param name="hasta"></param>
         /// <returns></returns>
-        public DataTable ConsultarReportePorSemana(DateTime desde, DateTime hasta)
+        public DataTable CrearReporteDeVentasPorSemana(DateTime desde, DateTime hasta)
         {
             string query = @"SELECT T0.Id_Orden, T0.Fecha, T0.Id_Articulo, T1.Precio, T1.Cantidad, T1.Id_Usuario FROM Orden_Compra T0
                             INNER JOIN Orden_Detalle T1 ON T0.Id_Orden = T1.Id_Orden
@@ -61,11 +62,11 @@ namespace Datos
         }
 
         /// <summary>
-        /// Consulta las ventas del usuario.
+        /// Consulta las ventas del vendedor elegido.
         /// </summary>
         /// <param name="usuario"></param>
         /// <returns></returns>
-        public DataTable ConsultarReportePorVendedor(int usuario)
+        public DataTable CrearReporteDeVentasPorVendedor(int usuario)
         {
             string query = @"SELECT T0.Id_Orden, T0.Fecha, T0.Id_Articulo, T1.Precio, T1.Cantidad, T1.Id_Usuario FROM Orden_Compra T0
                             INNER JOIN Orden_Detalle T1 ON T0.Id_Orden = T1.Id_Orden

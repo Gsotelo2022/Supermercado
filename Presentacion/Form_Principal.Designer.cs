@@ -34,6 +34,7 @@
             this.tabControlGerente = new System.Windows.Forms.TabControl();
             this.tabReporteMensual = new System.Windows.Forms.TabPage();
             this.boxElegirMes = new System.Windows.Forms.GroupBox();
+            this.txtBoxAño = new System.Windows.Forms.TextBox();
             this.btnBuscarXMes = new System.Windows.Forms.Button();
             this.cmbBoxMeses = new System.Windows.Forms.ComboBox();
             this.dtGridPorMes = new System.Windows.Forms.DataGridView();
@@ -217,18 +218,26 @@
             // 
             // boxElegirMes
             // 
+            this.boxElegirMes.Controls.Add(this.txtBoxAño);
             this.boxElegirMes.Controls.Add(this.btnBuscarXMes);
             this.boxElegirMes.Controls.Add(this.cmbBoxMeses);
             this.boxElegirMes.Location = new System.Drawing.Point(5, 6);
             this.boxElegirMes.Name = "boxElegirMes";
-            this.boxElegirMes.Size = new System.Drawing.Size(253, 52);
+            this.boxElegirMes.Size = new System.Drawing.Size(332, 52);
             this.boxElegirMes.TabIndex = 8;
             this.boxElegirMes.TabStop = false;
-            this.boxElegirMes.Text = "Elegir Mes";
+            this.boxElegirMes.Text = "Elegir Mes y Año";
+            // 
+            // txtBoxAño
+            // 
+            this.txtBoxAño.Location = new System.Drawing.Point(178, 20);
+            this.txtBoxAño.Name = "txtBoxAño";
+            this.txtBoxAño.Size = new System.Drawing.Size(50, 20);
+            this.txtBoxAño.TabIndex = 9;
             // 
             // btnBuscarXMes
             // 
-            this.btnBuscarXMes.Location = new System.Drawing.Point(178, 18);
+            this.btnBuscarXMes.Location = new System.Drawing.Point(254, 18);
             this.btnBuscarXMes.Name = "btnBuscarXMes";
             this.btnBuscarXMes.Size = new System.Drawing.Size(71, 21);
             this.btnBuscarXMes.TabIndex = 1;
@@ -435,7 +444,7 @@
             this.tabReporteVendedor.Padding = new System.Windows.Forms.Padding(3);
             this.tabReporteVendedor.Size = new System.Drawing.Size(881, 425);
             this.tabReporteVendedor.TabIndex = 2;
-            this.tabReporteVendedor.Text = "Reporte por vendedor";
+            this.tabReporteVendedor.Text = "Reporte por Vendedor";
             this.tabReporteVendedor.UseVisualStyleBackColor = true;
             // 
             // dtGridPorVend
@@ -1108,6 +1117,7 @@
             this.tabControlGerente.ResumeLayout(false);
             this.tabReporteMensual.ResumeLayout(false);
             this.boxElegirMes.ResumeLayout(false);
+            this.boxElegirMes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridPorMes)).EndInit();
             this.tabReporteSemanal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridPorSem)).EndInit();
@@ -1249,6 +1259,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.TextBox txtBoxAño;
     }
 }
 

@@ -12,8 +12,6 @@ namespace Supermercado
 {
     public partial class Form_Principal : Form
     {
-        Negocio.Gerente gerenteNeg = new Negocio.Gerente();
-
         // <summary>
         /// Constructor
         /// </summary>
@@ -70,56 +68,82 @@ namespace Supermercado
         #region Gerente
 
         /// <summary>
-        /// Desencadena la busqueda de ventas por mes.
+        /// Desencadena la busqueda de ventas por mes y año.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnBuscarXMes_Click(object sender, EventArgs e)
         {
+            Negocio.Gerente gerenteNeg = new Negocio.Gerente();
+
+            int añoSelect = 0;
             string mesSelect = this.cmbBoxMeses.SelectedItem.ToString();
             int mesSelectNum = 0;
 
-            switch (mesSelect)
+            try
             {
-                case "ENERO":
-                    mesSelectNum = (int)Entidades.Dias.ENERO;
-                    break;
-                case "FEBRERO":
-                    mesSelectNum = (int)Entidades.Dias.FEBRERO;
-                    break;
-                case "MARZO":
-                    mesSelectNum = (int)Entidades.Dias.MARZO;
-                    break;
-                case "ABRIL":
-                    mesSelectNum = (int)Entidades.Dias.ABRIL;
-                    break;
-                case "MAYO":
-                    mesSelectNum = (int)Entidades.Dias.MAYO;
-                    break;
-                case "JUNIO":
-                    mesSelectNum = (int)Entidades.Dias.JUNIO;
-                    break;
-                case "JULIO":
-                    mesSelectNum = (int)Entidades.Dias.JULIO;
-                    break;
-                case "AGOSTO":
-                    mesSelectNum = (int)Entidades.Dias.AGOSTO;
-                    break;
-                case "SEPTIEMBRE":
-                    mesSelectNum = (int)Entidades.Dias.SEPTIEMBRE;
-                    break;
-                case "OCTUBRE":
-                    mesSelectNum = (int)Entidades.Dias.OCTUBRE;
-                    break;
-                case "NOVIEMBRE":
-                    mesSelectNum = (int)Entidades.Dias.NOVIEMBRE;
-                    break;
-                case "DICIEMBRE":
-                    mesSelectNum = (int)Entidades.Dias.DICIEMBRE;
-                    break;
-            }
+                switch (mesSelect)
+                {
+                    case "ENERO":
+                        mesSelectNum = (int)Entidades.Dias.ENERO;
+                        break;
+                    case "FEBRERO":
+                        mesSelectNum = (int)Entidades.Dias.FEBRERO;
+                        break;
+                    case "MARZO":
+                        mesSelectNum = (int)Entidades.Dias.MARZO;
+                        break;
+                    case "ABRIL":
+                        mesSelectNum = (int)Entidades.Dias.ABRIL;
+                        break;
+                    case "MAYO":
+                        mesSelectNum = (int)Entidades.Dias.MAYO;
+                        break;
+                    case "JUNIO":
+                        mesSelectNum = (int)Entidades.Dias.JUNIO;
+                        break;
+                    case "JULIO":
+                        mesSelectNum = (int)Entidades.Dias.JULIO;
+                        break;
+                    case "AGOSTO":
+                        mesSelectNum = (int)Entidades.Dias.AGOSTO;
+                        break;
+                    case "SEPTIEMBRE":
+                        mesSelectNum = (int)Entidades.Dias.SEPTIEMBRE;
+                        break;
+                    case "OCTUBRE":
+                        mesSelectNum = (int)Entidades.Dias.OCTUBRE;
+                        break;
+                    case "NOVIEMBRE":
+                        mesSelectNum = (int)Entidades.Dias.NOVIEMBRE;
+                        break;
+                    case "DICIEMBRE":
+                        mesSelectNum = (int)Entidades.Dias.DICIEMBRE;
+                        break;
+                }
 
-            this.dtGridPorMes.DataSource = this.gerenteNeg.ConsultarReportePorMes(mesSelectNum);
+
+                if (string.IsNullOrEmpty(this.txtBoxAño.Text))
+                {
+                    throw new Entidades.Excepciones.ExcepcionDeNegocio("Debe escribir un año antes de continuar.");
+                }
+                else
+                {
+                    añoSelect = int.Parse(this.txtBoxAño.Text);
+                }
+
+
+                this.dtGridPorMes.DataSource = gerenteNeg.CrearReporteDeVentasPorMes(mesSelectNum, añoSelect);
+
+            }
+            catch(Entidades.Excepciones.ExcepcionDeNegocio exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
         }
 
         /// <summary>
@@ -129,10 +153,23 @@ namespace Supermercado
         /// <param name="e"></param>
         private void btnBuscarXSem_Click(object sender, EventArgs e)
         {
+            Negocio.Gerente gerenteNeg = new Negocio.Gerente();
+
             DateTime desde = this.dtPickerDesde.Value;
             DateTime hasta = this.dtPickerHasta.Value;
 
-            this.dtGridPorSem.DataSource = this.gerenteNeg.ConsultarReportePorSemana(desde, hasta);
+            try
+            {
+                this.dtGridPorSem.DataSource = gerenteNeg.CrearReporteDeVentasPorSemana(desde, hasta);
+            }
+            catch (Entidades.Excepciones.ExcepcionDeNegocio exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
         }
 
         /// <summary>
@@ -142,11 +179,25 @@ namespace Supermercado
         /// <param name="e"></param>
         private void btnBuscarXVend_Click(object sender, EventArgs e)
         {
+            Negocio.Gerente gerenteNeg = new Negocio.Gerente();
+
             string vendSelect = this.cmbBoxVendedor.SelectedItem.ToString();
 
-            string usuarioId = vendSelect.Split('-')[0].Split(' ')[0];
+            int usuarioId = int.Parse(vendSelect.Split('-')[0].Split(' ')[0]);
 
-            this.dtGridPorVend.DataSource = this.gerenteNeg.ConsultarReportePorVendedor(usuarioId);
+            try
+            {
+                this.dtGridPorVend.DataSource = gerenteNeg.CrearReporteDeVentasPorVendedor(usuarioId);
+            }
+            catch (Entidades.Excepciones.ExcepcionDeNegocio exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
+
         }
 
         #endregion
@@ -155,6 +206,9 @@ namespace Supermercado
 
         #region MÉTODOS PRIVADOS
 
+        /// <summary>
+        /// Carga los controles para que el usuario eliga los filtros deseados.
+        /// </summary>
         private void CargarDatosEnGerente()
         {
             // Carga el cmbBox que filtra la búsqueda por meses.
@@ -171,16 +225,31 @@ namespace Supermercado
                 "SEPTIEMBRE",
                 "OCTUBRE",
                 "NOVIEMBRE",
-                "DICIEMBE"
+                "DICIEMBRE"
             };
 
             cmbBoxMeses.DataSource = meses;
+            cmbBoxMeses.SelectedIndex = 0;
 
             //Carga el cmbBox que filtra la búsqueda por vendedor.
-            List<string> vendedor = new List<string>();
-            // idUsuario - Nombre Apellido
+            List<string> vendedores = new List<string>();
 
-            cmbBoxVendedor.DataSource = vendedor;
+            try
+            {
+                // vendedores = Acá va el método que busca todos los vendedores y devuelve una lista.
+                // idUsuario - Nombre ARpellido
+
+                cmbBoxVendedor.DataSource = vendedores;
+                cmbBoxVendedor.SelectedIndex = 0;
+            }
+            catch (Entidades.Excepciones.ExcepcionDeNegocio exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
         }
 
         #endregion
