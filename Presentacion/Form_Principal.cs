@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Negocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Supermercado
 {
@@ -133,22 +134,37 @@ namespace Supermercado
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            //Instancio Entidad
             E_Producto objProducto = new E_Producto();
-            objProducto.Descripcion = txtDescripcion.Text;
-            //objProducto.Precio = double.Parse(txtPrecio.Text);
-            objProducto.Precio = double.Parse(nudPrecio.Text);
-            objProducto.Cantidad = int.Parse(nudCantidad.Text);
-            objProducto.Habilitado = cmbHabilitado.Text;
-
+            //Instancio Negocio
             N_Producto objN_Producto = new N_Producto();
-            objN_Producto.crearProducto(objProducto);
-            dgvProductos.DataSource = objN_Producto.retornarProductos();
-            //Limpio campos
-            txtDescripcion.Text = "";
-            //txtPrecio.Text = "";
-            nudPrecio.Text = "";
-            nudCantidad.Text = "";
-            cmbHabilitado.Text = "";
+
+            //Excepciones
+            try
+            {
+                //Valido que no hayan errores al ingresar los campos
+                Negocio.ExcepcionesProductos.Exproductos.verificarCampos(txtDescripcion.Text, double.Parse(nudPrecio.Text), int.Parse(nudCantidad.Text), cmbHabilitado.Text);
+                //Descripcion           
+                objProducto.Descripcion = txtDescripcion.Text;                
+                //Precio               
+                objProducto.Precio = double.Parse(nudPrecio.Text);
+                //Cantidad
+                objProducto.Cantidad = int.Parse(nudCantidad.Text);                           
+                //Habiitado
+                objProducto.Habilitado = cmbHabilitado.Text;                
+                //Creacion del producto                
+                objN_Producto.crearProducto(objProducto);
+                dgvProductos.DataSource = objN_Producto.retornarProductos();
+                //Limpio campos
+                txtDescripcion.Text = "";
+                nudPrecio.Text = "";
+                nudCantidad.Text = "";
+                cmbHabilitado.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnGenerarListado_Click(object sender, EventArgs e)
@@ -177,7 +193,7 @@ namespace Supermercado
             E_Producto objEProducto = new E_Producto(); 
             objEProducto.Descripcion=txtDescripcionBCargarStock.Text;
 
-            N_Producto objNProducto= new N_Producto();            
+            N_Producto objNProducto= new N_Producto();             
             
             dgvCargarStock.DataSource = objNProducto.BuscarProducto(objEProducto.Descripcion);
 
