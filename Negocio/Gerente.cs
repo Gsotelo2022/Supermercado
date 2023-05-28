@@ -34,9 +34,9 @@ namespace Negocio
         {
             DataTable respuesta = gerenteDA.CrearReporteDeVentasPorMes(mes, año);
 
-            if ( respuesta == null)
+            if (respuesta == null)
             {
-                throw new Entidades.Excepciones.ExcepcionDeNegocio("No existen documentos para los filtros elegidos");
+                throw new Entidades.Excepciones.ExcepcionDeGerente("No existen documentos para los filtros elegidos");
             }
 
             return respuesta;
@@ -48,13 +48,13 @@ namespace Negocio
         /// <param name="desde"></param>
         /// <param name="hasta"></param>
         /// <returns></returns>
-        public DataTable CrearReporteDeVentasPorSemana(DateTime desde, DateTime hasta) 
+        public DataTable CrearReporteDeVentasPorSemana(DateTime desde, DateTime hasta)
         {
             DataTable respuesta = gerenteDA.CrearReporteDeVentasPorSemana(desde, hasta);
 
             if (respuesta == null)
             {
-                throw new Entidades.Excepciones.ExcepcionDeNegocio("No existen documentos para los filtros elegidos");
+                throw new Entidades.Excepciones.ExcepcionDeGerente("No existen documentos para los filtros elegidos");
             }
 
             return respuesta;
@@ -71,7 +71,7 @@ namespace Negocio
 
             if (respuesta == null)
             {
-                throw new Entidades.Excepciones.ExcepcionDeNegocio("No existen documentos para los filtros elegidos");
+                throw new Entidades.Excepciones.ExcepcionDeGerente("No existen documentos para los filtros elegidos");
             }
 
             return respuesta;

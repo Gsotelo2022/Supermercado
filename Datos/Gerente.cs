@@ -8,7 +8,7 @@ namespace Datos
     {
         #region ATRIBUTOS
 
-        private ConexionDB conexion;
+        private Conexion conexion;
 
         #endregion
 
@@ -17,7 +17,7 @@ namespace Datos
         /// </summary>
         public Gerente()
         {
-            this.conexion = new ConexionDB();
+            this.conexion = new Conexion();
         }
 
         /// <summary>
@@ -32,10 +32,10 @@ namespace Datos
                             WHERE MONTH(T0.Fecha) = @mes AND YEAR(T0.Fecha) = @año";
 
             SqlParameter[] parametros = new SqlParameter[2];
-            parametros[0] = this.conexion.CrearParametro("@mes", mes);
-            parametros[1] = this.conexion.CrearParametro("@año", año);
+            parametros[0] = this.conexion.crearParametro("@mes", mes);
+            parametros[1] = this.conexion.crearParametro("@año", año);
 
-            DataTable respuesta  = conexion.ObtenerResulatdoConsulta(query, false, parametros);
+            DataTable respuesta = conexion.LeerPorStoreProcedure(query, parametros);
 
             return respuesta;
         }
@@ -53,10 +53,10 @@ namespace Datos
                             WHERE T0.Fecha BETWEEN @desde AND @hasta";
 
             SqlParameter[] parametros = new SqlParameter[2];
-            parametros[0] = this.conexion.CrearParametro("@desde", desde);
-            parametros[1] = this.conexion.CrearParametro("@hasta", hasta);
+            parametros[0] = this.conexion.crearParametro("@desde", desde);
+            parametros[1] = this.conexion.crearParametro("@hasta", hasta);
 
-            DataTable respuesta = conexion.ObtenerResulatdoConsulta(query, false, parametros);
+            DataTable respuesta = conexion.LeerPorStoreProcedure(query, parametros);
 
             return respuesta;
         }
@@ -73,9 +73,9 @@ namespace Datos
                             WHERE T0.Id_Usuario = @usuario";
 
             SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = this.conexion.CrearParametro("@usuario", usuario);
+            parametros[0] = this.conexion.crearParametro("@usuario", usuario);
 
-            DataTable respuesta = conexion.ObtenerResulatdoConsulta(query, false, parametros);
+            DataTable respuesta = conexion.LeerPorStoreProcedure(query, parametros);
 
             return respuesta;
         }

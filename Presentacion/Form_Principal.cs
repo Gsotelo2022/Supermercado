@@ -125,7 +125,7 @@ namespace Supermercado
 
                 if (string.IsNullOrEmpty(this.txtBoxAño.Text))
                 {
-                    throw new Entidades.Excepciones.ExcepcionDeNegocio("Debe escribir un año antes de continuar.");
+                    throw new Entidades.Excepciones.ExcepcionDeGerente("Debe escribir un año antes de continuar.");
                 }
                 else
                 {
@@ -136,7 +136,7 @@ namespace Supermercado
                 this.dtGridPorMes.DataSource = gerenteNeg.CrearReporteDeVentasPorMes(mesSelectNum, añoSelect);
 
             }
-            catch(Entidades.Excepciones.ExcepcionDeNegocio exc)
+            catch (Entidades.Excepciones.ExcepcionDeGerente exc)
             {
                 MessageBox.Show(exc.Mensaje);
             }
@@ -162,7 +162,7 @@ namespace Supermercado
             {
                 this.dtGridPorSem.DataSource = gerenteNeg.CrearReporteDeVentasPorSemana(desde, hasta);
             }
-            catch (Entidades.Excepciones.ExcepcionDeNegocio exc)
+            catch (Entidades.Excepciones.ExcepcionDeGerente exc)
             {
                 MessageBox.Show(exc.Mensaje);
             }
@@ -189,7 +189,7 @@ namespace Supermercado
             {
                 this.dtGridPorVend.DataSource = gerenteNeg.CrearReporteDeVentasPorVendedor(usuarioId);
             }
-            catch (Entidades.Excepciones.ExcepcionDeNegocio exc)
+            catch (Entidades.Excepciones.ExcepcionDeGerente exc)
             {
                 MessageBox.Show(exc.Mensaje);
             }
@@ -212,14 +212,14 @@ namespace Supermercado
         private void CargarDatosEnGerente()
         {
             // Carga el cmbBox que filtra la búsqueda por meses.
-            List<string> meses = new List<string>() 
+            List<string> meses = new List<string>()
             {
                 "ENERO",
-                "FEBRERO", 
-                "MARZO", 
-                "ABRIL", 
+                "FEBRERO",
+                "MARZO",
+                "ABRIL",
                 "MAYO",
-                "JUNIO", 
+                "JUNIO",
                 "JULIO",
                 "AGOSTO",
                 "SEPTIEMBRE",
@@ -242,7 +242,7 @@ namespace Supermercado
                 cmbBoxVendedor.DataSource = vendedores;
                 cmbBoxVendedor.SelectedIndex = 0;
             }
-            catch (Entidades.Excepciones.ExcepcionDeNegocio exc)
+            catch (Entidades.Excepciones.ExcepcionDeGerente exc)
             {
                 MessageBox.Show(exc.Mensaje);
             }
