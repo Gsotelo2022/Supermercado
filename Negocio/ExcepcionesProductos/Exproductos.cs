@@ -40,7 +40,7 @@ namespace Negocio.ExcepcionesProductos
             //Descripcion
             if (Id <= 0)
             {
-                throw new Exception("No ingresó Descripción del producto");
+                throw new Exception("No ingresó un Id de producto");
             }
             //Cantidad
             if (_cantidad <= 0)
