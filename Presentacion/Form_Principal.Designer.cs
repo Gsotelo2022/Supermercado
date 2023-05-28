@@ -136,11 +136,21 @@
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage18 = new System.Windows.Forms.TabPage();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnCancUsu = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.txbReingContr = new System.Windows.Forms.TextBox();
+            this.txbContrasenia = new System.Windows.Forms.TextBox();
+            this.txbNomUsuario = new System.Windows.Forms.TextBox();
+            this.lblRepContr = new System.Windows.Forms.Label();
+            this.lblContr = new System.Windows.Forms.Label();
+            this.lblNombUsu = new System.Windows.Forms.Label();
+            this.cBoxPermisos = new System.Windows.Forms.ComboBox();
+            this.lblpermisos = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -1294,8 +1304,18 @@
             // 
             // tabPage18
             // 
+            this.tabPage18.Controls.Add(this.btnSalir);
+            this.tabPage18.Controls.Add(this.btnCancUsu);
+            this.tabPage18.Controls.Add(this.btnRegistrar);
+            this.tabPage18.Controls.Add(this.txbReingContr);
+            this.tabPage18.Controls.Add(this.txbContrasenia);
+            this.tabPage18.Controls.Add(this.txbNomUsuario);
+            this.tabPage18.Controls.Add(this.lblRepContr);
+            this.tabPage18.Controls.Add(this.lblContr);
+            this.tabPage18.Controls.Add(this.lblNombUsu);
+            this.tabPage18.Controls.Add(this.cBoxPermisos);
+            this.tabPage18.Controls.Add(this.lblpermisos);
             this.tabPage18.Controls.Add(this.groupBox17);
-            this.tabPage18.Controls.Add(this.groupBox18);
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
@@ -1312,15 +1332,6 @@
             this.groupBox17.TabIndex = 3;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Imagen";
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Location = new System.Drawing.Point(87, 6);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(336, 393);
-            this.groupBox18.TabIndex = 2;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Datos de usuario";
             // 
             // tabPage19
             // 
@@ -1360,6 +1371,103 @@
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.Size = new System.Drawing.Size(869, 338);
             this.dataGridView8.TabIndex = 10;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(341, 286);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // btnCancUsu
+            // 
+            this.btnCancUsu.Location = new System.Drawing.Point(202, 286);
+            this.btnCancUsu.Name = "btnCancUsu";
+            this.btnCancUsu.Size = new System.Drawing.Size(75, 23);
+            this.btnCancUsu.TabIndex = 25;
+            this.btnCancUsu.Text = "Cancelar";
+            this.btnCancUsu.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(54, 286);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 24;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // txbReingContr
+            // 
+            this.txbReingContr.Location = new System.Drawing.Point(214, 168);
+            this.txbReingContr.Name = "txbReingContr";
+            this.txbReingContr.Size = new System.Drawing.Size(121, 20);
+            this.txbReingContr.TabIndex = 23;
+            // 
+            // txbContrasenia
+            // 
+            this.txbContrasenia.Location = new System.Drawing.Point(214, 133);
+            this.txbContrasenia.Name = "txbContrasenia";
+            this.txbContrasenia.Size = new System.Drawing.Size(121, 20);
+            this.txbContrasenia.TabIndex = 22;
+            // 
+            // txbNomUsuario
+            // 
+            this.txbNomUsuario.Location = new System.Drawing.Point(214, 97);
+            this.txbNomUsuario.Name = "txbNomUsuario";
+            this.txbNomUsuario.Size = new System.Drawing.Size(121, 20);
+            this.txbNomUsuario.TabIndex = 21;
+            // 
+            // lblRepContr
+            // 
+            this.lblRepContr.AutoSize = true;
+            this.lblRepContr.Location = new System.Drawing.Point(51, 175);
+            this.lblRepContr.Name = "lblRepContr";
+            this.lblRepContr.Size = new System.Drawing.Size(112, 13);
+            this.lblRepContr.TabIndex = 20;
+            this.lblRepContr.Text = "Reingrese Contraseña";
+            // 
+            // lblContr
+            // 
+            this.lblContr.AutoSize = true;
+            this.lblContr.Location = new System.Drawing.Point(51, 140);
+            this.lblContr.Name = "lblContr";
+            this.lblContr.Size = new System.Drawing.Size(61, 13);
+            this.lblContr.TabIndex = 19;
+            this.lblContr.Text = "Contraseña";
+            // 
+            // lblNombUsu
+            // 
+            this.lblNombUsu.AutoSize = true;
+            this.lblNombUsu.Location = new System.Drawing.Point(51, 104);
+            this.lblNombUsu.Name = "lblNombUsu";
+            this.lblNombUsu.Size = new System.Drawing.Size(98, 13);
+            this.lblNombUsu.TabIndex = 18;
+            this.lblNombUsu.Text = "Nombre de Usuario";
+            // 
+            // cBoxPermisos
+            // 
+            this.cBoxPermisos.FormattingEnabled = true;
+            this.cBoxPermisos.Items.AddRange(new object[] {
+            "Cajero",
+            "Enc. Inventario",
+            "Gerente",
+            "Administrador"});
+            this.cBoxPermisos.Location = new System.Drawing.Point(214, 40);
+            this.cBoxPermisos.Name = "cBoxPermisos";
+            this.cBoxPermisos.Size = new System.Drawing.Size(121, 21);
+            this.cBoxPermisos.TabIndex = 17;
+            // 
+            // lblpermisos
+            // 
+            this.lblpermisos.AutoSize = true;
+            this.lblpermisos.Location = new System.Drawing.Point(51, 40);
+            this.lblpermisos.Name = "lblpermisos";
+            this.lblpermisos.Size = new System.Drawing.Size(90, 13);
+            this.lblpermisos.TabIndex = 16;
+            this.lblpermisos.Text = "Nivel de permisos";
             // 
             // Form_Principal
             // 
@@ -1428,6 +1536,7 @@
             this.tabAdmin.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage18.ResumeLayout(false);
+            this.tabPage18.PerformLayout();
             this.tabPage19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.ResumeLayout(false);
@@ -1481,7 +1590,6 @@
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.DataGridView dataGridView8;
@@ -1548,6 +1656,17 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtIdCargarStock1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCancUsu;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.TextBox txbReingContr;
+        private System.Windows.Forms.TextBox txbContrasenia;
+        private System.Windows.Forms.TextBox txbNomUsuario;
+        private System.Windows.Forms.Label lblRepContr;
+        private System.Windows.Forms.Label lblContr;
+        private System.Windows.Forms.Label lblNombUsu;
+        private System.Windows.Forms.ComboBox cBoxPermisos;
+        private System.Windows.Forms.Label lblpermisos;
     }
 }
 
