@@ -45,6 +45,7 @@
     <Compile Include="N_Carga_Stock.cs" />
     <Compile Include="N_Encargado.cs" />
     <Compile Include="N_Producto.cs" />
+    <Compile Include="N_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
