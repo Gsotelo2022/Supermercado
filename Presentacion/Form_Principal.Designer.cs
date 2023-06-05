@@ -31,19 +31,44 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Principal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGerente = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControlGerente = new System.Windows.Forms.TabControl();
+            this.tabReporteMensual = new System.Windows.Forms.TabPage();
+            this.boxElegirMes = new System.Windows.Forms.GroupBox();
+            this.txtBoxAño = new System.Windows.Forms.TextBox();
+            this.btnBuscarXMes = new System.Windows.Forms.Button();
+            this.cmbBoxMeses = new System.Windows.Forms.ComboBox();
+            this.dtGridPorMes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabReporteSemanal = new System.Windows.Forms.TabPage();
+            this.dtGridPorSem = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxElegirSemana = new System.Windows.Forms.GroupBox();
+            this.btnBuscarXSem = new System.Windows.Forms.Button();
+            this.lblHasta = new System.Windows.Forms.Label();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.dtPickerHasta = new System.Windows.Forms.DateTimePicker();
+            this.dtPickerDesde = new System.Windows.Forms.DateTimePicker();
+            this.tabReporteVendedor = new System.Windows.Forms.TabPage();
+            this.dtGridPorVend = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxElegirVendedor = new System.Windows.Forms.GroupBox();
+            this.btnBuscarXVend = new System.Windows.Forms.Button();
+            this.cmbBoxVendedor = new System.Windows.Forms.ComboBox();
             this.tabEncargado = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
@@ -168,13 +193,16 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControlGerente.SuspendLayout();
+            this.tabReporteMensual.SuspendLayout();
+            this.boxElegirMes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridPorMes)).BeginInit();
+            this.tabReporteSemanal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridPorSem)).BeginInit();
+            this.boxElegirSemana.SuspendLayout();
+            this.tabReporteVendedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridPorVend)).BeginInit();
+            this.boxElegirVendedor.SuspendLayout();
             this.tabEncargado.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -237,7 +265,7 @@
             // 
             // tabGerente
             // 
-            this.tabGerente.Controls.Add(this.tabControl2);
+            this.tabGerente.Controls.Add(this.tabControlGerente);
             this.tabGerente.Location = new System.Drawing.Point(4, 22);
             this.tabGerente.Name = "tabGerente";
             this.tabGerente.Padding = new System.Windows.Forms.Padding(3);
@@ -246,134 +274,344 @@
             this.tabGerente.Text = "Gerente";
             this.tabGerente.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // tabControlGerente
             // 
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Location = new System.Drawing.Point(3, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(889, 451);
-            this.tabControl2.TabIndex = 0;
+            this.tabControlGerente.Controls.Add(this.tabReporteMensual);
+            this.tabControlGerente.Controls.Add(this.tabReporteSemanal);
+            this.tabControlGerente.Controls.Add(this.tabReporteVendedor);
+            this.tabControlGerente.Location = new System.Drawing.Point(3, 0);
+            this.tabControlGerente.Name = "tabControlGerente";
+            this.tabControlGerente.SelectedIndex = 0;
+            this.tabControlGerente.Size = new System.Drawing.Size(889, 451);
+            this.tabControlGerente.TabIndex = 0;
             // 
-            // tabPage5
+            // tabReporteMensual
             // 
-            this.tabPage5.Controls.Add(this.groupBox6);
-            this.tabPage5.Controls.Add(this.groupBox3);
-            this.tabPage5.Controls.Add(this.dataGridView3);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(881, 425);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Reporte Mensual";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabReporteMensual.Controls.Add(this.boxElegirMes);
+            this.tabReporteMensual.Controls.Add(this.dtGridPorMes);
+            this.tabReporteMensual.Location = new System.Drawing.Point(4, 22);
+            this.tabReporteMensual.Name = "tabReporteMensual";
+            this.tabReporteMensual.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReporteMensual.Size = new System.Drawing.Size(881, 425);
+            this.tabReporteMensual.TabIndex = 0;
+            this.tabReporteMensual.Text = "Reporte Mensual";
+            this.tabReporteMensual.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // boxElegirMes
             // 
-            this.groupBox6.Location = new System.Drawing.Point(604, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(270, 69);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Botones";
+            this.boxElegirMes.Controls.Add(this.txtBoxAño);
+            this.boxElegirMes.Controls.Add(this.btnBuscarXMes);
+            this.boxElegirMes.Controls.Add(this.cmbBoxMeses);
+            this.boxElegirMes.Location = new System.Drawing.Point(5, 6);
+            this.boxElegirMes.Name = "boxElegirMes";
+            this.boxElegirMes.Size = new System.Drawing.Size(332, 52);
+            this.boxElegirMes.TabIndex = 8;
+            this.boxElegirMes.TabStop = false;
+            this.boxElegirMes.Text = "Elegir Mes y Año";
             // 
-            // groupBox3
+            // txtBoxAño
             // 
-            this.groupBox3.Location = new System.Drawing.Point(5, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(593, 69);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Buscar Mes";
+            this.txtBoxAño.Location = new System.Drawing.Point(178, 20);
+            this.txtBoxAño.Name = "txtBoxAño";
+            this.txtBoxAño.Size = new System.Drawing.Size(50, 20);
+            this.txtBoxAño.TabIndex = 9;
             // 
-            // dataGridView3
+            // btnBuscarXMes
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 81);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(869, 338);
-            this.dataGridView3.TabIndex = 7;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            this.btnBuscarXMes.Location = new System.Drawing.Point(254, 18);
+            this.btnBuscarXMes.Name = "btnBuscarXMes";
+            this.btnBuscarXMes.Size = new System.Drawing.Size(71, 21);
+            this.btnBuscarXMes.TabIndex = 1;
+            this.btnBuscarXMes.Text = "Buscar";
+            this.btnBuscarXMes.UseVisualStyleBackColor = true;
+            this.btnBuscarXMes.Click += new System.EventHandler(this.btnBuscarXMes_Click);
             // 
-            // tabPage6
+            // cmbBoxMeses
             // 
-            this.tabPage6.Controls.Add(this.groupBox2);
-            this.tabPage6.Controls.Add(this.groupBox7);
-            this.tabPage6.Controls.Add(this.dataGridView2);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(881, 425);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Reporte Semanal";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.cmbBoxMeses.FormattingEnabled = true;
+            this.cmbBoxMeses.Location = new System.Drawing.Point(6, 19);
+            this.cmbBoxMeses.Name = "cmbBoxMeses";
+            this.cmbBoxMeses.Size = new System.Drawing.Size(166, 21);
+            this.cmbBoxMeses.TabIndex = 0;
             // 
-            // groupBox2
+            // dtGridPorMes
             // 
-            this.groupBox2.Location = new System.Drawing.Point(604, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(270, 69);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Botones";
+            this.dtGridPorMes.AllowUserToAddRows = false;
+            this.dtGridPorMes.AllowUserToDeleteRows = false;
+            this.dtGridPorMes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGridPorMes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtGridPorMes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dtGridPorMes.Location = new System.Drawing.Point(6, 64);
+            this.dtGridPorMes.Name = "dtGridPorMes";
+            this.dtGridPorMes.ReadOnly = true;
+            this.dtGridPorMes.Size = new System.Drawing.Size(869, 355);
+            this.dtGridPorMes.TabIndex = 7;
             // 
-            // groupBox7
+            // Column1
             // 
-            this.groupBox7.Location = new System.Drawing.Point(5, 6);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(593, 69);
-            this.groupBox7.TabIndex = 8;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Buscar Mes";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Número Orden";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // dataGridView2
+            // Column2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 81);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(869, 338);
-            this.dataGridView2.TabIndex = 7;
+            this.Column2.HeaderText = "Fecha";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // tabPage7
+            // Column3
             // 
-            this.tabPage7.Controls.Add(this.groupBox1);
-            this.tabPage7.Controls.Add(this.groupBox8);
-            this.tabPage7.Controls.Add(this.dataGridView1);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(881, 425);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "Reporte por vendedor";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.Column3.HeaderText = "Articulo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // groupBox1
+            // Column4
             // 
-            this.groupBox1.Location = new System.Drawing.Point(604, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 69);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Botones";
+            this.Column4.HeaderText = "Precio";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
-            // groupBox8
+            // Column5
             // 
-            this.groupBox8.Location = new System.Drawing.Point(5, 6);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(593, 69);
-            this.groupBox8.TabIndex = 8;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Buscar Mes";
+            this.Column5.HeaderText = "Cantidad";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
-            // dataGridView1
+            // Column6
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(869, 338);
-            this.dataGridView1.TabIndex = 7;
+            this.Column6.HeaderText = "Usuario";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // tabReporteSemanal
+            // 
+            this.tabReporteSemanal.Controls.Add(this.dtGridPorSem);
+            this.tabReporteSemanal.Controls.Add(this.boxElegirSemana);
+            this.tabReporteSemanal.Location = new System.Drawing.Point(4, 22);
+            this.tabReporteSemanal.Name = "tabReporteSemanal";
+            this.tabReporteSemanal.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReporteSemanal.Size = new System.Drawing.Size(881, 425);
+            this.tabReporteSemanal.TabIndex = 1;
+            this.tabReporteSemanal.Text = "Reporte Semanal";
+            this.tabReporteSemanal.UseVisualStyleBackColor = true;
+            // 
+            // dtGridPorSem
+            // 
+            this.dtGridPorSem.AllowUserToAddRows = false;
+            this.dtGridPorSem.AllowUserToDeleteRows = false;
+            this.dtGridPorSem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGridPorSem.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtGridPorSem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dtGridPorSem.Location = new System.Drawing.Point(5, 64);
+            this.dtGridPorSem.Name = "dtGridPorSem";
+            this.dtGridPorSem.ReadOnly = true;
+            this.dtGridPorSem.Size = new System.Drawing.Size(869, 355);
+            this.dtGridPorSem.TabIndex = 9;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Número Orden";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Articulo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // boxElegirSemana
+            // 
+            this.boxElegirSemana.Controls.Add(this.btnBuscarXSem);
+            this.boxElegirSemana.Controls.Add(this.lblHasta);
+            this.boxElegirSemana.Controls.Add(this.lblDesde);
+            this.boxElegirSemana.Controls.Add(this.dtPickerHasta);
+            this.boxElegirSemana.Controls.Add(this.dtPickerDesde);
+            this.boxElegirSemana.Location = new System.Drawing.Point(5, 6);
+            this.boxElegirSemana.Name = "boxElegirSemana";
+            this.boxElegirSemana.Size = new System.Drawing.Size(409, 54);
+            this.boxElegirSemana.TabIndex = 8;
+            this.boxElegirSemana.TabStop = false;
+            this.boxElegirSemana.Text = "Elegir Semana";
+            // 
+            // btnBuscarXSem
+            // 
+            this.btnBuscarXSem.Location = new System.Drawing.Point(324, 22);
+            this.btnBuscarXSem.Name = "btnBuscarXSem";
+            this.btnBuscarXSem.Size = new System.Drawing.Size(71, 21);
+            this.btnBuscarXSem.TabIndex = 4;
+            this.btnBuscarXSem.Text = "Buscar";
+            this.btnBuscarXSem.UseVisualStyleBackColor = true;
+            this.btnBuscarXSem.Click += new System.EventHandler(this.btnBuscarXSem_Click);
+            // 
+            // lblHasta
+            // 
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.Location = new System.Drawing.Point(166, 25);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(35, 13);
+            this.lblHasta.TabIndex = 3;
+            this.lblHasta.Text = "Hasta";
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Location = new System.Drawing.Point(6, 25);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(38, 13);
+            this.lblDesde.TabIndex = 2;
+            this.lblDesde.Text = "Desde";
+            // 
+            // dtPickerHasta
+            // 
+            this.dtPickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPickerHasta.Location = new System.Drawing.Point(206, 22);
+            this.dtPickerHasta.Name = "dtPickerHasta";
+            this.dtPickerHasta.Size = new System.Drawing.Size(100, 20);
+            this.dtPickerHasta.TabIndex = 1;
+            // 
+            // dtPickerDesde
+            // 
+            this.dtPickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPickerDesde.Location = new System.Drawing.Point(47, 23);
+            this.dtPickerDesde.Name = "dtPickerDesde";
+            this.dtPickerDesde.Size = new System.Drawing.Size(100, 20);
+            this.dtPickerDesde.TabIndex = 0;
+            // 
+            // tabReporteVendedor
+            // 
+            this.tabReporteVendedor.Controls.Add(this.dtGridPorVend);
+            this.tabReporteVendedor.Controls.Add(this.boxElegirVendedor);
+            this.tabReporteVendedor.Location = new System.Drawing.Point(4, 22);
+            this.tabReporteVendedor.Name = "tabReporteVendedor";
+            this.tabReporteVendedor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabReporteVendedor.Size = new System.Drawing.Size(881, 425);
+            this.tabReporteVendedor.TabIndex = 2;
+            this.tabReporteVendedor.Text = "Reporte por Vendedor";
+            this.tabReporteVendedor.UseVisualStyleBackColor = true;
+            // 
+            // dtGridPorVend
+            // 
+            this.dtGridPorVend.AllowUserToAddRows = false;
+            this.dtGridPorVend.AllowUserToDeleteRows = false;
+            this.dtGridPorVend.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGridPorVend.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtGridPorVend.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dtGridPorVend.Location = new System.Drawing.Point(5, 67);
+            this.dtGridPorVend.Name = "dtGridPorVend";
+            this.dtGridPorVend.ReadOnly = true;
+            this.dtGridPorVend.Size = new System.Drawing.Size(869, 355);
+            this.dtGridPorVend.TabIndex = 10;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Número Orden";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Articulo";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // boxElegirVendedor
+            // 
+            this.boxElegirVendedor.Controls.Add(this.btnBuscarXVend);
+            this.boxElegirVendedor.Controls.Add(this.cmbBoxVendedor);
+            this.boxElegirVendedor.Location = new System.Drawing.Point(5, 6);
+            this.boxElegirVendedor.Name = "boxElegirVendedor";
+            this.boxElegirVendedor.Size = new System.Drawing.Size(389, 55);
+            this.boxElegirVendedor.TabIndex = 8;
+            this.boxElegirVendedor.TabStop = false;
+            this.boxElegirVendedor.Text = "Elegir Vendedor";
+            // 
+            // btnBuscarXVend
+            // 
+            this.btnBuscarXVend.Location = new System.Drawing.Point(305, 22);
+            this.btnBuscarXVend.Name = "btnBuscarXVend";
+            this.btnBuscarXVend.Size = new System.Drawing.Size(71, 21);
+            this.btnBuscarXVend.TabIndex = 5;
+            this.btnBuscarXVend.Text = "Buscar";
+            this.btnBuscarXVend.UseVisualStyleBackColor = true;
+            this.btnBuscarXVend.Click += new System.EventHandler(this.btnBuscarXVend_Click);
+            // 
+            // cmbBoxVendedor
+            // 
+            this.cmbBoxVendedor.FormattingEnabled = true;
+            this.cmbBoxVendedor.Location = new System.Drawing.Point(6, 22);
+            this.cmbBoxVendedor.Name = "cmbBoxVendedor";
+            this.cmbBoxVendedor.Size = new System.Drawing.Size(293, 21);
+            this.cmbBoxVendedor.TabIndex = 0;
             // 
             // tabEncargado
             // 
@@ -1636,13 +1874,18 @@
             this.Load += new System.EventHandler(this.Form_Principal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabGerente.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabPage7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControlGerente.ResumeLayout(false);
+            this.tabReporteMensual.ResumeLayout(false);
+            this.boxElegirMes.ResumeLayout(false);
+            this.boxElegirMes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridPorMes)).EndInit();
+            this.tabReporteSemanal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridPorSem)).EndInit();
+            this.boxElegirSemana.ResumeLayout(false);
+            this.boxElegirSemana.PerformLayout();
+            this.tabReporteVendedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridPorVend)).EndInit();
+            this.boxElegirVendedor.ResumeLayout(false);
             this.tabEncargado.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
@@ -1705,10 +1948,10 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabGerente;
         private System.Windows.Forms.TabPage tabEncargado;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabControl tabControlGerente;
+        private System.Windows.Forms.TabPage tabReporteMensual;
+        private System.Windows.Forms.TabPage tabReporteSemanal;
+        private System.Windows.Forms.TabPage tabReporteVendedor;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage9;
@@ -1726,15 +1969,10 @@
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage18;
         private System.Windows.Forms.TabPage tabPage19;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox boxElegirMes;
+        private System.Windows.Forms.DataGridView dtGridPorMes;
+        private System.Windows.Forms.GroupBox boxElegirSemana;
+        private System.Windows.Forms.GroupBox boxElegirVendedor;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -1839,6 +2077,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.ComboBox cmbBoxMeses;
+        private System.Windows.Forms.Button btnBuscarXMes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label lblHasta;
+        private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.DateTimePicker dtPickerHasta;
+        private System.Windows.Forms.DateTimePicker dtPickerDesde;
+        private System.Windows.Forms.DataGridView dtGridPorSem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Button btnBuscarXSem;
+        private System.Windows.Forms.Button btnBuscarXVend;
+        private System.Windows.Forms.ComboBox cmbBoxVendedor;
+        private System.Windows.Forms.DataGridView dtGridPorVend;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.TextBox txtBoxAño;
     }
 }
 
