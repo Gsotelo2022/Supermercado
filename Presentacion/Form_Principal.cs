@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,9 +33,14 @@ namespace Supermercado
                     this.tabControl1.TabPages.Remove(tabEncargado);
                     break;
                 case 2:
+                    //Funcionalidad Gerente:
+
                     this.tabControl1.TabPages.Remove(tabVendedor);
                     this.tabControl1.TabPages.Remove(tabAdmin);
                     this.tabControl1.TabPages.Remove(tabEncargado);
+
+                    CargarDatosEnGerente();
+
                     break;
                 case 3:
                     this.tabControl1.TabPages.Remove(tabGerente);
@@ -49,8 +56,6 @@ namespace Supermercado
             }
         }
 
-        #region EVENTOS
-
         /// <summary>
         /// Cuando el Formulario Principal se cierra, se cierra toda la aplicacion.
         /// </summary>
@@ -61,7 +66,196 @@ namespace Supermercado
             Application.Exit();
         }
 
+        #region Gerente
+
+        #region EVENTOS
+
+        /// <summary>
+        /// Desencadena la busqueda de ventas por mes y año.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnBuscarXMes_Click(object sender, EventArgs e)
+        {
+            Negocio.N_Gerente gerenteNeg = new Negocio.N_Gerente();
+
+            int añoSelect = 0;
+            string mesSelect = this.cmbBoxMeses.SelectedItem.ToString();
+            int mesSelectNum = 0;
+
+            try
+            {
+                switch (mesSelect)
+                {
+                    case "ENERO":
+                        mesSelectNum = (int)Entidades.Dias.ENERO;
+                        break;
+                    case "FEBRERO":
+                        mesSelectNum = (int)Entidades.Dias.FEBRERO;
+                        break;
+                    case "MARZO":
+                        mesSelectNum = (int)Entidades.Dias.MARZO;
+                        break;
+                    case "ABRIL":
+                        mesSelectNum = (int)Entidades.Dias.ABRIL;
+                        break;
+                    case "MAYO":
+                        mesSelectNum = (int)Entidades.Dias.MAYO;
+                        break;
+                    case "JUNIO":
+                        mesSelectNum = (int)Entidades.Dias.JUNIO;
+                        break;
+                    case "JULIO":
+                        mesSelectNum = (int)Entidades.Dias.JULIO;
+                        break;
+                    case "AGOSTO":
+                        mesSelectNum = (int)Entidades.Dias.AGOSTO;
+                        break;
+                    case "SEPTIEMBRE":
+                        mesSelectNum = (int)Entidades.Dias.SEPTIEMBRE;
+                        break;
+                    case "OCTUBRE":
+                        mesSelectNum = (int)Entidades.Dias.OCTUBRE;
+                        break;
+                    case "NOVIEMBRE":
+                        mesSelectNum = (int)Entidades.Dias.NOVIEMBRE;
+                        break;
+                    case "DICIEMBRE":
+                        mesSelectNum = (int)Entidades.Dias.DICIEMBRE;
+                        break;
+                }
+
+
+                if (string.IsNullOrEmpty(this.txtBoxAño.Text))
+                {
+                    throw new Entidades.Exc_Gerente("Debe escribir un año antes de continuar.");
+                }
+                else
+                {
+                    añoSelect = int.Parse(this.txtBoxAño.Text);
+                }
+
+
+                this.dtGridPorMes.DataSource = gerenteNeg.CrearReporteDeVentasPorMes(mesSelectNum, añoSelect);
+
+            }
+            catch (Entidades.Exc_Gerente exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
+        }
+
+        /// <summary>
+        /// Desencadena la busqueda de ventas por semana.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnBuscarXSem_Click(object sender, EventArgs e)
+        {
+            Negocio.N_Gerente gerenteNeg = new Negocio.N_Gerente();
+
+            DateTime desde = this.dtPickerDesde.Value;
+            DateTime hasta = this.dtPickerHasta.Value;
+
+            try
+            {
+                this.dtGridPorSem.DataSource = gerenteNeg.CrearReporteDeVentasPorSemana(desde, hasta);
+            }
+            catch (Entidades.Exc_Gerente exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
+        }
+
+        /// <summary>
+        /// Desencadena la busqueda de ventas por vendedor.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnBuscarXVend_Click(object sender, EventArgs e)
+        {
+            Negocio.N_Gerente gerenteNeg = new Negocio.N_Gerente();
+
+            string vendSelect = this.cmbBoxVendedor.SelectedItem.ToString();
+            int usuarioId = int.Parse(vendSelect.Split('-')[0].Split(' ')[0]);
+
+            try
+            {
+                this.dtGridPorVend.DataSource = gerenteNeg.CrearReporteDeVentasPorVendedor(usuarioId);
+            }
+            catch (Entidades.Exc_Gerente exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
+        }
+
         #endregion
+
+        #region MÉTODOS PRIVADOS
+
+        /// <summary>
+        /// Carga los controles para que el usuario eliga los filtros deseados.
+        /// </summary>
+        private void CargarDatosEnGerente()
+        {
+            // Carga el cmbBox que filtra la búsqueda por meses.
+            List<string> meses = new List<string>()
+            {
+                "ENERO",
+                "FEBRERO",
+                "MARZO",
+                "ABRIL",
+                "MAYO",
+                "JUNIO",
+                "JULIO",
+                "AGOSTO",
+                "SEPTIEMBRE",
+                "OCTUBRE",
+                "NOVIEMBRE",
+                "DICIEMBRE"
+            };
+
+            this.cmbBoxMeses.DataSource = meses;
+            cmbBoxMeses.SelectedIndex = 0;
+
+            //Carga el cmbBox que filtra la búsqueda por vendedor.
+            List<string> vendedores = new List<string>();
+            // idUsuario - Nombre Apellido
+
+            try
+            {
+                // vendedores = Acá va el método que busca todos los vendedores y devuelve una lista.
+                // idUsuario - Nombre ARpellido
+
+                cmbBoxVendedor.DataSource = vendedores;
+                cmbBoxVendedor.SelectedIndex = 0;
+            }
+            catch (Entidades.Exc_Gerente exc)
+            {
+                MessageBox.Show(exc.Mensaje);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + exc.Message);
+            }
+        }
+
+        #endregion
+
+        #endregion
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -216,25 +410,42 @@ namespace Supermercado
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            //Instancio Entidad
             E_Producto objE_Producto = new E_Producto();
-            objE_Producto.Id_Producto = int.Parse(txtIdModificar1.Text);
-            objE_Producto.Descripcion = txtDescripcionModificar1.Text;
-            objE_Producto.Precio = double.Parse(nudPrecioModificar1.Text);
-            objE_Producto.Habilitado = cmbHabilitadoModificar1.Text;
 
-            N_Producto objNProducto = new N_Producto();
-            objNProducto.modificarProducto(objE_Producto);
+            try
+            {
+                //Excepciones
+                Negocio.ExcepcionesProductos.Exproductos.verificarCampos(txtDescripcionModificar1.Text, double.Parse(nudPrecioModificar1.Text), int.Parse(nudCantidadModificar1.Text), cmbHabilitadoModificar1.Text);
+                //Asigno Id
+                objE_Producto.Id_Producto = int.Parse(txtIdModificar1.Text);
+                //Asigno nueva descripcion
+                objE_Producto.Descripcion = txtDescripcionModificar1.Text;
+                //Asigno nuevo precio
+                objE_Producto.Precio = double.Parse(nudPrecioModificar1.Text);
+                //Asigno nuevo estado
+                objE_Producto.Habilitado = cmbHabilitadoModificar1.Text;
 
-            dgvModificarProducto1.DataSource = objNProducto.retornarProductos();
+                //Modificacion del producto
+                N_Producto objNProducto = new N_Producto();
+                objNProducto.modificarProducto(objE_Producto);
 
-            //Limpio valores
-            txtIdModificar1.Text = "";
-            txtDescripcionModificar1.Text = "";
-            nudPrecioModificar1.Text = "";
-            nudCantidadModificar1.Text = "";
-            cmbHabilitadoModificar1.Text = "";
-            //Descripcion del buscador
-            txtDescripcionModificar.Text = "";
+                //Llenar Grilla
+                dgvModificarProducto1.DataSource = objNProducto.retornarProductos();
+
+                //Limpio valores
+                txtIdModificar1.Text = "";
+                txtDescripcionModificar1.Text = "";
+                nudPrecioModificar1.Text = "";
+                nudCantidadModificar1.Text = "";
+                cmbHabilitadoModificar1.Text = "";
+                //Descripcion del buscador
+                txtDescripcionModificar.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnLimpiar2_Click(object sender, EventArgs e)
@@ -282,9 +493,33 @@ namespace Supermercado
         private void btnStock_Click(object sender, EventArgs e)
         {
             E_Producto objEProducto = new E_Producto();
-            objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
-            objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);
+            //Excepcion Carga stock
+            try
+            {
+                //Excepciones
+                Negocio.ExcepcionesProductos.Exproductos.verificarCamposCargaStock(int.Parse(txtIdCargarStock1.Text), int.Parse(nudCantidadCargarStock1.Text));
+                objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
+                objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);
+                //Instancio Negocio
+                N_Producto objNProdcuto = new N_Producto();
+                objNProdcuto.cargarStock(objEProducto);
+                dgvCargarStock.DataSource = objNProdcuto.retornarProductos();
 
+                //Limpiar campos 
+                txtIdCargarStock1.Text = "";
+                txtDescripcionCargarStock1.Text = "";
+                nudCantidadCargarStock1.Text = "";
+                //Limpio campo descripcion de la busqueda
+                txtDescripcionBCargarStock.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
+            objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);*/
+            /*
             N_Producto objNProdcuto = new N_Producto();
             objNProdcuto.cargarStock(objEProducto);
             dgvCargarStock.DataSource = objNProdcuto.retornarProductos();
@@ -294,7 +529,7 @@ namespace Supermercado
             txtDescripcionCargarStock1.Text = "";
             nudCantidadCargarStock1.Text = "";
             //Limpio campo descripcion de la busqueda
-            txtDescripcionBCargarStock.Text = "";
+            txtDescripcionBCargarStock.Text = "";*/
         }
 
         private void btnLimpiar3_Click(object sender, EventArgs e)
