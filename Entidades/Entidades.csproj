@@ -47,6 +47,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="E_Empleado.cs" />
     <Compile Include="E_Producto.cs" />
+    <Compile Include="E_Rol.cs" />
     <Compile Include="E_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

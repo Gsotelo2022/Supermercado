@@ -12,12 +12,24 @@ namespace Datos
         //Conecto con la logica de producto
         Conexion objConexion = new Conexion();
 
-        /*public DataTable Listado()
-        {
-            //DataTable dt = objConexion.LeerPorComando("Select * from dbo.Empleado");
-            DataTable dt = objConexion.LeerPorStoreProcedure("sp_ListarEmpleados");
 
-            return dt;
-        }*/
+        public List<string> ListarRoles()
+        {
+            List<string> roles = new List<string>();
+
+            DataTable tablaRoles = objConexion.LeerPorStoreProcedure("sp_ListarRoles");
+
+            if (tablaRoles != null && tablaRoles.Rows.Count > 0)
+            {
+                foreach (DataRow fila in tablaRoles.Rows)
+                {
+                    string rol = fila["Nombre"].ToString();
+                    roles.Add(rol);
+                }
+            }
+            return roles;
+        }
+
     }
 }
+

@@ -328,7 +328,13 @@ namespace Supermercado
             dgvProductos.DataSource = objProducto.retornarProductos();
             dgvListaEmpleados.DataSource = objNUsuario.retornarEmpleados();
             //objEEmpleado.Legajo = int.Parse(txbLegajo.Text);
-            
+            N_Rol objNRol = new N_Rol();
+
+
+            List<string> nombresRoles = objNRol.RetornarRoles();
+
+            cBoxPermisos.DataSource = nombresRoles;
+
 
         }
 
