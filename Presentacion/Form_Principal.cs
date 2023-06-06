@@ -322,8 +322,14 @@ namespace Supermercado
         private void Form_Principal_Load(object sender, EventArgs e)
         {
             N_Producto objProducto = new N_Producto();
+            N_Usuario objNUsuario = new N_Usuario();
+            //E_Empleado objEEmpleado = new E_Empleado();
 
             dgvProductos.DataSource = objProducto.retornarProductos();
+            dgvListaEmpleados.DataSource = objNUsuario.retornarEmpleados();
+            //objEEmpleado.Legajo = int.Parse(txbLegajo.Text);
+            
+
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -534,6 +540,11 @@ namespace Supermercado
             nudCantidadCargarStock1.Text = "";
             //Limpio campo descripcion de la busqueda
             txtDescripcionBCargarStock.Text = "";
+        }
+
+        private void dgvListaEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txbLegajo.Text = dgvListaEmpleados.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

@@ -44,6 +44,8 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="D_Gerente.cs" />
     <Compile Include="D_Producto.cs" />
+    <Compile Include="D_Rol.cs" />
+    <Compile Include="D_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -23,7 +23,7 @@ namespace Datos
          */
         private void Conectar()
         {   // HACK: Cadena de conexión hardcodeada. Luego ponerla como parametro de configuración del proyecto u otra alternativa.
-            strCadenaDeConexion = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SupermercadoDia;Data Source=GSOTELO\SQLEXPRESS01";
+            strCadenaDeConexion = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SupermercadoDia;Data Source=.\SQLEXPRESS";
 
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();

@@ -160,6 +160,7 @@
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancUsu = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -171,7 +172,6 @@
             this.lblNombUsu = new System.Windows.Forms.Label();
             this.cBoxPermisos = new System.Windows.Forms.ComboBox();
             this.lblpermisos = new System.Windows.Forms.Label();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.btnRestContr = new System.Windows.Forms.Button();
@@ -191,6 +191,8 @@
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txbLegajo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControlGerente.SuspendLayout();
@@ -245,6 +247,7 @@
             this.tabAdmin.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).BeginInit();
             this.tabPage19.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.gbBuscarEmpl.SuspendLayout();
@@ -1552,6 +1555,9 @@
             // 
             // tabPage18
             // 
+            this.tabPage18.Controls.Add(this.txbLegajo);
+            this.tabPage18.Controls.Add(this.label10);
+            this.tabPage18.Controls.Add(this.dgvListaEmpleados);
             this.tabPage18.Controls.Add(this.btnSalir);
             this.tabPage18.Controls.Add(this.btnCancUsu);
             this.tabPage18.Controls.Add(this.btnRegistrar);
@@ -1563,7 +1569,6 @@
             this.tabPage18.Controls.Add(this.lblNombUsu);
             this.tabPage18.Controls.Add(this.cBoxPermisos);
             this.tabPage18.Controls.Add(this.lblpermisos);
-            this.tabPage18.Controls.Add(this.groupBox17);
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
@@ -1571,6 +1576,18 @@
             this.tabPage18.TabIndex = 0;
             this.tabPage18.Text = "Crear Usuarios";
             this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // dgvListaEmpleados
+            // 
+            this.dgvListaEmpleados.AllowUserToAddRows = false;
+            this.dgvListaEmpleados.AllowUserToDeleteRows = false;
+            this.dgvListaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaEmpleados.Location = new System.Drawing.Point(432, 14);
+            this.dgvListaEmpleados.Name = "dgvListaEmpleados";
+            this.dgvListaEmpleados.ReadOnly = true;
+            this.dgvListaEmpleados.Size = new System.Drawing.Size(437, 396);
+            this.dgvListaEmpleados.TabIndex = 27;
+            this.dgvListaEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpleados_CellContentClick);
             // 
             // btnSalir
             // 
@@ -1601,21 +1618,21 @@
             // 
             // txbReingContr
             // 
-            this.txbReingContr.Location = new System.Drawing.Point(214, 168);
+            this.txbReingContr.Location = new System.Drawing.Point(214, 210);
             this.txbReingContr.Name = "txbReingContr";
             this.txbReingContr.Size = new System.Drawing.Size(121, 20);
             this.txbReingContr.TabIndex = 23;
             // 
             // txbContrasenia
             // 
-            this.txbContrasenia.Location = new System.Drawing.Point(214, 133);
+            this.txbContrasenia.Location = new System.Drawing.Point(214, 175);
             this.txbContrasenia.Name = "txbContrasenia";
             this.txbContrasenia.Size = new System.Drawing.Size(121, 20);
             this.txbContrasenia.TabIndex = 22;
             // 
             // txbNomUsuario
             // 
-            this.txbNomUsuario.Location = new System.Drawing.Point(214, 97);
+            this.txbNomUsuario.Location = new System.Drawing.Point(214, 139);
             this.txbNomUsuario.Name = "txbNomUsuario";
             this.txbNomUsuario.Size = new System.Drawing.Size(121, 20);
             this.txbNomUsuario.TabIndex = 21;
@@ -1623,7 +1640,7 @@
             // lblRepContr
             // 
             this.lblRepContr.AutoSize = true;
-            this.lblRepContr.Location = new System.Drawing.Point(51, 175);
+            this.lblRepContr.Location = new System.Drawing.Point(51, 217);
             this.lblRepContr.Name = "lblRepContr";
             this.lblRepContr.Size = new System.Drawing.Size(112, 13);
             this.lblRepContr.TabIndex = 20;
@@ -1632,7 +1649,7 @@
             // lblContr
             // 
             this.lblContr.AutoSize = true;
-            this.lblContr.Location = new System.Drawing.Point(51, 140);
+            this.lblContr.Location = new System.Drawing.Point(51, 182);
             this.lblContr.Name = "lblContr";
             this.lblContr.Size = new System.Drawing.Size(61, 13);
             this.lblContr.TabIndex = 19;
@@ -1641,7 +1658,7 @@
             // lblNombUsu
             // 
             this.lblNombUsu.AutoSize = true;
-            this.lblNombUsu.Location = new System.Drawing.Point(51, 104);
+            this.lblNombUsu.Location = new System.Drawing.Point(51, 146);
             this.lblNombUsu.Name = "lblNombUsu";
             this.lblNombUsu.Size = new System.Drawing.Size(98, 13);
             this.lblNombUsu.TabIndex = 18;
@@ -1655,7 +1672,7 @@
             "Enc. Inventario",
             "Gerente",
             "Administrador"});
-            this.cBoxPermisos.Location = new System.Drawing.Point(214, 40);
+            this.cBoxPermisos.Location = new System.Drawing.Point(214, 82);
             this.cBoxPermisos.Name = "cBoxPermisos";
             this.cBoxPermisos.Size = new System.Drawing.Size(121, 21);
             this.cBoxPermisos.TabIndex = 17;
@@ -1663,20 +1680,11 @@
             // lblpermisos
             // 
             this.lblpermisos.AutoSize = true;
-            this.lblpermisos.Location = new System.Drawing.Point(51, 40);
+            this.lblpermisos.Location = new System.Drawing.Point(51, 82);
             this.lblpermisos.Name = "lblpermisos";
             this.lblpermisos.Size = new System.Drawing.Size(90, 13);
             this.lblpermisos.TabIndex = 16;
             this.lblpermisos.Text = "Nivel de permisos";
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Location = new System.Drawing.Point(464, 3);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(336, 393);
-            this.groupBox17.TabIndex = 3;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Imagen";
             // 
             // tabPage19
             // 
@@ -1854,6 +1862,23 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Legajo";
+            // 
+            // txbLegajo
+            // 
+            this.txbLegajo.Enabled = false;
+            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
+            this.txbLegajo.Name = "txbLegajo";
+            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
+            this.txbLegajo.TabIndex = 29;
+            // 
             // Form_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1927,6 +1952,7 @@
             this.tabControl5.ResumeLayout(false);
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).EndInit();
             this.tabPage19.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.gbBuscarEmpl.ResumeLayout(false);
@@ -1977,7 +2003,6 @@
         private System.Windows.Forms.DataGridView dgvCargarStock;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.DataGridView dataGridView9;
@@ -2070,6 +2095,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+
+        private System.Windows.Forms.DataGridView dgvListaEmpleados;
+        private System.Windows.Forms.TextBox txbLegajo;
+        private System.Windows.Forms.Label label10;
+
         private System.Windows.Forms.ComboBox cmbBoxMeses;
         private System.Windows.Forms.Button btnBuscarXMes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -2100,6 +2130,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.TextBox txtBoxAño;
+
     }
 }
 
