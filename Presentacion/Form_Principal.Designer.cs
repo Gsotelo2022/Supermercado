@@ -50,8 +50,8 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.nudPrecio = new System.Windows.Forms.NumericUpDown();
-            this.btnLimpiar1 = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnEncargadoLimpiarCamposCP = new System.Windows.Forms.Button();
+            this.btnEncargadoCP = new System.Windows.Forms.Button();
             this.cmbHabilitado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,8 +64,8 @@
             this.txtIdModificar1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.nudPrecioModificar1 = new System.Windows.Forms.NumericUpDown();
-            this.btnLimpiar2 = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnLimpiarCamposDatosProductoMP = new System.Windows.Forms.Button();
+            this.btnModificarDatosProductoMP = new System.Windows.Forms.Button();
             this.cmbHabilitadoModificar1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,8 +74,8 @@
             this.txtDescripcionModificar1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnBuscarProducto1 = new System.Windows.Forms.Button();
+            this.btnLimpiarCamposMP = new System.Windows.Forms.Button();
+            this.btnBuscarProductoMP = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtDescripcionModificar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -93,12 +93,12 @@
             this.txtDescripcionBCargarStock = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.btnLimpiar3 = new System.Windows.Forms.Button();
-            this.btnBuscarProducto2 = new System.Windows.Forms.Button();
+            this.btnLimpiarCamposCS = new System.Windows.Forms.Button();
+            this.btnBuscarProductoCS = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.txtIdCargarStock1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnStock = new System.Windows.Forms.Button();
+            this.btnCargarStock = new System.Windows.Forms.Button();
             this.nudCantidadCargarStock1 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDescripcionCargarStock1 = new System.Windows.Forms.TextBox();
@@ -397,8 +397,8 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.nudPrecio);
-            this.groupBox4.Controls.Add(this.btnLimpiar1);
-            this.groupBox4.Controls.Add(this.btnCrear);
+            this.groupBox4.Controls.Add(this.btnEncargadoLimpiarCamposCP);
+            this.groupBox4.Controls.Add(this.btnEncargadoCP);
             this.groupBox4.Controls.Add(this.cmbHabilitado);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label3);
@@ -425,25 +425,25 @@
             this.nudPrecio.Size = new System.Drawing.Size(120, 20);
             this.nudPrecio.TabIndex = 10;
             // 
-            // btnLimpiar1
+            // btnEncargadoLimpiarCamposCP
             // 
-            this.btnLimpiar1.Location = new System.Drawing.Point(6, 349);
-            this.btnLimpiar1.Name = "btnLimpiar1";
-            this.btnLimpiar1.Size = new System.Drawing.Size(147, 27);
-            this.btnLimpiar1.TabIndex = 9;
-            this.btnLimpiar1.Text = "Limpiar";
-            this.btnLimpiar1.UseVisualStyleBackColor = true;
-            this.btnLimpiar1.Click += new System.EventHandler(this.button2_Click);
+            this.btnEncargadoLimpiarCamposCP.Location = new System.Drawing.Point(6, 349);
+            this.btnEncargadoLimpiarCamposCP.Name = "btnEncargadoLimpiarCamposCP";
+            this.btnEncargadoLimpiarCamposCP.Size = new System.Drawing.Size(147, 27);
+            this.btnEncargadoLimpiarCamposCP.TabIndex = 9;
+            this.btnEncargadoLimpiarCamposCP.Text = "Limpiar";
+            this.btnEncargadoLimpiarCamposCP.UseVisualStyleBackColor = true;
+            this.btnEncargadoLimpiarCamposCP.Click += new System.EventHandler(this.btnEncargadoLimpiarCamposCP_Click);
             // 
-            // btnCrear
+            // btnEncargadoCP
             // 
-            this.btnCrear.Location = new System.Drawing.Point(159, 349);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(147, 27);
-            this.btnCrear.TabIndex = 8;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnEncargadoCP.Location = new System.Drawing.Point(159, 349);
+            this.btnEncargadoCP.Name = "btnEncargadoCP";
+            this.btnEncargadoCP.Size = new System.Drawing.Size(147, 27);
+            this.btnEncargadoCP.TabIndex = 8;
+            this.btnEncargadoCP.Text = "Crear";
+            this.btnEncargadoCP.UseVisualStyleBackColor = true;
+            this.btnEncargadoCP.Click += new System.EventHandler(this.btnEncargadoCP_Click);
             // 
             // cmbHabilitado
             // 
@@ -530,8 +530,8 @@
             this.groupBox36.Controls.Add(this.txtIdModificar1);
             this.groupBox36.Controls.Add(this.label15);
             this.groupBox36.Controls.Add(this.nudPrecioModificar1);
-            this.groupBox36.Controls.Add(this.btnLimpiar2);
-            this.groupBox36.Controls.Add(this.btnModificar);
+            this.groupBox36.Controls.Add(this.btnLimpiarCamposDatosProductoMP);
+            this.groupBox36.Controls.Add(this.btnModificarDatosProductoMP);
             this.groupBox36.Controls.Add(this.cmbHabilitadoModificar1);
             this.groupBox36.Controls.Add(this.label5);
             this.groupBox36.Controls.Add(this.label6);
@@ -575,25 +575,25 @@
             this.nudPrecioModificar1.Size = new System.Drawing.Size(120, 20);
             this.nudPrecioModificar1.TabIndex = 10;
             // 
-            // btnLimpiar2
+            // btnLimpiarCamposDatosProductoMP
             // 
-            this.btnLimpiar2.Location = new System.Drawing.Point(6, 258);
-            this.btnLimpiar2.Name = "btnLimpiar2";
-            this.btnLimpiar2.Size = new System.Drawing.Size(147, 27);
-            this.btnLimpiar2.TabIndex = 9;
-            this.btnLimpiar2.Text = "Limpiar";
-            this.btnLimpiar2.UseVisualStyleBackColor = true;
-            this.btnLimpiar2.Click += new System.EventHandler(this.btnLimpiar2_Click);
+            this.btnLimpiarCamposDatosProductoMP.Location = new System.Drawing.Point(6, 258);
+            this.btnLimpiarCamposDatosProductoMP.Name = "btnLimpiarCamposDatosProductoMP";
+            this.btnLimpiarCamposDatosProductoMP.Size = new System.Drawing.Size(147, 27);
+            this.btnLimpiarCamposDatosProductoMP.TabIndex = 9;
+            this.btnLimpiarCamposDatosProductoMP.Text = "Limpiar";
+            this.btnLimpiarCamposDatosProductoMP.UseVisualStyleBackColor = true;
+            this.btnLimpiarCamposDatosProductoMP.Click += new System.EventHandler(this.btnLimpiarCamposDatosProductoMP_Click);
             // 
-            // btnModificar
+            // btnModificarDatosProductoMP
             // 
-            this.btnModificar.Location = new System.Drawing.Point(162, 258);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(147, 27);
-            this.btnModificar.TabIndex = 8;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificarDatosProductoMP.Location = new System.Drawing.Point(162, 258);
+            this.btnModificarDatosProductoMP.Name = "btnModificarDatosProductoMP";
+            this.btnModificarDatosProductoMP.Size = new System.Drawing.Size(147, 27);
+            this.btnModificarDatosProductoMP.TabIndex = 8;
+            this.btnModificarDatosProductoMP.Text = "Modificar";
+            this.btnModificarDatosProductoMP.UseVisualStyleBackColor = true;
+            this.btnModificarDatosProductoMP.Click += new System.EventHandler(this.btnModificarDatosProductoMP_Click);
             // 
             // cmbHabilitadoModificar1
             // 
@@ -664,8 +664,8 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.button3);
-            this.groupBox9.Controls.Add(this.btnBuscarProducto1);
+            this.groupBox9.Controls.Add(this.btnLimpiarCamposMP);
+            this.groupBox9.Controls.Add(this.btnBuscarProductoMP);
             this.groupBox9.Location = new System.Drawing.Point(607, 9);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(270, 69);
@@ -674,25 +674,25 @@
             this.groupBox9.Text = "Botones";
             this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
-            // button3
+            // btnLimpiarCamposMP
             // 
-            this.button3.Location = new System.Drawing.Point(143, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Limpiar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnLimpiarCamposMP.Location = new System.Drawing.Point(143, 29);
+            this.btnLimpiarCamposMP.Name = "btnLimpiarCamposMP";
+            this.btnLimpiarCamposMP.Size = new System.Drawing.Size(100, 23);
+            this.btnLimpiarCamposMP.TabIndex = 1;
+            this.btnLimpiarCamposMP.Text = "Limpiar";
+            this.btnLimpiarCamposMP.UseVisualStyleBackColor = true;
+            this.btnLimpiarCamposMP.Click += new System.EventHandler(this.btnLimpiarCamposMP_Click);
             // 
-            // btnBuscarProducto1
+            // btnBuscarProductoMP
             // 
-            this.btnBuscarProducto1.Location = new System.Drawing.Point(25, 29);
-            this.btnBuscarProducto1.Name = "btnBuscarProducto1";
-            this.btnBuscarProducto1.Size = new System.Drawing.Size(100, 23);
-            this.btnBuscarProducto1.TabIndex = 0;
-            this.btnBuscarProducto1.Text = "Buscar";
-            this.btnBuscarProducto1.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto1.Click += new System.EventHandler(this.btnBuscarProducto1_Click);
+            this.btnBuscarProductoMP.Location = new System.Drawing.Point(25, 29);
+            this.btnBuscarProductoMP.Name = "btnBuscarProductoMP";
+            this.btnBuscarProductoMP.Size = new System.Drawing.Size(100, 23);
+            this.btnBuscarProductoMP.TabIndex = 0;
+            this.btnBuscarProductoMP.Text = "Buscar";
+            this.btnBuscarProductoMP.UseVisualStyleBackColor = true;
+            this.btnBuscarProductoMP.Click += new System.EventHandler(this.btnBuscarProductoMP_Click);
             // 
             // groupBox10
             // 
@@ -864,8 +864,8 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.btnLimpiar3);
-            this.groupBox14.Controls.Add(this.btnBuscarProducto2);
+            this.groupBox14.Controls.Add(this.btnLimpiarCamposCS);
+            this.groupBox14.Controls.Add(this.btnBuscarProductoCS);
             this.groupBox14.Location = new System.Drawing.Point(605, 9);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(270, 69);
@@ -873,31 +873,31 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Botones";
             // 
-            // btnLimpiar3
+            // btnLimpiarCamposCS
             // 
-            this.btnLimpiar3.Location = new System.Drawing.Point(131, 27);
-            this.btnLimpiar3.Name = "btnLimpiar3";
-            this.btnLimpiar3.Size = new System.Drawing.Size(100, 23);
-            this.btnLimpiar3.TabIndex = 1;
-            this.btnLimpiar3.Text = "Limpiar";
-            this.btnLimpiar3.UseVisualStyleBackColor = true;
-            this.btnLimpiar3.Click += new System.EventHandler(this.btnLimpiar3_Click);
+            this.btnLimpiarCamposCS.Location = new System.Drawing.Point(131, 29);
+            this.btnLimpiarCamposCS.Name = "btnLimpiarCamposCS";
+            this.btnLimpiarCamposCS.Size = new System.Drawing.Size(100, 23);
+            this.btnLimpiarCamposCS.TabIndex = 1;
+            this.btnLimpiarCamposCS.Text = "Limpiar";
+            this.btnLimpiarCamposCS.UseVisualStyleBackColor = true;
+            this.btnLimpiarCamposCS.Click += new System.EventHandler(this.btnLimpiarCamposCS_Click);
             // 
-            // btnBuscarProducto2
+            // btnBuscarProductoCS
             // 
-            this.btnBuscarProducto2.Location = new System.Drawing.Point(25, 29);
-            this.btnBuscarProducto2.Name = "btnBuscarProducto2";
-            this.btnBuscarProducto2.Size = new System.Drawing.Size(100, 23);
-            this.btnBuscarProducto2.TabIndex = 0;
-            this.btnBuscarProducto2.Text = "Buscar";
-            this.btnBuscarProducto2.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto2.Click += new System.EventHandler(this.btnBuscarProducto2_Click);
+            this.btnBuscarProductoCS.Location = new System.Drawing.Point(25, 29);
+            this.btnBuscarProductoCS.Name = "btnBuscarProductoCS";
+            this.btnBuscarProductoCS.Size = new System.Drawing.Size(100, 23);
+            this.btnBuscarProductoCS.TabIndex = 0;
+            this.btnBuscarProductoCS.Text = "Buscar";
+            this.btnBuscarProductoCS.UseVisualStyleBackColor = true;
+            this.btnBuscarProductoCS.Click += new System.EventHandler(this.btnBuscarProductoCS_Click);
             // 
             // groupBox37
             // 
             this.groupBox37.Controls.Add(this.txtIdCargarStock1);
             this.groupBox37.Controls.Add(this.label9);
-            this.groupBox37.Controls.Add(this.btnStock);
+            this.groupBox37.Controls.Add(this.btnCargarStock);
             this.groupBox37.Controls.Add(this.nudCantidadCargarStock1);
             this.groupBox37.Controls.Add(this.label11);
             this.groupBox37.Controls.Add(this.txtDescripcionCargarStock1);
@@ -926,15 +926,15 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Id Producto";
             // 
-            // btnStock
+            // btnCargarStock
             // 
-            this.btnStock.Location = new System.Drawing.Point(764, 46);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(89, 27);
-            this.btnStock.TabIndex = 8;
-            this.btnStock.Text = "Cargar Stock";
-            this.btnStock.UseVisualStyleBackColor = true;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            this.btnCargarStock.Location = new System.Drawing.Point(764, 46);
+            this.btnCargarStock.Name = "btnCargarStock";
+            this.btnCargarStock.Size = new System.Drawing.Size(89, 27);
+            this.btnCargarStock.TabIndex = 8;
+            this.btnCargarStock.Text = "Cargar Stock";
+            this.btnCargarStock.UseVisualStyleBackColor = true;
+            this.btnCargarStock.Click += new System.EventHandler(this.btnCargarStock_Click);
             // 
             // nudCantidadCargarStock1
             // 
@@ -1500,15 +1500,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLimpiar1;
-        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnEncargadoLimpiarCamposCP;
+        private System.Windows.Forms.Button btnEncargadoCP;
         private System.Windows.Forms.ComboBox cmbHabilitado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.GroupBox groupBox36;
-        private System.Windows.Forms.Button btnLimpiar2;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnLimpiarCamposDatosProductoMP;
+        private System.Windows.Forms.Button btnModificarDatosProductoMP;
         private System.Windows.Forms.ComboBox cmbHabilitadoModificar1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -1517,24 +1517,24 @@
         private System.Windows.Forms.TextBox txtDescripcionModificar1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox37;
-        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Button btnCargarStock;
         private System.Windows.Forms.NumericUpDown nudCantidadCargarStock1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDescripcionCargarStock1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnBuscarProducto1;
+        private System.Windows.Forms.Button btnLimpiarCamposMP;
+        private System.Windows.Forms.Button btnBuscarProductoMP;
         private System.Windows.Forms.TextBox txtDescripcionModificar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.TextBox txtDescripcionBCargarStock;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Button btnBuscarProducto2;
+        private System.Windows.Forms.Button btnBuscarProductoCS;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button btnGenerarListado;
         private System.Windows.Forms.Button btnGenerarAlerta;
-        private System.Windows.Forms.Button btnLimpiar3;
+        private System.Windows.Forms.Button btnLimpiarCamposCS;
         private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.NumericUpDown nudPrecioModificar1;
         private System.Windows.Forms.TextBox txtIdModificar1;

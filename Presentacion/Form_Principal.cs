@@ -63,15 +63,7 @@ namespace Supermercado
 
         #endregion
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Limpio campos
-            txtDescripcion.Text = "";
-            //txtPrecio.Text = "";
-            nudPrecio.Text = "";
-            nudCantidad.Text = "";
-            cmbHabilitado.Text = "";
-        }
+
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -106,7 +98,7 @@ namespace Supermercado
 
         }
 
-        private void btnBuscarProducto1_Click(object sender, EventArgs e)
+        private void btnBuscarProductoMP_Click(object sender, EventArgs e)
         {
             E_Producto objEProducto = new E_Producto();
             objEProducto.Descripcion = txtDescripcionModificar.Text;
@@ -119,7 +111,7 @@ namespace Supermercado
             txtDescripcionModificar.Text = "";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLimpiarCamposMP_Click(object sender, EventArgs e)
         {
             //Descripcion del buscador
             txtDescripcionModificar.Text = "";
@@ -129,10 +121,10 @@ namespace Supermercado
         {
             N_Producto objProducto = new N_Producto();
 
-            dgvProductos.DataSource = objProducto.retornarProductos();
+            dgvProductos.DataSource = objProducto.RetornarProductos();
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void btnEncargadoCP_Click(object sender, EventArgs e)
         {
             //Instancio Entidad
             E_Producto objProducto = new E_Producto();
@@ -153,8 +145,8 @@ namespace Supermercado
                 //Habiitado
                 objProducto.Habilitado = cmbHabilitado.Text;                
                 //Creacion del producto                
-                objN_Producto.crearProducto(objProducto);
-                dgvProductos.DataSource = objN_Producto.retornarProductos();
+                objN_Producto.CrearProducto(objProducto);
+                dgvProductos.DataSource = objN_Producto.RetornarProductos();
                 //Limpio campos
                 txtDescripcion.Text = "";
                 nudPrecio.Text = "";
@@ -170,7 +162,7 @@ namespace Supermercado
         private void btnGenerarListado_Click(object sender, EventArgs e)
         {
             N_Producto objN_Producto = new N_Producto();
-            dgvStock.DataSource = objN_Producto.retornarProductos();
+            dgvStock.DataSource = objN_Producto.RetornarProductos();
         }
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
@@ -188,7 +180,7 @@ namespace Supermercado
     
         }
 
-        private void btnBuscarProducto2_Click(object sender, EventArgs e)
+        private void btnBuscarProductoCS_Click(object sender, EventArgs e)
         {
             E_Producto objEProducto = new E_Producto(); 
             objEProducto.Descripcion=txtDescripcionBCargarStock.Text;
@@ -205,10 +197,10 @@ namespace Supermercado
         private void btnGenerarAlerta_Click(object sender, EventArgs e)
         {
             N_Producto objNProducto = new N_Producto();
-            dgvAlerta.DataSource = objNProducto.productoAlerta();
+            dgvAlerta.DataSource = objNProducto.ProductoAlerta();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificarDatosProductoMP_Click(object sender, EventArgs e)
         {
             //Instancio Entidad
             E_Producto objE_Producto = new E_Producto();
@@ -218,7 +210,7 @@ namespace Supermercado
                 //Excepciones
                 Negocio.ExcepcionesProductos.Exproductos.verificarCampos(txtDescripcionModificar1.Text, double.Parse(nudPrecioModificar1.Text), int.Parse(nudCantidadModificar1.Text), cmbHabilitadoModificar1.Text);
                 //Asigno Id
-                objE_Producto.Id_Producto = int.Parse(txtIdModificar1.Text);
+                objE_Producto.IdProducto = int.Parse(txtIdModificar1.Text);
                 //Asigno nueva descripcion
                 objE_Producto.Descripcion = txtDescripcionModificar1.Text;
                 //Asigno nuevo precio
@@ -228,10 +220,10 @@ namespace Supermercado
 
                 //Modificacion del producto
                 N_Producto objNProducto = new N_Producto();
-                objNProducto.modificarProducto(objE_Producto);
+                objNProducto.ModificarProducto(objE_Producto);
 
                 //Llenar Grilla
-                dgvModificarProducto1.DataSource = objNProducto.retornarProductos();
+                dgvModificarProducto1.DataSource = objNProducto.RetornarProductos();
 
                 //Limpio valores
                 txtIdModificar1.Text = "";
@@ -248,7 +240,7 @@ namespace Supermercado
             }
         }
 
-        private void btnLimpiar2_Click(object sender, EventArgs e)
+        private void btnLimpiarCamposDatosProductoMP_Click(object sender, EventArgs e)
         {
             //Limpio valores
             txtIdModificar1.Text = "";
@@ -290,7 +282,7 @@ namespace Supermercado
         {       
         }
 
-        private void btnStock_Click(object sender, EventArgs e)
+        private void btnCargarStock_Click(object sender, EventArgs e)
         {
             E_Producto objEProducto = new E_Producto();
             //Excepcion Carga stock
@@ -298,12 +290,12 @@ namespace Supermercado
             {
                 //Excepciones
                 Negocio.ExcepcionesProductos.Exproductos.verificarCamposCargaStock(int.Parse(txtIdCargarStock1.Text), int.Parse(nudCantidadCargarStock1.Text));
-                objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
+                objEProducto.IdProducto = int.Parse(txtIdCargarStock1.Text);
                 objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);
                 //Instancio Negocio
                 N_Producto objNProdcuto = new N_Producto();
-                objNProdcuto.cargarStock(objEProducto);
-                dgvCargarStock.DataSource = objNProdcuto.retornarProductos();
+                objNProdcuto.CargarStock(objEProducto);
+                dgvCargarStock.DataSource = objNProdcuto.RetornarProductos();
 
                 //Limpiar campos 
                 txtIdCargarStock1.Text = "";
@@ -317,22 +309,9 @@ namespace Supermercado
                 MessageBox.Show(ex.Message);
             }
 
-            /*objEProducto.Id_Producto = int.Parse(txtIdCargarStock1.Text);
-            objEProducto.Cantidad = int.Parse(nudCantidadCargarStock1.Text);*/
-            /*
-            N_Producto objNProdcuto = new N_Producto();
-            objNProdcuto.cargarStock(objEProducto);
-            dgvCargarStock.DataSource = objNProdcuto.retornarProductos();
-
-            //Limpiar campos 
-            txtIdCargarStock1.Text = "";
-            txtDescripcionCargarStock1.Text = "";
-            nudCantidadCargarStock1.Text = "";
-            //Limpio campo descripcion de la busqueda
-            txtDescripcionBCargarStock.Text = "";*/
         }
 
-        private void btnLimpiar3_Click(object sender, EventArgs e)
+        private void btnLimpiarCamposCS_Click(object sender, EventArgs e)
         {
             //Limpiar campos 
             txtIdCargarStock1.Text = "";
@@ -340,6 +319,16 @@ namespace Supermercado
             nudCantidadCargarStock1.Text = "";
             //Limpio campo descripcion de la busqueda
             txtDescripcionBCargarStock.Text = "";
+        }
+
+        private void btnEncargadoLimpiarCamposCP_Click(object sender, EventArgs e)
+        {
+            //Limpio campos
+            txtDescripcion.Text = "";
+            //txtPrecio.Text = "";
+            nudPrecio.Text = "";
+            nudCantidad.Text = "";
+            cmbHabilitado.Text = "";
         }
     }
 }
