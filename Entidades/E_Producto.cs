@@ -8,12 +8,12 @@ namespace Entidades
 {
     public class E_Producto
     {
-		private int _id_Prodcuto;
+		private int _idProdcuto;
 
-		public int Id_Producto
+		public int IdProducto
 		{
-			get { return _id_Prodcuto; }
-			set { _id_Prodcuto = value; }
+			get { return _idProdcuto; }
+			set { _idProdcuto = value; }
 		}
 		private string _descripcion;
 
