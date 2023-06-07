@@ -205,7 +205,7 @@ namespace Supermercado
 
 
 
-=======
+
         #region MÉTODOS PRIVADOS
 
         /// <summary>
@@ -331,8 +331,6 @@ namespace Supermercado
 
 
             dgvProductos.DataSource = objProducto.RetornarProductos();
-=======
-            dgvProductos.DataSource = objProducto.retornarProductos();
             dgvListaEmpleados.DataSource = objNUsuario.retornarEmpleados();
             //objEEmpleado.Legajo = int.Parse(txbLegajo.Text);
             N_Rol objNRol = new N_Rol();
@@ -552,7 +550,7 @@ namespace Supermercado
             nudPrecio.Text = "";
             nudCantidad.Text = "";
             cmbHabilitado.Text = "";
-=======
+        }
         private void dgvListaEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txbLegajo.Text = dgvListaEmpleados.CurrentRow.Cells[0].Value.ToString();
