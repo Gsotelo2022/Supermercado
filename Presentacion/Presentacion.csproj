@@ -68,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Principal.resx">
       <DependentUpon>Form_Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Bienvenida.resx">
       <DependentUpon>Form_Bienvenida.cs</DependentUpon>

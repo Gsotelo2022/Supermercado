@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="ExcepcionesProductos\Exproductos.cs" />
     <Compile Include="N_Encargado.cs" />
+    <Compile Include="N_Gerente.cs" />
     <Compile Include="N_Producto.cs" />
+    <Compile Include="N_Rol.cs" />
+    <Compile Include="N_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
