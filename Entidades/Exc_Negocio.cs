@@ -2,7 +2,7 @@
 
 namespace Entidades
 {
-    public class Exc_Gerente : Exception
+    public class Exc_Negocio : Exception
     {
         #region ATRIBUTOS
 
@@ -14,7 +14,7 @@ namespace Entidades
         /// Constructor: Instancia el valor de la variabel local de la clase.
         /// </summary>
         /// <param name="texto"></param>
-        public Exc_Gerente(string texto)
+        public Exc_Negocio(string texto)
         {
             this.Mensaje = texto;
         }

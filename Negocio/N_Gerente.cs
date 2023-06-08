@@ -30,9 +30,9 @@ namespace Negocio
         {
             DataTable respuesta = gerenteDA.CrearReporteDeVentasPorMes(mes, año);
 
-            if (respuesta == null)
+            if (respuesta.Rows.Count == 0)
             {
-                throw new Entidades.Exc_Gerente("No existen documentos para los filtros elegidos");
+                throw new Entidades.Exc_Negocio("No existen documentos para los filtros elegidos");
             }
 
             return respuesta;
@@ -48,9 +48,9 @@ namespace Negocio
         {
             DataTable respuesta = gerenteDA.CrearReporteDeVentasPorSemana(desde, hasta);
 
-            if (respuesta == null)
+            if (respuesta.Rows.Count == 0)
             {
-                throw new Entidades.Exc_Gerente("No existen documentos para los filtros elegidos");
+                throw new Entidades.Exc_Negocio("No existen documentos para los filtros elegidos");
             }
 
             return respuesta;
@@ -65,9 +65,9 @@ namespace Negocio
         {
             DataTable respuesta = gerenteDA.CrearReporteDeVentasPorVendedor(usuario);
 
-            if (respuesta == null)
+            if (respuesta.Rows.Count == 0)
             {
-                throw new Entidades.Exc_Gerente("No existen documentos para los filtros elegidos");
+                throw new Entidades.Exc_Negocio("No existen documentos para los filtros elegidos");
             }
 
             return respuesta;

@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\E_Dias.cs" />
-    <Compile Include="Exc_Gerente.cs" />
+    <Compile Include="Exc_Negocio.cs" />
     <Compile Include="E_Empleado.cs" />
     <Compile Include="E_Producto.cs" />
     <Compile Include="E_Rol.cs" />
