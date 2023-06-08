@@ -128,20 +128,20 @@ namespace Supermercado
 
                 if (string.IsNullOrEmpty(this.txtBoxAño.Text))
                 {
-                    throw new Entidades.Exc_Gerente("Debe escribir un año antes de continuar.");
+                    throw new Entidades.Exc_Negocio("Debe escribir un año antes de continuar.");
                 }
                 else
                 {
                     añoSelect = int.Parse(this.txtBoxAño.Text);
                 }
 
-
                 this.dtGridPorMes.DataSource = gerenteNeg.CrearReporteDeVentasPorMes(mesSelectNum, añoSelect);
-
             }
-            catch (Entidades.Exc_Gerente exc)
+            catch (Entidades.Exc_Negocio exc)
             {
                 MessageBox.Show(exc.Mensaje);
+
+                this.dtGridPorMes.DataSource = null;
             }
             catch (Exception exc)
             {
@@ -165,9 +165,11 @@ namespace Supermercado
             {
                 this.dtGridPorSem.DataSource = gerenteNeg.CrearReporteDeVentasPorSemana(desde, hasta);
             }
-            catch (Entidades.Exc_Gerente exc)
+            catch (Entidades.Exc_Negocio exc)
             {
                 MessageBox.Show(exc.Mensaje);
+
+                this.dtGridPorSem.DataSource = null;
             }
             catch (Exception exc)
             {
@@ -191,9 +193,11 @@ namespace Supermercado
             {
                 this.dtGridPorVend.DataSource = gerenteNeg.CrearReporteDeVentasPorVendedor(usuarioId);
             }
-            catch (Entidades.Exc_Gerente exc)
+            catch (Entidades.Exc_Negocio exc)
             {
                 MessageBox.Show(exc.Mensaje);
+
+                this.dtGridPorVend.DataSource = null;
             }
             catch (Exception exc)
             {
@@ -202,9 +206,6 @@ namespace Supermercado
         }
 
         #endregion
-
-
-
 
         #region MÉTODOS PRIVADOS
 
@@ -239,13 +240,22 @@ namespace Supermercado
 
             try
             {
-                // vendedores = Acá va el método que busca todos los vendedores y devuelve una lista.
-                // idUsuario - Nombre ARpellido
+                N_Usuario usuarioNeg = new N_Usuario();
+
+                var empleados = usuarioNeg.retornarEmpleados();
+
+                foreach (DataRow row in empleados.Rows)
+                {
+                    if (row["Rol"].ToString().Contains("CAJERO"))
+                    {
+                        vendedores.Add(row["Id_Usuario"] + "-" + row["Nombre"] + " " + row["Apellido"]);
+                    }
+                }
 
                 cmbBoxVendedor.DataSource = vendedores;
                 cmbBoxVendedor.SelectedIndex = 0;
             }
-            catch (Entidades.Exc_Gerente exc)
+            catch (Exc_Negocio exc)
             {
                 MessageBox.Show(exc.Mensaje);
             }
@@ -325,7 +335,7 @@ namespace Supermercado
 
         private void Form_Principal_Load(object sender, EventArgs e)
         {
-            N_Producto objProducto = new N_Producto();
+            /*N_Producto objProducto = new N_Producto();
             N_Usuario objNUsuario = new N_Usuario();
             //E_Empleado objEEmpleado = new E_Empleado();
 
@@ -340,7 +350,7 @@ namespace Supermercado
 
             cBoxPermisos.DataSource = nombresRoles;
 
-
+            */
 
         }
 

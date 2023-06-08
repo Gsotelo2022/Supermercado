@@ -38,20 +38,8 @@
             this.btnBuscarXMes = new System.Windows.Forms.Button();
             this.cmbBoxMeses = new System.Windows.Forms.ComboBox();
             this.dtGridPorMes = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabReporteSemanal = new System.Windows.Forms.TabPage();
             this.dtGridPorSem = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boxElegirSemana = new System.Windows.Forms.GroupBox();
             this.btnBuscarXSem = new System.Windows.Forms.Button();
             this.lblHasta = new System.Windows.Forms.Label();
@@ -60,12 +48,6 @@
             this.dtPickerDesde = new System.Windows.Forms.DateTimePicker();
             this.tabReporteVendedor = new System.Windows.Forms.TabPage();
             this.dtGridPorVend = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boxElegirVendedor = new System.Windows.Forms.GroupBox();
             this.btnBuscarXVend = new System.Windows.Forms.Button();
             this.cmbBoxVendedor = new System.Windows.Forms.ComboBox();
@@ -160,6 +142,8 @@
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.txbLegajo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancUsu = new System.Windows.Forms.Button();
@@ -191,8 +175,6 @@
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txbLegajo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControlGerente.SuspendLayout();
@@ -343,55 +325,13 @@
             this.dtGridPorMes.AllowUserToDeleteRows = false;
             this.dtGridPorMes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridPorMes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtGridPorMes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
+            this.dtGridPorMes.ColumnHeadersHeight = 25;
             this.dtGridPorMes.Location = new System.Drawing.Point(6, 64);
             this.dtGridPorMes.Name = "dtGridPorMes";
             this.dtGridPorMes.ReadOnly = true;
+            this.dtGridPorMes.RowHeadersWidth = 45;
             this.dtGridPorMes.Size = new System.Drawing.Size(869, 355);
             this.dtGridPorMes.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Número Orden";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fecha";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Articulo";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Precio";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Cantidad";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Usuario";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // tabReporteSemanal
             // 
@@ -411,55 +351,13 @@
             this.dtGridPorSem.AllowUserToDeleteRows = false;
             this.dtGridPorSem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridPorSem.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtGridPorSem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.dtGridPorSem.ColumnHeadersHeight = 25;
             this.dtGridPorSem.Location = new System.Drawing.Point(5, 64);
             this.dtGridPorSem.Name = "dtGridPorSem";
             this.dtGridPorSem.ReadOnly = true;
+            this.dtGridPorSem.RowHeadersWidth = 45;
             this.dtGridPorSem.Size = new System.Drawing.Size(869, 355);
             this.dtGridPorSem.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Número Orden";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Articulo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // boxElegirSemana
             // 
@@ -537,55 +435,13 @@
             this.dtGridPorVend.AllowUserToDeleteRows = false;
             this.dtGridPorVend.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridPorVend.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtGridPorVend.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
+            this.dtGridPorVend.ColumnHeadersHeight = 25;
             this.dtGridPorVend.Location = new System.Drawing.Point(5, 67);
             this.dtGridPorVend.Name = "dtGridPorVend";
             this.dtGridPorVend.ReadOnly = true;
+            this.dtGridPorVend.RowHeadersWidth = 45;
             this.dtGridPorVend.Size = new System.Drawing.Size(869, 355);
             this.dtGridPorVend.TabIndex = 10;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Número Orden";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Articulo";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // boxElegirVendedor
             // 
@@ -659,6 +515,7 @@
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(327, 19);
             this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 45;
             this.dgvProductos.Size = new System.Drawing.Size(558, 393);
             this.dgvProductos.TabIndex = 1;
             // 
@@ -998,6 +855,7 @@
             this.dgvModificarProducto1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModificarProducto1.Location = new System.Drawing.Point(333, 84);
             this.dgvModificarProducto1.Name = "dgvModificarProducto1";
+            this.dgvModificarProducto1.RowHeadersWidth = 45;
             this.dgvModificarProducto1.Size = new System.Drawing.Size(545, 338);
             this.dgvModificarProducto1.TabIndex = 10;
             this.dgvModificarProducto1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
@@ -1044,6 +902,7 @@
             this.dgvStock.Location = new System.Drawing.Point(9, 84);
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
+            this.dgvStock.RowHeadersWidth = 45;
             this.dgvStock.Size = new System.Drawing.Size(869, 338);
             this.dgvStock.TabIndex = 10;
             // 
@@ -1085,6 +944,7 @@
             this.dgvAlerta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlerta.Location = new System.Drawing.Point(9, 84);
             this.dgvAlerta.Name = "dgvAlerta";
+            this.dgvAlerta.RowHeadersWidth = 45;
             this.dgvAlerta.Size = new System.Drawing.Size(869, 338);
             this.dgvAlerta.TabIndex = 13;
             // 
@@ -1248,6 +1108,7 @@
             this.dgvCargarStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCargarStock.Location = new System.Drawing.Point(6, 178);
             this.dgvCargarStock.Name = "dgvCargarStock";
+            this.dgvCargarStock.RowHeadersWidth = 45;
             this.dgvCargarStock.Size = new System.Drawing.Size(872, 244);
             this.dgvCargarStock.TabIndex = 10;
             this.dgvCargarStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCargarStock_CellContentClick);
@@ -1342,6 +1203,7 @@
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView9.Location = new System.Drawing.Point(11, 84);
             this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.RowHeadersWidth = 45;
             this.dataGridView9.Size = new System.Drawing.Size(869, 338);
             this.dataGridView9.TabIndex = 10;
             // 
@@ -1382,6 +1244,7 @@
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView10.Location = new System.Drawing.Point(6, 112);
             this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.RowHeadersWidth = 45;
             this.dataGridView10.Size = new System.Drawing.Size(868, 178);
             this.dataGridView10.TabIndex = 1;
             // 
@@ -1451,6 +1314,7 @@
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView11.Location = new System.Drawing.Point(11, 126);
             this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.RowHeadersWidth = 45;
             this.dataGridView11.Size = new System.Drawing.Size(868, 178);
             this.dataGridView11.TabIndex = 5;
             // 
@@ -1520,6 +1384,7 @@
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView12.Location = new System.Drawing.Point(11, 126);
             this.dataGridView12.Name = "dataGridView12";
+            this.dataGridView12.RowHeadersWidth = 45;
             this.dataGridView12.Size = new System.Drawing.Size(868, 178);
             this.dataGridView12.TabIndex = 10;
             // 
@@ -1577,6 +1442,23 @@
             this.tabPage18.Text = "Crear Usuarios";
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
+            // txbLegajo
+            // 
+            this.txbLegajo.Enabled = false;
+            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
+            this.txbLegajo.Name = "txbLegajo";
+            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
+            this.txbLegajo.TabIndex = 29;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Legajo";
+            // 
             // dgvListaEmpleados
             // 
             this.dgvListaEmpleados.AllowUserToAddRows = false;
@@ -1585,6 +1467,7 @@
             this.dgvListaEmpleados.Location = new System.Drawing.Point(432, 14);
             this.dgvListaEmpleados.Name = "dgvListaEmpleados";
             this.dgvListaEmpleados.ReadOnly = true;
+            this.dgvListaEmpleados.RowHeadersWidth = 45;
             this.dgvListaEmpleados.Size = new System.Drawing.Size(437, 396);
             this.dgvListaEmpleados.TabIndex = 27;
             this.dgvListaEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpleados_CellContentClick);
@@ -1835,49 +1718,41 @@
             this.dataGridView8.Location = new System.Drawing.Point(9, 81);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.ReadOnly = true;
+            this.dataGridView8.RowHeadersWidth = 45;
             this.dataGridView8.Size = new System.Drawing.Size(869, 338);
             this.dataGridView8.TabIndex = 13;
             // 
             // Legajo
             // 
             this.Legajo.HeaderText = "Legajo";
+            this.Legajo.MinimumWidth = 6;
             this.Legajo.Name = "Legajo";
             this.Legajo.ReadOnly = true;
+            this.Legajo.Width = 110;
             // 
             // DNI
             // 
             this.DNI.HeaderText = "DNI";
+            this.DNI.MinimumWidth = 6;
             this.DNI.Name = "DNI";
             this.DNI.ReadOnly = true;
+            this.DNI.Width = 110;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
+            this.Apellido.Width = 110;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Legajo";
-            // 
-            // txbLegajo
-            // 
-            this.txbLegajo.Enabled = false;
-            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
-            this.txbLegajo.Name = "txbLegajo";
-            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
-            this.txbLegajo.TabIndex = 29;
+            this.Nombre.Width = 110;
             // 
             // Form_Principal
             // 
@@ -2102,33 +1977,15 @@
 
         private System.Windows.Forms.ComboBox cmbBoxMeses;
         private System.Windows.Forms.Button btnBuscarXMes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.DateTimePicker dtPickerHasta;
         private System.Windows.Forms.DateTimePicker dtPickerDesde;
         private System.Windows.Forms.DataGridView dtGridPorSem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button btnBuscarXSem;
         private System.Windows.Forms.Button btnBuscarXVend;
         private System.Windows.Forms.ComboBox cmbBoxVendedor;
         private System.Windows.Forms.DataGridView dtGridPorVend;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.TextBox txtBoxAño;
 
     }
