@@ -20,5 +20,12 @@ namespace Negocio
             Datos.D_Usuario objDatos = new Datos.D_Usuario();
             return objDatos.ListadoEmpleados();
         }
+
+        public string crearUsuario(int legajo, int permiso, string nombreUsuario, string contrasenia)
+        {
+            Datos.D_Usuario objDatos = new Datos.D_Usuario();
+            string mensaje = objDatos.CrearUsuario(legajo, permiso, nombreUsuario, contrasenia);
+            return mensaje;
+        }
     }
 }

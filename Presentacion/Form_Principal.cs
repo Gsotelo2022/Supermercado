@@ -566,5 +566,33 @@ namespace Supermercado
             txbLegajo.Text = dgvListaEmpleados.CurrentRow.Cells[0].Value.ToString();
 
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            int legajo;
+            if (int.TryParse(txbLegajo.Text, out legajo))
+            {
+                int permiso;
+                if (cBoxPermisos.SelectedItem is Entidades.E_Rol rol && rol != null)
+                {
+                    permiso = rol.Id;
+                    string nombreUsuario = txbNomUsuario.Text;
+                    string contraseña = txbContrasenia.Text;
+                    string reingresarContraseña = txbReingContr.Text;
+
+                    N_Usuario objNUsuario = new N_Usuario();
+                    string mensaje = objNUsuario.crearUsuario(legajo, permiso, nombreUsuario, contraseña);
+                    MessageBox.Show(mensaje);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un permiso válido");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El campo Legajo no es un número válido");
+            }
+        }
     }
 }
