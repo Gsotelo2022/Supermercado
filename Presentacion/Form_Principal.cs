@@ -343,11 +343,6 @@ namespace Supermercado
             dgvProductos.DataSource = objProducto.RetornarProductos();
             dgvListaEmpleados.DataSource = objNUsuario.listarEmpleados();
 
-
-            dgvProductos.DataSource = objProducto.RetornarProductos();
-            dgvListaEmpleados.DataSource = objNUsuario.retornarEmpleados();
-
-            //objEEmpleado.Legajo = int.Parse(txbLegajo.Text);
             N_Rol objNRol = new N_Rol();
 
 
@@ -355,7 +350,6 @@ namespace Supermercado
 
             cBoxPermisos.DataSource = nombresRol;
             cBoxPermisos.DisplayMember = "Nombre";
-
 
 
         }
