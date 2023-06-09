@@ -14,22 +14,22 @@ namespace Datos
         //Conecto con la logica de producto
         Conexion objConexion = new Conexion();
 
-        public void actualizarStock(E_Producto objEProducto)
+        public void ActualizarStock(E_Producto objEProducto)
         {
             //throw new NotImplementedException();
             SqlParameter[] parametrosNuevos = new SqlParameter[2];
-            parametrosNuevos[0] = objConexion.crearParametro("@pIdProducto", objEProducto.Id_Producto);
+            parametrosNuevos[0] = objConexion.crearParametro("@pIdProducto", objEProducto.IdProducto);
             parametrosNuevos[1] = objConexion.crearParametro("@pCantidad", objEProducto.Cantidad);
 
             objConexion.LeerPorStoreProcedure("sp_cargarStock", parametrosNuevos);
         }
 
         //Modifico valores del producto
-        public void actualizarValores(E_Producto objE_Producto)
+        public void ActualizarValores(E_Producto objE_Producto)
         {
             //throw new NotImplementedException();
             SqlParameter[] parametrosNuevos = new SqlParameter[4];
-            parametrosNuevos[0] = objConexion.crearParametro("@pIdProducto", objE_Producto.Id_Producto);
+            parametrosNuevos[0] = objConexion.crearParametro("@pIdProducto", objE_Producto.IdProducto);
             parametrosNuevos[1] = objConexion.crearParametro("@pDescripcion", objE_Producto.Descripcion);
             parametrosNuevos[2] = objConexion.crearParametro("@pPrecio", objE_Producto.Precio);
             parametrosNuevos[3] = objConexion.crearParametro("@pHabilitado", objE_Producto.Habilitado);
@@ -37,7 +37,7 @@ namespace Datos
             objConexion.LeerPorStoreProcedure("sp_ModificarProducto", parametrosNuevos);
         }
 
-        public DataTable devuelvoProducto(string descripcion)
+        public DataTable DevuelvoProducto(string descripcion)
         {
             //throw new NotImplementedException();
             SqlParameter[] parametros = new SqlParameter[1];
@@ -47,7 +47,7 @@ namespace Datos
             return dtProductos;
         }
 
-        public DataTable devuelvoProductoEnAlerta()
+        public DataTable DevuelvoProductoEnAlerta()
         {
             //throw new NotImplementedException();
             DataTable dtProductosEnAlerta = objConexion.LeerPorStoreProcedure("sp_ProductosAlerta");
@@ -61,7 +61,7 @@ namespace Datos
             return dt; 
         }
 
-        public void recibirDatosProducto(E_Producto objProducto)
+        public void RecibirDatosProducto(E_Producto objProducto)
         {
             //throw new NotImplementedException();
             //objConexion.EscribirPorComando("insert into dbo.Producto (Descripcion,Precio,Cantidad,Habilitado) values ('"+objProducto.Descripcion+"',"+objProducto.Precio+","+objProducto.Cantidad+",'"+objProducto.Habilitado+"')");

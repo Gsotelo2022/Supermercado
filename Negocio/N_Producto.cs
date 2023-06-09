@@ -12,7 +12,7 @@ namespace Negocio
     public class N_Producto
     {
         /*Traigo los productos*/
-        public DataTable retornarProductos() { 
+        public DataTable RetornarProductos() { 
             Datos.D_Producto objDatos = new Datos.D_Producto();
             return objDatos.Listado();
         }
@@ -22,35 +22,35 @@ namespace Negocio
             //throw new NotImplementedException();
             D_Producto objProductoDatos = new D_Producto();
 
-            return objProductoDatos.devuelvoProducto(descripcion);
+            return objProductoDatos.DevuelvoProducto(descripcion);
         }
         //Busco productos en alerta
-        public DataTable productoAlerta()
+        public DataTable ProductoAlerta()
         {
             //throw new NotImplementedException();
             D_Producto objProductoDatos = new D_Producto();
 
-            return objProductoDatos.devuelvoProductoEnAlerta();
+            return objProductoDatos.DevuelvoProductoEnAlerta();
         }
-        public void crearProducto(E_Producto objProducto)
+        public void CrearProducto(E_Producto objProducto)
         {
             //throw new NotImplementedException();
             D_Producto objProductoDatos = new D_Producto();
-            objProductoDatos.recibirDatosProducto(objProducto);
+            objProductoDatos.RecibirDatosProducto(objProducto);
         }
 
-        public void modificarProducto(E_Producto objE_Producto)
+        public void ModificarProducto(E_Producto objE_Producto)
         {
             //throw new NotImplementedException();
             D_Producto objProductosDatos= new D_Producto();
-            objProductosDatos.actualizarValores(objE_Producto);
+            objProductosDatos.ActualizarValores(objE_Producto);
         }
 
-        public void cargarStock(E_Producto objEProducto)
+        public void CargarStock(E_Producto objEProducto)
         {
             //throw new NotImplementedException();
             D_Producto objProductosDatos = new D_Producto();
-            objProductosDatos.actualizarStock(objEProducto);
+            objProductosDatos.ActualizarStock(objEProducto);
         }
     }
 }

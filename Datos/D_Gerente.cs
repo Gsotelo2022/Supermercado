@@ -27,10 +27,7 @@ namespace Datos
         /// <returns></returns>
         public DataTable CrearReporteDeVentasPorMes(int mes, int año)
         {
-            string sp = "VentasPorMes";
-            //@"SELECT T0.Id_Orden, T0.Fecha, T0.Id_Articulo, T1.Precio, T1.Cantidad, T1.Id_Usuario FROM Orden_Compra T0
-            //INNER JOIN Orden_Detalle T1 ON T0.Id_Orden = T1.Id_Orden
-            //WHERE MONTH(T0.Fecha) = @mes AND YEAR(T0.Fecha) = @año";
+            string sp = "sp_VentasPorMes";
 
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = this.conexion.crearParametro("mes", mes);
@@ -49,10 +46,7 @@ namespace Datos
         /// <returns></returns>
         public DataTable CrearReporteDeVentasPorSemana(DateTime desde, DateTime hasta)
         {
-            string query = "VentasPorSemana";
-            //@"SELECT T0.Id_Orden, T0.Fecha, T0.Id_Articulo, T1.Precio, T1.Cantidad, T1.Id_Usuario FROM Orden_Compra T0
-            //INNER JOIN Orden_Detalle T1 ON T0.Id_Orden = T1.Id_Orden
-            //WHERE T0.Fecha BETWEEN @desde AND @hasta";
+            string query = "sp_VentasPorSemana";
 
             SqlParameter[] parametros = new SqlParameter[2];
             parametros[0] = this.conexion.crearParametro("desde", desde);
@@ -70,10 +64,7 @@ namespace Datos
         /// <returns></returns>
         public DataTable CrearReporteDeVentasPorVendedor(int usuario)
         {
-            string query = "VentasPorVendedor";
-            //@"SELECT T0.Id_Orden, T0.Fecha, T0.Id_Articulo, T1.Precio, T1.Cantidad, T1.Id_Usuario FROM Orden_Compra T0
-            //INNER JOIN Orden_Detalle T1 ON T0.Id_Orden = T1.Id_Orden
-            //WHERE T0.Id_Usuario = @usuario";
+            string query = "sp_VentasPorVendedor";
 
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = this.conexion.crearParametro("usuario", usuario);
