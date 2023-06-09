@@ -326,7 +326,7 @@ namespace Supermercado
             //E_Empleado objEEmpleado = new E_Empleado();
 
             dgvProductos.DataSource = objProducto.retornarProductos();
-            dgvListaEmpleados.DataSource = objNUsuario.retornarEmpleados();
+            dgvListaEmpleados.DataSource = objNUsuario.listarEmpleados();
             //objEEmpleado.Legajo = int.Parse(txbLegajo.Text);
             N_Rol objNRol = new N_Rol();
 

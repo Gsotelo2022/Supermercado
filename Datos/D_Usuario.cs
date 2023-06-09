@@ -19,5 +19,13 @@ namespace Datos
 
             return dt;
         }
+
+        public DataTable ListadoEmpleados()
+        {
+            //DataTable dt = objConexion.LeerPorComando("Select * from dbo.Empleado");
+            DataTable dt = objConexion.LeerPorStoreProcedure("sp_ListarEmpleadosCU");
+
+            return dt;
+        }
     }
 }
