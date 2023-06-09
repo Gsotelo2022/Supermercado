@@ -9,7 +9,7 @@ namespace Datos
 {
     public class D_Rol
     {
-        //Conecto con la logica de producto
+        //Conecto con la logica de producto.
         Conexion objConexion = new Conexion();
 
 
