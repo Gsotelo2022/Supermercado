@@ -335,12 +335,12 @@ namespace Supermercado
 
         private void Form_Principal_Load(object sender, EventArgs e)
         {
-            /*N_Producto objProducto = new N_Producto();
+            N_Producto objProducto = new N_Producto();
             N_Usuario objNUsuario = new N_Usuario();
             //E_Empleado objEEmpleado = new E_Empleado();
 
 
-            dgvProductos.DataSource = objProducto.retornarProductos();
+            dgvProductos.DataSource = objProducto.RetornarProductos();
             dgvListaEmpleados.DataSource = objNUsuario.listarEmpleados();
 
 
@@ -351,11 +351,12 @@ namespace Supermercado
             N_Rol objNRol = new N_Rol();
 
 
-            List<string> nombresRoles = objNRol.RetornarRoles();
+            List<E_Rol> nombresRol = objNRol.RetornarRoles();
 
-            cBoxPermisos.DataSource = nombresRoles;
+            cBoxPermisos.DataSource = nombresRol;
+            cBoxPermisos.DisplayMember = "Nombre";
 
-            */
+
 
         }
 

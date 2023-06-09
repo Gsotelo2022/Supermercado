@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Negocio
     {
         private D_Rol datosRol = new D_Rol();
 
-        public List<string> RetornarRoles()
+        public List<E_Rol> RetornarRoles()
         {
             return datosRol.ListarRoles();
         }
