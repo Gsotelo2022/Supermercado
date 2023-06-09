@@ -14,5 +14,11 @@ namespace Negocio
             Datos.D_Usuario objDatos = new Datos.D_Usuario();
             return objDatos.Listado();
         }
+
+        public DataTable listarEmpleados()
+        {
+            Datos.D_Usuario objDatos = new Datos.D_Usuario();
+            return objDatos.ListadoEmpleados();
+        }
     }
 }
