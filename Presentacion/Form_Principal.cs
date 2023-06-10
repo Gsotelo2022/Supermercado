@@ -569,30 +569,70 @@ namespace Supermercado
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            int legajo;
-            if (int.TryParse(txbLegajo.Text, out legajo))
+            try
             {
-                int permiso;
-                if (cBoxPermisos.SelectedItem is Entidades.E_Rol rol && rol != null)
+                int legajo;
+                if (!int.TryParse(txbLegajo.Text, out legajo))
                 {
-                    permiso = rol.Id;
-                    string nombreUsuario = txbNomUsuario.Text;
-                    string contraseña = txbContrasenia.Text;
-                    string reingresarContraseña = txbReingContr.Text;
+                    throw new Exc_Negocio("El campo Legajo no es un número válido");
+                }
 
-                    N_Usuario objNUsuario = new N_Usuario();
-                    string mensaje = objNUsuario.crearUsuario(legajo, permiso, nombreUsuario, contraseña);
-                    MessageBox.Show(mensaje);
-                }
-                else
+                if (!(cBoxPermisos.SelectedItem is Entidades.E_Rol rol) || rol == null)
                 {
-                    MessageBox.Show("Seleccione un permiso válido");
+                    throw new Exc_Negocio("Seleccione un permiso válido");
                 }
+
+                int permiso = rol.Id;
+                string nombreUsuario = txbNomUsuario.Text;
+                if (!ValidarNoVacio(nombreUsuario, "nombre de usuario"))
+                {
+                    return;
+                }
+
+                string contraseña = txbContrasenia.Text;
+                if (!ValidarNoVacio(contraseña, "contraseña"))
+                {
+                    return;
+                }
+
+                string reingresarContraseña = txbReingContr.Text;
+                if (reingresarContraseña != contraseña)
+                {
+                    throw new Exc_Negocio("Debe reingresar la contraseña correctamente");
+                }
+
+                N_Usuario objNUsuario = new N_Usuario();
+                string mensaje = objNUsuario.crearUsuario(legajo, permiso, nombreUsuario, contraseña);
+                MessageBox.Show(mensaje);
             }
-            else
+            catch (Exc_Negocio ex)
             {
-                MessageBox.Show("El campo Legajo no es un número válido");
+                MessageBox.Show(ex.Mensaje);
             }
+
+            bool ValidarNoVacio(string valor, string nombreCampo)
+            {
+                if (string.IsNullOrEmpty(valor))
+                {
+                    MessageBox.Show($"El campo {nombreCampo} no puede ser vacío");
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        private void btnCancUsu_Click(object sender, EventArgs e)
+        {
+            txbNomUsuario.Text = "";
+            txbContrasenia.Text = "";
+            txbReingContr.Text = "";
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form_Login loginForm = new Form_Login();
+            loginForm.ShowDialog();
         }
     }
 }
