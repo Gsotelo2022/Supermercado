@@ -140,41 +140,22 @@
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.tabAdmin = new System.Windows.Forms.TabPage();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.txbLegajo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnCancUsu = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.txbReingContr = new System.Windows.Forms.TextBox();
-            this.txbContrasenia = new System.Windows.Forms.TextBox();
-            this.txbNomUsuario = new System.Windows.Forms.TextBox();
-            this.lblRepContr = new System.Windows.Forms.Label();
-            this.lblContr = new System.Windows.Forms.Label();
-            this.lblNombUsu = new System.Windows.Forms.Label();
-            this.cBoxPermisos = new System.Windows.Forms.ComboBox();
             this.lblpermisos = new System.Windows.Forms.Label();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.btnRestContr = new System.Windows.Forms.Button();
-            this.btnModContr = new System.Windows.Forms.Button();
-            this.btnBloquear = new System.Windows.Forms.Button();
-            this.gbBuscarEmpl = new System.Windows.Forms.GroupBox();
-            this.btnAcepEmpl = new System.Windows.Forms.Button();
-            this.btnCancEmpl = new System.Windows.Forms.Button();
-            this.lblApeEmpl = new System.Windows.Forms.Label();
-            this.lblNombEmpl = new System.Windows.Forms.Label();
-            this.lblDNI = new System.Windows.Forms.Label();
-            this.txbApeEmpl = new System.Windows.Forms.TextBox();
-            this.txbNombEmpl = new System.Windows.Forms.TextBox();
-            this.txbDNI = new System.Windows.Forms.TextBox();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.Legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cBoxPermisos = new System.Windows.Forms.ComboBox();
+            this.lblNombUsu = new System.Windows.Forms.Label();
+            this.lblContr = new System.Windows.Forms.Label();
+            this.lblRepContr = new System.Windows.Forms.Label();
+            this.txbNomUsuario = new System.Windows.Forms.TextBox();
+            this.txbContrasenia = new System.Windows.Forms.TextBox();
+            this.txbReingContr = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnCancUsu = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txbLegajo = new System.Windows.Forms.TextBox();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControlGerente.SuspendLayout();
@@ -227,13 +208,9 @@
             this.groupBox31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             this.tabAdmin.SuspendLayout();
-            this.tabControl5.SuspendLayout();
             this.tabPage18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).BeginInit();
-            this.tabPage19.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.gbBuscarEmpl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.tabControl5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1408,27 +1385,17 @@
             this.tabAdmin.Text = "Administrador";
             this.tabAdmin.UseVisualStyleBackColor = true;
             // 
-            // tabControl5
-            // 
-            this.tabControl5.Controls.Add(this.tabPage18);
-            this.tabControl5.Controls.Add(this.tabPage19);
-            this.tabControl5.Location = new System.Drawing.Point(2, 6);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(895, 450);
-            this.tabControl5.TabIndex = 1;
-            // 
             // tabPage18
             // 
             this.tabPage18.Controls.Add(this.txbLegajo);
+            this.tabPage18.Controls.Add(this.txbReingContr);
+            this.tabPage18.Controls.Add(this.txbContrasenia);
+            this.tabPage18.Controls.Add(this.txbNomUsuario);
             this.tabPage18.Controls.Add(this.label10);
             this.tabPage18.Controls.Add(this.dgvListaEmpleados);
             this.tabPage18.Controls.Add(this.btnSalir);
             this.tabPage18.Controls.Add(this.btnCancUsu);
             this.tabPage18.Controls.Add(this.btnRegistrar);
-            this.tabPage18.Controls.Add(this.txbReingContr);
-            this.tabPage18.Controls.Add(this.txbContrasenia);
-            this.tabPage18.Controls.Add(this.txbNomUsuario);
             this.tabPage18.Controls.Add(this.lblRepContr);
             this.tabPage18.Controls.Add(this.lblContr);
             this.tabPage18.Controls.Add(this.lblNombUsu);
@@ -1442,111 +1409,14 @@
             this.tabPage18.Text = "Crear Usuarios";
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
-            // txbLegajo
+            // lblpermisos
             // 
-            this.txbLegajo.Enabled = false;
-            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
-            this.txbLegajo.Name = "txbLegajo";
-            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
-            this.txbLegajo.TabIndex = 29;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Legajo";
-            // 
-            // dgvListaEmpleados
-            // 
-            this.dgvListaEmpleados.AllowUserToAddRows = false;
-            this.dgvListaEmpleados.AllowUserToDeleteRows = false;
-            this.dgvListaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaEmpleados.Location = new System.Drawing.Point(432, 14);
-            this.dgvListaEmpleados.Name = "dgvListaEmpleados";
-            this.dgvListaEmpleados.ReadOnly = true;
-            this.dgvListaEmpleados.RowHeadersWidth = 45;
-            this.dgvListaEmpleados.Size = new System.Drawing.Size(437, 396);
-            this.dgvListaEmpleados.TabIndex = 27;
-            this.dgvListaEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpleados_CellContentClick);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(341, 286);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 26;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnCancUsu
-            // 
-            this.btnCancUsu.Location = new System.Drawing.Point(202, 286);
-            this.btnCancUsu.Name = "btnCancUsu";
-            this.btnCancUsu.Size = new System.Drawing.Size(75, 23);
-            this.btnCancUsu.TabIndex = 25;
-            this.btnCancUsu.Text = "Cancelar";
-            this.btnCancUsu.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Location = new System.Drawing.Point(54, 286);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 24;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // txbReingContr
-            // 
-            this.txbReingContr.Location = new System.Drawing.Point(214, 210);
-            this.txbReingContr.Name = "txbReingContr";
-            this.txbReingContr.Size = new System.Drawing.Size(121, 20);
-            this.txbReingContr.TabIndex = 23;
-            // 
-            // txbContrasenia
-            // 
-            this.txbContrasenia.Location = new System.Drawing.Point(214, 175);
-            this.txbContrasenia.Name = "txbContrasenia";
-            this.txbContrasenia.Size = new System.Drawing.Size(121, 20);
-            this.txbContrasenia.TabIndex = 22;
-            // 
-            // txbNomUsuario
-            // 
-            this.txbNomUsuario.Location = new System.Drawing.Point(214, 139);
-            this.txbNomUsuario.Name = "txbNomUsuario";
-            this.txbNomUsuario.Size = new System.Drawing.Size(121, 20);
-            this.txbNomUsuario.TabIndex = 21;
-            // 
-            // lblRepContr
-            // 
-            this.lblRepContr.AutoSize = true;
-            this.lblRepContr.Location = new System.Drawing.Point(51, 217);
-            this.lblRepContr.Name = "lblRepContr";
-            this.lblRepContr.Size = new System.Drawing.Size(112, 13);
-            this.lblRepContr.TabIndex = 20;
-            this.lblRepContr.Text = "Reingrese Contraseña";
-            // 
-            // lblContr
-            // 
-            this.lblContr.AutoSize = true;
-            this.lblContr.Location = new System.Drawing.Point(51, 182);
-            this.lblContr.Name = "lblContr";
-            this.lblContr.Size = new System.Drawing.Size(61, 13);
-            this.lblContr.TabIndex = 19;
-            this.lblContr.Text = "Contraseña";
-            // 
-            // lblNombUsu
-            // 
-            this.lblNombUsu.AutoSize = true;
-            this.lblNombUsu.Location = new System.Drawing.Point(51, 146);
-            this.lblNombUsu.Name = "lblNombUsu";
-            this.lblNombUsu.Size = new System.Drawing.Size(98, 13);
-            this.lblNombUsu.TabIndex = 18;
-            this.lblNombUsu.Text = "Nombre de Usuario";
+            this.lblpermisos.AutoSize = true;
+            this.lblpermisos.Location = new System.Drawing.Point(51, 82);
+            this.lblpermisos.Name = "lblpermisos";
+            this.lblpermisos.Size = new System.Drawing.Size(90, 13);
+            this.lblpermisos.TabIndex = 16;
+            this.lblpermisos.Text = "Nivel de permisos";
             // 
             // cBoxPermisos
             // 
@@ -1561,199 +1431,122 @@
             this.cBoxPermisos.Size = new System.Drawing.Size(121, 21);
             this.cBoxPermisos.TabIndex = 17;
             // 
-            // lblpermisos
+            // lblNombUsu
             // 
-            this.lblpermisos.AutoSize = true;
-            this.lblpermisos.Location = new System.Drawing.Point(51, 82);
-            this.lblpermisos.Name = "lblpermisos";
-            this.lblpermisos.Size = new System.Drawing.Size(90, 13);
-            this.lblpermisos.TabIndex = 16;
-            this.lblpermisos.Text = "Nivel de permisos";
+            this.lblNombUsu.AutoSize = true;
+            this.lblNombUsu.Location = new System.Drawing.Point(51, 146);
+            this.lblNombUsu.Name = "lblNombUsu";
+            this.lblNombUsu.Size = new System.Drawing.Size(98, 13);
+            this.lblNombUsu.TabIndex = 18;
+            this.lblNombUsu.Text = "Nombre de Usuario";
             // 
-            // tabPage19
+            // lblContr
             // 
-            this.tabPage19.Controls.Add(this.groupBox19);
-            this.tabPage19.Controls.Add(this.gbBuscarEmpl);
-            this.tabPage19.Controls.Add(this.dataGridView8);
-            this.tabPage19.Location = new System.Drawing.Point(4, 22);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage19.Size = new System.Drawing.Size(887, 424);
-            this.tabPage19.TabIndex = 1;
-            this.tabPage19.Text = "Modificar Usuarios";
-            this.tabPage19.UseVisualStyleBackColor = true;
+            this.lblContr.AutoSize = true;
+            this.lblContr.Location = new System.Drawing.Point(51, 182);
+            this.lblContr.Name = "lblContr";
+            this.lblContr.Size = new System.Drawing.Size(61, 13);
+            this.lblContr.TabIndex = 19;
+            this.lblContr.Text = "Contraseña";
             // 
-            // groupBox19
+            // lblRepContr
             // 
-            this.groupBox19.Controls.Add(this.btnRestContr);
-            this.groupBox19.Controls.Add(this.btnModContr);
-            this.groupBox19.Controls.Add(this.btnBloquear);
-            this.groupBox19.Location = new System.Drawing.Point(558, 6);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(319, 69);
-            this.groupBox19.TabIndex = 15;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Botones";
+            this.lblRepContr.AutoSize = true;
+            this.lblRepContr.Location = new System.Drawing.Point(51, 217);
+            this.lblRepContr.Name = "lblRepContr";
+            this.lblRepContr.Size = new System.Drawing.Size(112, 13);
+            this.lblRepContr.TabIndex = 20;
+            this.lblRepContr.Text = "Reingrese Contraseña";
             // 
-            // btnRestContr
+            // txbNomUsuario
             // 
-            this.btnRestContr.Location = new System.Drawing.Point(218, 21);
-            this.btnRestContr.Name = "btnRestContr";
-            this.btnRestContr.Size = new System.Drawing.Size(75, 35);
-            this.btnRestContr.TabIndex = 2;
-            this.btnRestContr.Text = "Restablecer Contraseña";
-            this.btnRestContr.UseVisualStyleBackColor = true;
+            this.txbNomUsuario.Location = new System.Drawing.Point(214, 139);
+            this.txbNomUsuario.Name = "txbNomUsuario";
+            this.txbNomUsuario.Size = new System.Drawing.Size(121, 20);
+            this.txbNomUsuario.TabIndex = 21;
             // 
-            // btnModContr
+            // txbContrasenia
             // 
-            this.btnModContr.BackColor = System.Drawing.Color.Red;
-            this.btnModContr.Location = new System.Drawing.Point(120, 21);
-            this.btnModContr.Name = "btnModContr";
-            this.btnModContr.Size = new System.Drawing.Size(75, 36);
-            this.btnModContr.TabIndex = 1;
-            this.btnModContr.Text = "Modificar Contraseña";
-            this.btnModContr.UseVisualStyleBackColor = false;
+            this.txbContrasenia.Location = new System.Drawing.Point(214, 175);
+            this.txbContrasenia.Name = "txbContrasenia";
+            this.txbContrasenia.Size = new System.Drawing.Size(121, 20);
+            this.txbContrasenia.TabIndex = 22;
             // 
-            // btnBloquear
+            // txbReingContr
             // 
-            this.btnBloquear.Location = new System.Drawing.Point(22, 19);
-            this.btnBloquear.Name = "btnBloquear";
-            this.btnBloquear.Size = new System.Drawing.Size(75, 37);
-            this.btnBloquear.TabIndex = 0;
-            this.btnBloquear.Text = "Bloquear Usuario";
-            this.btnBloquear.UseVisualStyleBackColor = true;
+            this.txbReingContr.Location = new System.Drawing.Point(214, 210);
+            this.txbReingContr.Name = "txbReingContr";
+            this.txbReingContr.Size = new System.Drawing.Size(121, 20);
+            this.txbReingContr.TabIndex = 23;
             // 
-            // gbBuscarEmpl
+            // btnRegistrar
             // 
-            this.gbBuscarEmpl.Controls.Add(this.btnAcepEmpl);
-            this.gbBuscarEmpl.Controls.Add(this.btnCancEmpl);
-            this.gbBuscarEmpl.Controls.Add(this.lblApeEmpl);
-            this.gbBuscarEmpl.Controls.Add(this.lblNombEmpl);
-            this.gbBuscarEmpl.Controls.Add(this.lblDNI);
-            this.gbBuscarEmpl.Controls.Add(this.txbApeEmpl);
-            this.gbBuscarEmpl.Controls.Add(this.txbNombEmpl);
-            this.gbBuscarEmpl.Controls.Add(this.txbDNI);
-            this.gbBuscarEmpl.Location = new System.Drawing.Point(8, 6);
-            this.gbBuscarEmpl.Name = "gbBuscarEmpl";
-            this.gbBuscarEmpl.Size = new System.Drawing.Size(544, 69);
-            this.gbBuscarEmpl.TabIndex = 14;
-            this.gbBuscarEmpl.TabStop = false;
-            this.gbBuscarEmpl.Text = "Buscar empleado";
+            this.btnRegistrar.Location = new System.Drawing.Point(54, 286);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 24;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnAcepEmpl
+            // btnCancUsu
             // 
-            this.btnAcepEmpl.Location = new System.Drawing.Point(460, 23);
-            this.btnAcepEmpl.Name = "btnAcepEmpl";
-            this.btnAcepEmpl.Size = new System.Drawing.Size(75, 23);
-            this.btnAcepEmpl.TabIndex = 7;
-            this.btnAcepEmpl.Text = "Aceptar";
-            this.btnAcepEmpl.UseVisualStyleBackColor = true;
+            this.btnCancUsu.Location = new System.Drawing.Point(202, 286);
+            this.btnCancUsu.Name = "btnCancUsu";
+            this.btnCancUsu.Size = new System.Drawing.Size(75, 23);
+            this.btnCancUsu.TabIndex = 25;
+            this.btnCancUsu.Text = "Cancelar";
+            this.btnCancUsu.UseVisualStyleBackColor = true;
+            this.btnCancUsu.Click += new System.EventHandler(this.btnCancUsu_Click);
             // 
-            // btnCancEmpl
+            // btnSalir
             // 
-            this.btnCancEmpl.Location = new System.Drawing.Point(378, 22);
-            this.btnCancEmpl.Name = "btnCancEmpl";
-            this.btnCancEmpl.Size = new System.Drawing.Size(75, 23);
-            this.btnCancEmpl.TabIndex = 6;
-            this.btnCancEmpl.Text = "Cancelar";
-            this.btnCancEmpl.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(341, 286);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // lblApeEmpl
+            // dgvListaEmpleados
             // 
-            this.lblApeEmpl.AutoSize = true;
-            this.lblApeEmpl.Location = new System.Drawing.Point(260, 18);
-            this.lblApeEmpl.Name = "lblApeEmpl";
-            this.lblApeEmpl.Size = new System.Drawing.Size(44, 13);
-            this.lblApeEmpl.TabIndex = 5;
-            this.lblApeEmpl.Text = "Apellido";
+            this.dgvListaEmpleados.AllowUserToAddRows = false;
+            this.dgvListaEmpleados.AllowUserToDeleteRows = false;
+            this.dgvListaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaEmpleados.Location = new System.Drawing.Point(432, 14);
+            this.dgvListaEmpleados.Name = "dgvListaEmpleados";
+            this.dgvListaEmpleados.ReadOnly = true;
+            this.dgvListaEmpleados.RowHeadersWidth = 45;
+            this.dgvListaEmpleados.Size = new System.Drawing.Size(437, 396);
+            this.dgvListaEmpleados.TabIndex = 27;
+            this.dgvListaEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpleados_CellContentClick);
             // 
-            // lblNombEmpl
+            // label10
             // 
-            this.lblNombEmpl.AutoSize = true;
-            this.lblNombEmpl.Location = new System.Drawing.Point(135, 19);
-            this.lblNombEmpl.Name = "lblNombEmpl";
-            this.lblNombEmpl.Size = new System.Drawing.Size(44, 13);
-            this.lblNombEmpl.TabIndex = 4;
-            this.lblNombEmpl.Text = "Nombre";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Legajo";
             // 
-            // lblDNI
+            // txbLegajo
             // 
-            this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(7, 19);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(26, 13);
-            this.lblDNI.TabIndex = 3;
-            this.lblDNI.Text = "DNI";
+            this.txbLegajo.Enabled = false;
+            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
+            this.txbLegajo.Name = "txbLegajo";
+            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
+            this.txbLegajo.TabIndex = 29;
             // 
-            // txbApeEmpl
+            // tabControl5
             // 
-            this.txbApeEmpl.Location = new System.Drawing.Point(260, 40);
-            this.txbApeEmpl.Name = "txbApeEmpl";
-            this.txbApeEmpl.Size = new System.Drawing.Size(100, 20);
-            this.txbApeEmpl.TabIndex = 2;
-            // 
-            // txbNombEmpl
-            // 
-            this.txbNombEmpl.Location = new System.Drawing.Point(132, 40);
-            this.txbNombEmpl.Name = "txbNombEmpl";
-            this.txbNombEmpl.Size = new System.Drawing.Size(100, 20);
-            this.txbNombEmpl.TabIndex = 1;
-            // 
-            // txbDNI
-            // 
-            this.txbDNI.Location = new System.Drawing.Point(6, 40);
-            this.txbDNI.Name = "txbDNI";
-            this.txbDNI.Size = new System.Drawing.Size(100, 20);
-            this.txbDNI.TabIndex = 0;
-            // 
-            // dataGridView8
-            // 
-            this.dataGridView8.AllowUserToAddRows = false;
-            this.dataGridView8.AllowUserToDeleteRows = false;
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Legajo,
-            this.DNI,
-            this.Apellido,
-            this.Nombre});
-            this.dataGridView8.Location = new System.Drawing.Point(9, 81);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.ReadOnly = true;
-            this.dataGridView8.RowHeadersWidth = 45;
-            this.dataGridView8.Size = new System.Drawing.Size(869, 338);
-            this.dataGridView8.TabIndex = 13;
-            // 
-            // Legajo
-            // 
-            this.Legajo.HeaderText = "Legajo";
-            this.Legajo.MinimumWidth = 6;
-            this.Legajo.Name = "Legajo";
-            this.Legajo.ReadOnly = true;
-            this.Legajo.Width = 110;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.MinimumWidth = 6;
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            this.DNI.Width = 110;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.MinimumWidth = 6;
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 110;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 110;
+            this.tabControl5.Controls.Add(this.tabPage18);
+            this.tabControl5.Location = new System.Drawing.Point(2, 6);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(895, 450);
+            this.tabControl5.TabIndex = 1;
             // 
             // Form_Principal
             // 
@@ -1825,15 +1618,10 @@
             this.groupBox31.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             this.tabAdmin.ResumeLayout(false);
-            this.tabControl5.ResumeLayout(false);
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).EndInit();
-            this.tabPage19.ResumeLayout(false);
-            this.groupBox19.ResumeLayout(false);
-            this.gbBuscarEmpl.ResumeLayout(false);
-            this.gbBuscarEmpl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.tabControl5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1861,9 +1649,6 @@
         private System.Windows.Forms.TabPage tabPage16;
         private System.Windows.Forms.TabPage tabPage17;
         private System.Windows.Forms.TabPage tabAdmin;
-        private System.Windows.Forms.TabControl tabControl5;
-        private System.Windows.Forms.TabPage tabPage18;
-        private System.Windows.Forms.TabPage tabPage19;
         private System.Windows.Forms.GroupBox boxElegirMes;
         private System.Windows.Forms.DataGridView dtGridPorMes;
         private System.Windows.Forms.GroupBox boxElegirSemana;
@@ -1942,39 +1727,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtIdCargarStock1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnCancUsu;
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txbReingContr;
-        private System.Windows.Forms.TextBox txbContrasenia;
-        private System.Windows.Forms.TextBox txbNomUsuario;
-        private System.Windows.Forms.Label lblRepContr;
-        private System.Windows.Forms.Label lblContr;
-        private System.Windows.Forms.Label lblNombUsu;
-        private System.Windows.Forms.ComboBox cBoxPermisos;
-        private System.Windows.Forms.Label lblpermisos;
-        private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.Button btnRestContr;
-        private System.Windows.Forms.Button btnModContr;
-        private System.Windows.Forms.Button btnBloquear;
-        private System.Windows.Forms.GroupBox gbBuscarEmpl;
-        private System.Windows.Forms.Button btnAcepEmpl;
-        private System.Windows.Forms.Button btnCancEmpl;
-        private System.Windows.Forms.Label lblApeEmpl;
-        private System.Windows.Forms.Label lblNombEmpl;
-        private System.Windows.Forms.Label lblDNI;
-        private System.Windows.Forms.TextBox txbApeEmpl;
-        private System.Windows.Forms.TextBox txbNombEmpl;
-        private System.Windows.Forms.TextBox txbDNI;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Legajo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-
-        private System.Windows.Forms.DataGridView dgvListaEmpleados;
-        private System.Windows.Forms.TextBox txbLegajo;
-        private System.Windows.Forms.Label label10;
 
         private System.Windows.Forms.ComboBox cmbBoxMeses;
         private System.Windows.Forms.Button btnBuscarXMes;
@@ -1988,7 +1740,22 @@
         private System.Windows.Forms.ComboBox cmbBoxVendedor;
         private System.Windows.Forms.DataGridView dtGridPorVend;
         private System.Windows.Forms.TextBox txtBoxAño;
-
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage18;
+        private System.Windows.Forms.TextBox txbLegajo;
+        private System.Windows.Forms.TextBox txbReingContr;
+        private System.Windows.Forms.TextBox txbContrasenia;
+        private System.Windows.Forms.TextBox txbNomUsuario;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgvListaEmpleados;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCancUsu;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label lblRepContr;
+        private System.Windows.Forms.Label lblContr;
+        private System.Windows.Forms.Label lblNombUsu;
+        private System.Windows.Forms.ComboBox cBoxPermisos;
+        private System.Windows.Forms.Label lblpermisos;
     }
 }
 
