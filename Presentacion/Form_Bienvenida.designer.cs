@@ -59,7 +59,7 @@ namespace Supermercado
             this.lblMail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblMail.Location = new System.Drawing.Point(13, 127);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(188, 15);
+            this.lblMail.Size = new System.Drawing.Size(215, 19);
             this.lblMail.TabIndex = 12;
             this.lblMail.Text = "desarrollo@upeyasociados.com.ar";
             // 
@@ -70,7 +70,7 @@ namespace Supermercado
             this.lblTP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblTP.Location = new System.Drawing.Point(13, 110);
             this.lblTP.Name = "lblTP";
-            this.lblTP.Size = new System.Drawing.Size(145, 15);
+            this.lblTP.Size = new System.Drawing.Size(166, 19);
             this.lblTP.TabIndex = 11;
             this.lblTP.Text = "Técnicas de Programación";
             // 
@@ -80,7 +80,7 @@ namespace Supermercado
             this.lblPowered.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPowered.Location = new System.Drawing.Point(12, 69);
             this.lblPowered.Name = "lblPowered";
-            this.lblPowered.Size = new System.Drawing.Size(91, 21);
+            this.lblPowered.Size = new System.Drawing.Size(104, 25);
             this.lblPowered.TabIndex = 8;
             this.lblPowered.Text = "Powered By";
             // 
@@ -90,7 +90,7 @@ namespace Supermercado
             this.lblUPE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUPE.Location = new System.Drawing.Point(12, 89);
             this.lblUPE.Name = "lblUPE";
-            this.lblUPE.Size = new System.Drawing.Size(109, 21);
+            this.lblUPE.Size = new System.Drawing.Size(124, 25);
             this.lblUPE.TabIndex = 9;
             this.lblUPE.Text = "UPE && ASOC.";
             // 
@@ -109,7 +109,7 @@ namespace Supermercado
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblVersion.Location = new System.Drawing.Point(121, 170);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(100, 13);
+            this.lblVersion.Size = new System.Drawing.Size(113, 17);
             this.lblVersion.TabIndex = 14;
             this.lblVersion.Text = "Dia Software 1.0.0";
             // 

@@ -39,7 +39,9 @@ namespace Supermercado
             this.btnMinim = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureUser = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBoxUser
@@ -49,7 +51,7 @@ namespace Supermercado
             this.txtBoxUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxUser.Location = new System.Drawing.Point(408, 325);
             this.txtBoxUser.Name = "txtBoxUser";
-            this.txtBoxUser.Size = new System.Drawing.Size(177, 18);
+            this.txtBoxUser.Size = new System.Drawing.Size(177, 20);
             this.txtBoxUser.TabIndex = 1;
             // 
             // lblUser
@@ -58,7 +60,7 @@ namespace Supermercado
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(404, 301);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(69, 21);
+            this.lblUser.Size = new System.Drawing.Size(77, 25);
             this.lblUser.TabIndex = 3;
             this.lblUser.Text = "Usuario";
             // 
@@ -68,7 +70,7 @@ namespace Supermercado
             this.lblPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.Location = new System.Drawing.Point(403, 357);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(52, 21);
+            this.lblPass.Size = new System.Drawing.Size(58, 25);
             this.lblPass.TabIndex = 4;
             this.lblPass.Text = "Clave";
             // 
@@ -78,7 +80,7 @@ namespace Supermercado
             this.txtBoxPass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPass.Location = new System.Drawing.Point(407, 381);
             this.txtBoxPass.Name = "txtBoxPass";
-            this.txtBoxPass.Size = new System.Drawing.Size(177, 18);
+            this.txtBoxPass.Size = new System.Drawing.Size(177, 20);
             this.txtBoxPass.TabIndex = 2;
             this.txtBoxPass.UseSystemPasswordChar = true;
             // 
@@ -90,7 +92,7 @@ namespace Supermercado
             this.chkBoxClave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBoxClave.Location = new System.Drawing.Point(407, 412);
             this.chkBoxClave.Name = "chkBoxClave";
-            this.chkBoxClave.Size = new System.Drawing.Size(125, 25);
+            this.chkBoxClave.Size = new System.Drawing.Size(141, 29);
             this.chkBoxClave.TabIndex = 5;
             this.chkBoxClave.Text = "Mostrar clave";
             this.chkBoxClave.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -107,10 +109,10 @@ namespace Supermercado
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Image = global::Supermercado.Properties.Resources.entrar__2_;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(475, 450);
+            this.btnIngresar.Location = new System.Drawing.Point(460, 450);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(0);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(109, 38);
+            this.btnIngresar.Size = new System.Drawing.Size(123, 38);
             this.btnIngresar.TabIndex = 8;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,12 +162,23 @@ namespace Supermercado
             this.pictureUser.TabIndex = 0;
             this.pictureUser.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Supermercado.Properties.Resources.Dia_Logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(638, 286);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(446, 452);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1000, 650);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnMinim);
             this.Controls.Add(this.btnSalir);
@@ -183,6 +196,7 @@ namespace Supermercado
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +213,7 @@ namespace Supermercado
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnMinim;
         private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
