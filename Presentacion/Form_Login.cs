@@ -4,11 +4,16 @@ using System.Windows.Forms;
 //Incorporo el espacio de nombre System.Data.SqlClient
 using System.Data.SqlClient;
 using System.Data;
+using Entidades;
+using Negocio;
 
 namespace Supermercado
 {
     public partial class Form_Login : Form
     {
+
+
+
 
         /// <summary>
         /// Constructor
@@ -77,38 +82,15 @@ namespace Supermercado
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            /*Entidades.Usuario objUsuario = new Entidades.Usuario()
-            {
-                Nombre = txtBoxUser.Text,
-                Contraseña = txtBoxPass.Text
-            };
-
-            Negocio.Usuario gestorUsuario = new Negocio.Usuario();
-
-            try
-            {
-                if (gestorUsuario.ValidarUsuario(objUsuario))
-                {
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o Contraseña inválidos.");
-                }
-            }
-            catch (Entidades.ExcepcionNegocio exPers)
-            {
-                MessageBox.Show(exPers.Mensaje);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió una Exception: " + ex.Message);
-            }*/
 
             string usuario, password;
 
             usuario = txtBoxUser.Text;
             password = txtBoxPass.Text;
+
+
+
+
 
             if (string.IsNullOrEmpty(usuario))
             {
@@ -120,30 +102,49 @@ namespace Supermercado
             }
             else
             {
-                if (usuario == "GracielaFarias" && password == "gf123")
+                N_Usuario nUsuario = new N_Usuario();
+                DataTable dtUsuario = nUsuario.ValidarUsuario(usuario, password);
+
+
+                if (dtUsuario.Rows.Count == 0)
                 {
-                    iniciar_sesion(1);
-                }
-                else if (usuario == "DelfinaGomez" && password == "dg123")
-                {
-                    iniciar_sesion(2);
-                }
-                else if (usuario == "GabrielSotelo" && password == "gs123")
-                {
-                    iniciar_sesion(3);
-                }
-                else if (usuario == "GabrielDella" && password == "gd123")
-                {
-                    iniciar_sesion(4);
+                    MessageBox.Show("La búsqueda no obtuvo coincidencias....");
+
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña incorrecta.");
-                    //Application.Exit();
+                    DataRow fila = dtUsuario.Rows[0];
+
+                    E_Empleado unEmpleado = new E_Empleado();
+
+                    unEmpleado.Dni = Convert.ToInt64(fila[0]);
+                    unEmpleado.Nombre = fila[1].ToString();
+                    unEmpleado.Apellido = fila[2].ToString();
+                    unEmpleado.Cuil = Convert.ToInt64(fila[3]);
+                    unEmpleado.Direccion = fila[4].ToString();
+                    unEmpleado.Telefono = Convert.ToInt64(fila[5]);
+                    unEmpleado.Legajo = Convert.ToInt32(fila[6]);
+
+
+                    E_Usuario unUsuario = new E_Usuario();
+
+                    unUsuario.IdUsuario = Convert.ToInt32(fila[7]);
+                    unUsuario.Nombre = fila[8].ToString();
+                    unUsuario.Password = fila[9].ToString();
+                    unUsuario.Rol = fila[10].ToString();
+                    unUsuario.EmpleadoDatos = unEmpleado;
+
+                    this.Iniciar_Sesion(unUsuario);
+
                 }
 
-                //this.Hide();
+
+
             }
+
+
+
         }
 
         #endregion
@@ -152,17 +153,22 @@ namespace Supermercado
 
         #region MÉTODOS PRIVADOS
 
-        private void iniciar_sesion(int codigo)
+        private void Iniciar_Sesion(E_Usuario unUsuario)
         {
             this.Hide();
-            new Form_Principal(codigo).Show();
+            new Form_Principal(unUsuario).Show();
         }
 
         #endregion
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void txtBoxUser_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

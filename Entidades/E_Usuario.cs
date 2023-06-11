@@ -10,7 +10,7 @@ namespace Entidades
     {
 		private int _idUsuario;
 
-		public int idUsuario
+		public int IdUsuario
 		{
 			get { return _idUsuario; }
 			set { _idUsuario = value; }

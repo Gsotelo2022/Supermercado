@@ -112,50 +112,47 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dgvCargarStock = new System.Windows.Forms.DataGridView();
             this.tabVendedor = new System.Windows.Forms.TabPage();
+            this.tabAdmin = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.txbLegajo = new System.Windows.Forms.TextBox();
+            this.txbReingContr = new System.Windows.Forms.TextBox();
+            this.txbContrasenia = new System.Windows.Forms.TextBox();
+            this.txbNomUsuario = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnCancUsu = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.lblRepContr = new System.Windows.Forms.Label();
+            this.lblContr = new System.Windows.Forms.Label();
+            this.lblNombUsu = new System.Windows.Forms.Label();
+            this.cBoxPermisos = new System.Windows.Forms.ComboBox();
+            this.lblpermisos = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.benerarCliente_btn = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.direccionCliente_tbx = new System.Windows.Forms.TextBox();
+            this.telefonoCliente_tbx = new System.Windows.Forms.TextBox();
+            this.cuitCliente_tbx = new System.Windows.Forms.TextBox();
+            this.dniCliente_tbx = new System.Windows.Forms.TextBox();
+            this.nombrCliente_tbx = new System.Windows.Forms.TextBox();
+            this.apellidoCliente_tbx = new System.Windows.Forms.TextBox();
+            this.direccionCliente_lbl = new System.Windows.Forms.Label();
+            this.telefonoCliente_lbl = new System.Windows.Forms.Label();
+            this.cuitCliente_lbl = new System.Windows.Forms.Label();
+            this.dniCliente_lbl = new System.Windows.Forms.Label();
+            this.nombreCliente_lbl = new System.Windows.Forms.Label();
+            this.apellidoCliente_lbl = new System.Windows.Forms.Label();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.dataGridView12 = new System.Windows.Forms.DataGridView();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.tabAdmin = new System.Windows.Forms.TabPage();
-            this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.lblpermisos = new System.Windows.Forms.Label();
-            this.cBoxPermisos = new System.Windows.Forms.ComboBox();
-            this.lblNombUsu = new System.Windows.Forms.Label();
-            this.lblContr = new System.Windows.Forms.Label();
-            this.lblRepContr = new System.Windows.Forms.Label();
-            this.txbNomUsuario = new System.Windows.Forms.TextBox();
-            this.txbContrasenia = new System.Windows.Forms.TextBox();
-            this.txbReingContr = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnCancUsu = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txbLegajo = new System.Windows.Forms.TextBox();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.modificarcliente_btn = new System.Windows.Forms.Button();
+            this.iniciarVenta_btn = new System.Windows.Forms.Button();
+            this.buscarCliente_btn = new System.Windows.Forms.Button();
+            this.buscarCliente_gbx = new System.Windows.Forms.GroupBox();
+            this.dni_tbx = new System.Windows.Forms.TextBox();
+            this.dni_lbl = new System.Windows.Forms.Label();
+            this.dbDatosCliente_dg = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabGerente.SuspendLayout();
             this.tabControlGerente.SuspendLayout();
@@ -195,22 +192,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadCargarStock1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCargarStock)).BeginInit();
             this.tabVendedor.SuspendLayout();
-            this.tabControl4.SuspendLayout();
-            this.tabPage13.SuspendLayout();
-            this.tabPage14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            this.tabPage15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            this.tabPage16.SuspendLayout();
-            this.groupBox29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
-            this.tabPage17.SuspendLayout();
-            this.groupBox31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             this.tabAdmin.SuspendLayout();
+            this.tabControl5.SuspendLayout();
             this.tabPage18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).BeginInit();
-            this.tabControl5.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.tabPage13.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.tabPage14.SuspendLayout();
+            this.buscarCliente_gbx.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDatosCliente_dg)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1101,279 +1092,6 @@
             this.tabVendedor.Text = "Vendedor";
             this.tabVendedor.UseVisualStyleBackColor = true;
             // 
-            // tabControl4
-            // 
-            this.tabControl4.Controls.Add(this.tabPage13);
-            this.tabControl4.Controls.Add(this.tabPage14);
-            this.tabControl4.Controls.Add(this.tabPage15);
-            this.tabControl4.Controls.Add(this.tabPage16);
-            this.tabControl4.Controls.Add(this.tabPage17);
-            this.tabControl4.Location = new System.Drawing.Point(3, 3);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(899, 456);
-            this.tabControl4.TabIndex = 0;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Controls.Add(this.groupBox16);
-            this.tabPage13.Controls.Add(this.groupBox15);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(891, 430);
-            this.tabPage13.TabIndex = 0;
-            this.tabPage13.Text = "Cargar Clientes";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Location = new System.Drawing.Point(570, 36);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(206, 192);
-            this.groupBox16.TabIndex = 1;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Icono de Usuario";
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Location = new System.Drawing.Point(90, 27);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(401, 377);
-            this.groupBox15.TabIndex = 0;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Datos del Cliente";
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Controls.Add(this.groupBox21);
-            this.tabPage14.Controls.Add(this.groupBox22);
-            this.tabPage14.Controls.Add(this.dataGridView9);
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(891, 430);
-            this.tabPage14.TabIndex = 1;
-            this.tabPage14.Text = "Modificar Cliente";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Location = new System.Drawing.Point(609, 9);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(270, 69);
-            this.groupBox21.TabIndex = 12;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Botones";
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.Location = new System.Drawing.Point(10, 9);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(593, 69);
-            this.groupBox22.TabIndex = 11;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Buscar Cliente";
-            // 
-            // dataGridView9
-            // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(11, 84);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.RowHeadersWidth = 45;
-            this.dataGridView9.Size = new System.Drawing.Size(869, 338);
-            this.dataGridView9.TabIndex = 10;
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.groupBox25);
-            this.tabPage15.Controls.Add(this.groupBox24);
-            this.tabPage15.Controls.Add(this.dataGridView10);
-            this.tabPage15.Controls.Add(this.groupBox23);
-            this.tabPage15.Location = new System.Drawing.Point(4, 22);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(891, 430);
-            this.tabPage15.TabIndex = 2;
-            this.tabPage15.Text = "Crear Orden";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Location = new System.Drawing.Point(674, 296);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(200, 100);
-            this.groupBox25.TabIndex = 3;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Botones";
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Location = new System.Drawing.Point(6, 296);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(660, 100);
-            this.groupBox24.TabIndex = 2;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Importes";
-            // 
-            // dataGridView10
-            // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(6, 112);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.RowHeadersWidth = 45;
-            this.dataGridView10.Size = new System.Drawing.Size(868, 178);
-            this.dataGridView10.TabIndex = 1;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.Location = new System.Drawing.Point(6, 6);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(868, 100);
-            this.groupBox23.TabIndex = 0;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "Datos del Cliente";
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.Controls.Add(this.groupBox29);
-            this.tabPage16.Controls.Add(this.groupBox26);
-            this.tabPage16.Controls.Add(this.groupBox27);
-            this.tabPage16.Controls.Add(this.dataGridView11);
-            this.tabPage16.Controls.Add(this.groupBox28);
-            this.tabPage16.Location = new System.Drawing.Point(4, 22);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(891, 430);
-            this.tabPage16.TabIndex = 3;
-            this.tabPage16.Text = "Modificar Orden";
-            this.tabPage16.UseVisualStyleBackColor = true;
-            // 
-            // groupBox29
-            // 
-            this.groupBox29.Controls.Add(this.groupBox30);
-            this.groupBox29.Location = new System.Drawing.Point(11, 20);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(293, 100);
-            this.groupBox29.TabIndex = 8;
-            this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Buscar Orden";
-            // 
-            // groupBox30
-            // 
-            this.groupBox30.Location = new System.Drawing.Point(179, 59);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(114, 41);
-            this.groupBox30.TabIndex = 0;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Boton Buscar";
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Location = new System.Drawing.Point(679, 310);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(200, 100);
-            this.groupBox26.TabIndex = 7;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Botones";
-            // 
-            // groupBox27
-            // 
-            this.groupBox27.Location = new System.Drawing.Point(11, 310);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(660, 100);
-            this.groupBox27.TabIndex = 6;
-            this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "Importes";
-            // 
-            // dataGridView11
-            // 
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(11, 126);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.RowHeadersWidth = 45;
-            this.dataGridView11.Size = new System.Drawing.Size(868, 178);
-            this.dataGridView11.TabIndex = 5;
-            // 
-            // groupBox28
-            // 
-            this.groupBox28.Location = new System.Drawing.Point(310, 20);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(569, 100);
-            this.groupBox28.TabIndex = 4;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "Datos del Cliente";
-            // 
-            // tabPage17
-            // 
-            this.tabPage17.Controls.Add(this.groupBox31);
-            this.tabPage17.Controls.Add(this.groupBox33);
-            this.tabPage17.Controls.Add(this.groupBox34);
-            this.tabPage17.Controls.Add(this.dataGridView12);
-            this.tabPage17.Controls.Add(this.groupBox35);
-            this.tabPage17.Location = new System.Drawing.Point(4, 22);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(891, 430);
-            this.tabPage17.TabIndex = 4;
-            this.tabPage17.Text = "Facturación";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // groupBox31
-            // 
-            this.groupBox31.Controls.Add(this.groupBox32);
-            this.groupBox31.Location = new System.Drawing.Point(11, 20);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(293, 100);
-            this.groupBox31.TabIndex = 13;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "Buscar Orden";
-            // 
-            // groupBox32
-            // 
-            this.groupBox32.Location = new System.Drawing.Point(179, 59);
-            this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(114, 41);
-            this.groupBox32.TabIndex = 0;
-            this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "Boton Buscar";
-            // 
-            // groupBox33
-            // 
-            this.groupBox33.Location = new System.Drawing.Point(679, 310);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(200, 100);
-            this.groupBox33.TabIndex = 12;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Botones";
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.Location = new System.Drawing.Point(11, 310);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(660, 100);
-            this.groupBox34.TabIndex = 11;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "Importes";
-            // 
-            // dataGridView12
-            // 
-            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(11, 126);
-            this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.RowHeadersWidth = 45;
-            this.dataGridView12.Size = new System.Drawing.Size(868, 178);
-            this.dataGridView12.TabIndex = 10;
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Location = new System.Drawing.Point(310, 20);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(569, 100);
-            this.groupBox35.TabIndex = 9;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "Datos del Cliente";
-            // 
             // tabAdmin
             // 
             this.tabAdmin.Controls.Add(this.tabControl5);
@@ -1384,6 +1102,15 @@
             this.tabAdmin.TabIndex = 3;
             this.tabAdmin.Text = "Administrador";
             this.tabAdmin.UseVisualStyleBackColor = true;
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage18);
+            this.tabControl5.Location = new System.Drawing.Point(2, 6);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(895, 450);
+            this.tabControl5.TabIndex = 1;
             // 
             // tabPage18
             // 
@@ -1409,68 +1136,13 @@
             this.tabPage18.Text = "Crear Usuarios";
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
-            // lblpermisos
+            // txbLegajo
             // 
-            this.lblpermisos.AutoSize = true;
-            this.lblpermisos.Location = new System.Drawing.Point(51, 82);
-            this.lblpermisos.Name = "lblpermisos";
-            this.lblpermisos.Size = new System.Drawing.Size(90, 13);
-            this.lblpermisos.TabIndex = 16;
-            this.lblpermisos.Text = "Nivel de permisos";
-            // 
-            // cBoxPermisos
-            // 
-            this.cBoxPermisos.FormattingEnabled = true;
-            this.cBoxPermisos.Items.AddRange(new object[] {
-            "Cajero",
-            "Enc. Inventario",
-            "Gerente",
-            "Administrador"});
-            this.cBoxPermisos.Location = new System.Drawing.Point(214, 82);
-            this.cBoxPermisos.Name = "cBoxPermisos";
-            this.cBoxPermisos.Size = new System.Drawing.Size(121, 21);
-            this.cBoxPermisos.TabIndex = 17;
-            // 
-            // lblNombUsu
-            // 
-            this.lblNombUsu.AutoSize = true;
-            this.lblNombUsu.Location = new System.Drawing.Point(51, 146);
-            this.lblNombUsu.Name = "lblNombUsu";
-            this.lblNombUsu.Size = new System.Drawing.Size(98, 13);
-            this.lblNombUsu.TabIndex = 18;
-            this.lblNombUsu.Text = "Nombre de Usuario";
-            // 
-            // lblContr
-            // 
-            this.lblContr.AutoSize = true;
-            this.lblContr.Location = new System.Drawing.Point(51, 182);
-            this.lblContr.Name = "lblContr";
-            this.lblContr.Size = new System.Drawing.Size(61, 13);
-            this.lblContr.TabIndex = 19;
-            this.lblContr.Text = "Contraseña";
-            // 
-            // lblRepContr
-            // 
-            this.lblRepContr.AutoSize = true;
-            this.lblRepContr.Location = new System.Drawing.Point(51, 217);
-            this.lblRepContr.Name = "lblRepContr";
-            this.lblRepContr.Size = new System.Drawing.Size(112, 13);
-            this.lblRepContr.TabIndex = 20;
-            this.lblRepContr.Text = "Reingrese Contraseña";
-            // 
-            // txbNomUsuario
-            // 
-            this.txbNomUsuario.Location = new System.Drawing.Point(214, 139);
-            this.txbNomUsuario.Name = "txbNomUsuario";
-            this.txbNomUsuario.Size = new System.Drawing.Size(121, 20);
-            this.txbNomUsuario.TabIndex = 21;
-            // 
-            // txbContrasenia
-            // 
-            this.txbContrasenia.Location = new System.Drawing.Point(214, 175);
-            this.txbContrasenia.Name = "txbContrasenia";
-            this.txbContrasenia.Size = new System.Drawing.Size(121, 20);
-            this.txbContrasenia.TabIndex = 22;
+            this.txbLegajo.Enabled = false;
+            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
+            this.txbLegajo.Name = "txbLegajo";
+            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
+            this.txbLegajo.TabIndex = 29;
             // 
             // txbReingContr
             // 
@@ -1479,35 +1151,28 @@
             this.txbReingContr.Size = new System.Drawing.Size(121, 20);
             this.txbReingContr.TabIndex = 23;
             // 
-            // btnRegistrar
+            // txbContrasenia
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(54, 286);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 24;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.txbContrasenia.Location = new System.Drawing.Point(214, 175);
+            this.txbContrasenia.Name = "txbContrasenia";
+            this.txbContrasenia.Size = new System.Drawing.Size(121, 20);
+            this.txbContrasenia.TabIndex = 22;
             // 
-            // btnCancUsu
+            // txbNomUsuario
             // 
-            this.btnCancUsu.Location = new System.Drawing.Point(202, 286);
-            this.btnCancUsu.Name = "btnCancUsu";
-            this.btnCancUsu.Size = new System.Drawing.Size(75, 23);
-            this.btnCancUsu.TabIndex = 25;
-            this.btnCancUsu.Text = "Cancelar";
-            this.btnCancUsu.UseVisualStyleBackColor = true;
-            this.btnCancUsu.Click += new System.EventHandler(this.btnCancUsu_Click);
+            this.txbNomUsuario.Location = new System.Drawing.Point(214, 139);
+            this.txbNomUsuario.Name = "txbNomUsuario";
+            this.txbNomUsuario.Size = new System.Drawing.Size(121, 20);
+            this.txbNomUsuario.TabIndex = 21;
             // 
-            // btnSalir
+            // label10
             // 
-            this.btnSalir.Location = new System.Drawing.Point(341, 286);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 26;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(51, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Legajo";
             // 
             // dgvListaEmpleados
             // 
@@ -1522,31 +1187,317 @@
             this.dgvListaEmpleados.TabIndex = 27;
             this.dgvListaEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEmpleados_CellContentClick);
             // 
-            // label10
+            // btnSalir
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Legajo";
+            this.btnSalir.Location = new System.Drawing.Point(341, 286);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txbLegajo
+            // btnCancUsu
             // 
-            this.txbLegajo.Enabled = false;
-            this.txbLegajo.Location = new System.Drawing.Point(214, 34);
-            this.txbLegajo.Name = "txbLegajo";
-            this.txbLegajo.Size = new System.Drawing.Size(121, 20);
-            this.txbLegajo.TabIndex = 29;
+            this.btnCancUsu.Location = new System.Drawing.Point(202, 286);
+            this.btnCancUsu.Name = "btnCancUsu";
+            this.btnCancUsu.Size = new System.Drawing.Size(75, 23);
+            this.btnCancUsu.TabIndex = 25;
+            this.btnCancUsu.Text = "Cancelar";
+            this.btnCancUsu.UseVisualStyleBackColor = true;
+            this.btnCancUsu.Click += new System.EventHandler(this.btnCancUsu_Click);
             // 
-            // tabControl5
+            // btnRegistrar
             // 
-            this.tabControl5.Controls.Add(this.tabPage18);
-            this.tabControl5.Location = new System.Drawing.Point(2, 6);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(895, 450);
-            this.tabControl5.TabIndex = 1;
+            this.btnRegistrar.Location = new System.Drawing.Point(54, 286);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 24;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // lblRepContr
+            // 
+            this.lblRepContr.AutoSize = true;
+            this.lblRepContr.Location = new System.Drawing.Point(51, 217);
+            this.lblRepContr.Name = "lblRepContr";
+            this.lblRepContr.Size = new System.Drawing.Size(112, 13);
+            this.lblRepContr.TabIndex = 20;
+            this.lblRepContr.Text = "Reingrese Contraseña";
+            // 
+            // lblContr
+            // 
+            this.lblContr.AutoSize = true;
+            this.lblContr.Location = new System.Drawing.Point(51, 182);
+            this.lblContr.Name = "lblContr";
+            this.lblContr.Size = new System.Drawing.Size(61, 13);
+            this.lblContr.TabIndex = 19;
+            this.lblContr.Text = "Contraseña";
+            // 
+            // lblNombUsu
+            // 
+            this.lblNombUsu.AutoSize = true;
+            this.lblNombUsu.Location = new System.Drawing.Point(51, 146);
+            this.lblNombUsu.Name = "lblNombUsu";
+            this.lblNombUsu.Size = new System.Drawing.Size(98, 13);
+            this.lblNombUsu.TabIndex = 18;
+            this.lblNombUsu.Text = "Nombre de Usuario";
+            // 
+            // cBoxPermisos
+            // 
+            this.cBoxPermisos.FormattingEnabled = true;
+            this.cBoxPermisos.Items.AddRange(new object[] {
+            "Cajero",
+            "Enc. Inventario",
+            "Gerente",
+            "Administrador"});
+            this.cBoxPermisos.Location = new System.Drawing.Point(214, 82);
+            this.cBoxPermisos.Name = "cBoxPermisos";
+            this.cBoxPermisos.Size = new System.Drawing.Size(121, 21);
+            this.cBoxPermisos.TabIndex = 17;
+            // 
+            // lblpermisos
+            // 
+            this.lblpermisos.AutoSize = true;
+            this.lblpermisos.Location = new System.Drawing.Point(51, 82);
+            this.lblpermisos.Name = "lblpermisos";
+            this.lblpermisos.Size = new System.Drawing.Size(90, 13);
+            this.lblpermisos.TabIndex = 16;
+            this.lblpermisos.Text = "Nivel de permisos";
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage13);
+            this.tabControl4.Controls.Add(this.tabPage14);
+            this.tabControl4.Location = new System.Drawing.Point(0, 1);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(899, 456);
+            this.tabControl4.TabIndex = 1;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage13.Controls.Add(this.benerarCliente_btn);
+            this.tabPage13.Controls.Add(this.groupBox15);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(891, 430);
+            this.tabPage13.TabIndex = 0;
+            this.tabPage13.Text = "Cargar Clientes";
+            // 
+            // benerarCliente_btn
+            // 
+            this.benerarCliente_btn.BackColor = System.Drawing.Color.LightGray;
+            this.benerarCliente_btn.Location = new System.Drawing.Point(643, 90);
+            this.benerarCliente_btn.Name = "benerarCliente_btn";
+            this.benerarCliente_btn.Size = new System.Drawing.Size(143, 61);
+            this.benerarCliente_btn.TabIndex = 1;
+            this.benerarCliente_btn.Text = "Nuevo Cliente";
+            this.benerarCliente_btn.UseVisualStyleBackColor = false;
+            this.benerarCliente_btn.Click += new System.EventHandler(this.benerarCliente_btn_Click_1);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.direccionCliente_tbx);
+            this.groupBox15.Controls.Add(this.telefonoCliente_tbx);
+            this.groupBox15.Controls.Add(this.cuitCliente_tbx);
+            this.groupBox15.Controls.Add(this.dniCliente_tbx);
+            this.groupBox15.Controls.Add(this.nombrCliente_tbx);
+            this.groupBox15.Controls.Add(this.apellidoCliente_tbx);
+            this.groupBox15.Controls.Add(this.direccionCliente_lbl);
+            this.groupBox15.Controls.Add(this.telefonoCliente_lbl);
+            this.groupBox15.Controls.Add(this.cuitCliente_lbl);
+            this.groupBox15.Controls.Add(this.dniCliente_lbl);
+            this.groupBox15.Controls.Add(this.nombreCliente_lbl);
+            this.groupBox15.Controls.Add(this.apellidoCliente_lbl);
+            this.groupBox15.Location = new System.Drawing.Point(90, 27);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(401, 377);
+            this.groupBox15.TabIndex = 0;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Datos del Cliente";
+            // 
+            // direccionCliente_tbx
+            // 
+            this.direccionCliente_tbx.Location = new System.Drawing.Point(157, 273);
+            this.direccionCliente_tbx.Name = "direccionCliente_tbx";
+            this.direccionCliente_tbx.Size = new System.Drawing.Size(211, 20);
+            this.direccionCliente_tbx.TabIndex = 11;
+            // 
+            // telefonoCliente_tbx
+            // 
+            this.telefonoCliente_tbx.Location = new System.Drawing.Point(157, 228);
+            this.telefonoCliente_tbx.Name = "telefonoCliente_tbx";
+            this.telefonoCliente_tbx.Size = new System.Drawing.Size(211, 20);
+            this.telefonoCliente_tbx.TabIndex = 10;
+            // 
+            // cuitCliente_tbx
+            // 
+            this.cuitCliente_tbx.Location = new System.Drawing.Point(157, 185);
+            this.cuitCliente_tbx.Name = "cuitCliente_tbx";
+            this.cuitCliente_tbx.Size = new System.Drawing.Size(211, 20);
+            this.cuitCliente_tbx.TabIndex = 9;
+            // 
+            // dniCliente_tbx
+            // 
+            this.dniCliente_tbx.Location = new System.Drawing.Point(157, 146);
+            this.dniCliente_tbx.Name = "dniCliente_tbx";
+            this.dniCliente_tbx.Size = new System.Drawing.Size(211, 20);
+            this.dniCliente_tbx.TabIndex = 8;
+            // 
+            // nombrCliente_tbx
+            // 
+            this.nombrCliente_tbx.Location = new System.Drawing.Point(157, 104);
+            this.nombrCliente_tbx.Name = "nombrCliente_tbx";
+            this.nombrCliente_tbx.Size = new System.Drawing.Size(211, 20);
+            this.nombrCliente_tbx.TabIndex = 7;
+            // 
+            // apellidoCliente_tbx
+            // 
+            this.apellidoCliente_tbx.Location = new System.Drawing.Point(157, 60);
+            this.apellidoCliente_tbx.MaxLength = 50;
+            this.apellidoCliente_tbx.Name = "apellidoCliente_tbx";
+            this.apellidoCliente_tbx.Size = new System.Drawing.Size(211, 20);
+            this.apellidoCliente_tbx.TabIndex = 6;
+            // 
+            // direccionCliente_lbl
+            // 
+            this.direccionCliente_lbl.AutoSize = true;
+            this.direccionCliente_lbl.Location = new System.Drawing.Point(35, 280);
+            this.direccionCliente_lbl.Name = "direccionCliente_lbl";
+            this.direccionCliente_lbl.Size = new System.Drawing.Size(52, 13);
+            this.direccionCliente_lbl.TabIndex = 5;
+            this.direccionCliente_lbl.Text = "Direccion";
+            // 
+            // telefonoCliente_lbl
+            // 
+            this.telefonoCliente_lbl.AutoSize = true;
+            this.telefonoCliente_lbl.Location = new System.Drawing.Point(35, 235);
+            this.telefonoCliente_lbl.Name = "telefonoCliente_lbl";
+            this.telefonoCliente_lbl.Size = new System.Drawing.Size(49, 13);
+            this.telefonoCliente_lbl.TabIndex = 4;
+            this.telefonoCliente_lbl.Text = "Teléfono";
+            // 
+            // cuitCliente_lbl
+            // 
+            this.cuitCliente_lbl.AutoSize = true;
+            this.cuitCliente_lbl.Location = new System.Drawing.Point(35, 192);
+            this.cuitCliente_lbl.Name = "cuitCliente_lbl";
+            this.cuitCliente_lbl.Size = new System.Drawing.Size(32, 13);
+            this.cuitCliente_lbl.TabIndex = 3;
+            this.cuitCliente_lbl.Text = "CUIT";
+            // 
+            // dniCliente_lbl
+            // 
+            this.dniCliente_lbl.AutoSize = true;
+            this.dniCliente_lbl.Location = new System.Drawing.Point(35, 146);
+            this.dniCliente_lbl.Name = "dniCliente_lbl";
+            this.dniCliente_lbl.Size = new System.Drawing.Size(26, 13);
+            this.dniCliente_lbl.TabIndex = 2;
+            this.dniCliente_lbl.Text = "DNI";
+            // 
+            // nombreCliente_lbl
+            // 
+            this.nombreCliente_lbl.AutoSize = true;
+            this.nombreCliente_lbl.Location = new System.Drawing.Point(35, 104);
+            this.nombreCliente_lbl.Name = "nombreCliente_lbl";
+            this.nombreCliente_lbl.Size = new System.Drawing.Size(44, 13);
+            this.nombreCliente_lbl.TabIndex = 1;
+            this.nombreCliente_lbl.Text = "Nombre";
+            // 
+            // apellidoCliente_lbl
+            // 
+            this.apellidoCliente_lbl.AutoSize = true;
+            this.apellidoCliente_lbl.Location = new System.Drawing.Point(35, 63);
+            this.apellidoCliente_lbl.Name = "apellidoCliente_lbl";
+            this.apellidoCliente_lbl.Size = new System.Drawing.Size(44, 13);
+            this.apellidoCliente_lbl.TabIndex = 0;
+            this.apellidoCliente_lbl.Text = "Apellido";
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.modificarcliente_btn);
+            this.tabPage14.Controls.Add(this.iniciarVenta_btn);
+            this.tabPage14.Controls.Add(this.buscarCliente_btn);
+            this.tabPage14.Controls.Add(this.buscarCliente_gbx);
+            this.tabPage14.Controls.Add(this.dbDatosCliente_dg);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(891, 430);
+            this.tabPage14.TabIndex = 1;
+            this.tabPage14.Text = "Busqueda / mod Clientes";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // modificarcliente_btn
+            // 
+            this.modificarcliente_btn.BackColor = System.Drawing.Color.Teal;
+            this.modificarcliente_btn.Location = new System.Drawing.Point(675, 248);
+            this.modificarcliente_btn.Name = "modificarcliente_btn";
+            this.modificarcliente_btn.Size = new System.Drawing.Size(145, 49);
+            this.modificarcliente_btn.TabIndex = 14;
+            this.modificarcliente_btn.Text = "Modificar cliente";
+            this.modificarcliente_btn.UseVisualStyleBackColor = false;
+            this.modificarcliente_btn.Click += new System.EventHandler(this.modificarcliente_btn_Click_1);
+            // 
+            // iniciarVenta_btn
+            // 
+            this.iniciarVenta_btn.BackColor = System.Drawing.Color.Lime;
+            this.iniciarVenta_btn.Location = new System.Drawing.Point(675, 137);
+            this.iniciarVenta_btn.Name = "iniciarVenta_btn";
+            this.iniciarVenta_btn.Size = new System.Drawing.Size(145, 56);
+            this.iniciarVenta_btn.TabIndex = 13;
+            this.iniciarVenta_btn.Text = "Iniciar Venta";
+            this.iniciarVenta_btn.UseVisualStyleBackColor = false;
+            this.iniciarVenta_btn.Click += new System.EventHandler(this.iniciarVenta_btn_Click_1);
+            // 
+            // buscarCliente_btn
+            // 
+            this.buscarCliente_btn.BackColor = System.Drawing.Color.IndianRed;
+            this.buscarCliente_btn.Location = new System.Drawing.Point(675, 9);
+            this.buscarCliente_btn.Name = "buscarCliente_btn";
+            this.buscarCliente_btn.Size = new System.Drawing.Size(145, 60);
+            this.buscarCliente_btn.TabIndex = 12;
+            this.buscarCliente_btn.Text = "BUSCAR";
+            this.buscarCliente_btn.UseVisualStyleBackColor = false;
+            this.buscarCliente_btn.Click += new System.EventHandler(this.buscarCliente_btn_Click_1);
+            // 
+            // buscarCliente_gbx
+            // 
+            this.buscarCliente_gbx.Controls.Add(this.dni_tbx);
+            this.buscarCliente_gbx.Controls.Add(this.dni_lbl);
+            this.buscarCliente_gbx.Location = new System.Drawing.Point(10, 9);
+            this.buscarCliente_gbx.Name = "buscarCliente_gbx";
+            this.buscarCliente_gbx.Size = new System.Drawing.Size(593, 69);
+            this.buscarCliente_gbx.TabIndex = 11;
+            this.buscarCliente_gbx.TabStop = false;
+            // 
+            // dni_tbx
+            // 
+            this.dni_tbx.Location = new System.Drawing.Point(80, 24);
+            this.dni_tbx.Name = "dni_tbx";
+            this.dni_tbx.Size = new System.Drawing.Size(200, 20);
+            this.dni_tbx.TabIndex = 1;
+            // 
+            // dni_lbl
+            // 
+            this.dni_lbl.AutoSize = true;
+            this.dni_lbl.Location = new System.Drawing.Point(24, 24);
+            this.dni_lbl.Name = "dni_lbl";
+            this.dni_lbl.Size = new System.Drawing.Size(26, 13);
+            this.dni_lbl.TabIndex = 0;
+            this.dni_lbl.Text = "DNI";
+            // 
+            // dbDatosCliente_dg
+            // 
+            this.dbDatosCliente_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbDatosCliente_dg.Location = new System.Drawing.Point(37, 84);
+            this.dbDatosCliente_dg.Name = "dbDatosCliente_dg";
+            this.dbDatosCliente_dg.Size = new System.Drawing.Size(598, 340);
+            this.dbDatosCliente_dg.TabIndex = 10;
             // 
             // Form_Principal
             // 
@@ -1605,23 +1556,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadCargarStock1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCargarStock)).EndInit();
             this.tabVendedor.ResumeLayout(false);
-            this.tabControl4.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            this.tabPage15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            this.tabPage16.ResumeLayout(false);
-            this.groupBox29.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
-            this.tabPage17.ResumeLayout(false);
-            this.groupBox31.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             this.tabAdmin.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).EndInit();
-            this.tabControl5.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
+            this.tabPage13.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.tabPage14.ResumeLayout(false);
+            this.buscarCliente_gbx.ResumeLayout(false);
+            this.buscarCliente_gbx.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDatosCliente_dg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1642,12 +1589,6 @@
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.TabPage tabVendedor;
-        private System.Windows.Forms.TabControl tabControl4;
-        private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.TabPage tabPage14;
-        private System.Windows.Forms.TabPage tabPage15;
-        private System.Windows.Forms.TabPage tabPage16;
-        private System.Windows.Forms.TabPage tabPage17;
         private System.Windows.Forms.TabPage tabAdmin;
         private System.Windows.Forms.GroupBox boxElegirMes;
         private System.Windows.Forms.DataGridView dtGridPorMes;
@@ -1662,27 +1603,6 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dgvAlerta;
         private System.Windows.Forms.DataGridView dgvCargarStock;
-        private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.GroupBox groupBox29;
-        private System.Windows.Forms.GroupBox groupBox30;
-        private System.Windows.Forms.GroupBox groupBox26;
-        private System.Windows.Forms.GroupBox groupBox27;
-        private System.Windows.Forms.DataGridView dataGridView11;
-        private System.Windows.Forms.GroupBox groupBox28;
-        private System.Windows.Forms.GroupBox groupBox31;
-        private System.Windows.Forms.GroupBox groupBox32;
-        private System.Windows.Forms.GroupBox groupBox33;
-        private System.Windows.Forms.GroupBox groupBox34;
-        private System.Windows.Forms.DataGridView dataGridView12;
-        private System.Windows.Forms.GroupBox groupBox35;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
@@ -1756,6 +1676,30 @@
         private System.Windows.Forms.Label lblNombUsu;
         private System.Windows.Forms.ComboBox cBoxPermisos;
         private System.Windows.Forms.Label lblpermisos;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage tabPage13;
+        private System.Windows.Forms.Button benerarCliente_btn;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.TextBox direccionCliente_tbx;
+        private System.Windows.Forms.TextBox telefonoCliente_tbx;
+        private System.Windows.Forms.TextBox cuitCliente_tbx;
+        private System.Windows.Forms.TextBox dniCliente_tbx;
+        private System.Windows.Forms.TextBox nombrCliente_tbx;
+        private System.Windows.Forms.TextBox apellidoCliente_tbx;
+        private System.Windows.Forms.Label direccionCliente_lbl;
+        private System.Windows.Forms.Label telefonoCliente_lbl;
+        private System.Windows.Forms.Label cuitCliente_lbl;
+        private System.Windows.Forms.Label dniCliente_lbl;
+        private System.Windows.Forms.Label nombreCliente_lbl;
+        private System.Windows.Forms.Label apellidoCliente_lbl;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.Button modificarcliente_btn;
+        private System.Windows.Forms.Button iniciarVenta_btn;
+        private System.Windows.Forms.Button buscarCliente_btn;
+        private System.Windows.Forms.GroupBox buscarCliente_gbx;
+        private System.Windows.Forms.TextBox dni_tbx;
+        private System.Windows.Forms.Label dni_lbl;
+        private System.Windows.Forms.DataGridView dbDatosCliente_dg;
     }
 }
 

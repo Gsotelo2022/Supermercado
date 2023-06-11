@@ -52,5 +52,38 @@ namespace Negocio
             D_Producto objProductosDatos = new D_Producto();
             objProductosDatos.ActualizarStock(objEProducto);
         }
+        public E_Producto BuscarProductoPorId(int unId)
+        {
+            D_Producto objDProducto = new D_Producto();
+            DataTable dtProducto = new DataTable();
+            E_Producto objEProducto = new E_Producto();
+
+
+            dtProducto = objDProducto.BuscarProductoPorId(unId);
+
+
+            if (dtProducto.Rows.Count == 0)
+            {
+                objEProducto = null;
+            }
+            else
+            {
+                DataRow fila = dtProducto.Rows[0];
+                objEProducto.IdProducto = Convert.ToInt32(fila["Id_Producto"]);
+                objEProducto.Descripcion = fila["Descripcion"].ToString();
+                objEProducto.Precio = Convert.ToDouble(fila["Precio"]);
+                objEProducto.Cantidad = Convert.ToInt32(fila["Cantidad"]);
+                objEProducto.Habilitado = fila["Habilitado"].ToString();
+
+            }
+
+            return objEProducto;
+        }
+        public void ActualizarStock(E_OrdenDeCompra objEOrdenDeCompra)
+        {
+            D_Producto objDProducto = new D_Producto();
+
+            objDProducto.ActualizarStockDeProducto(objEOrdenDeCompra);
+        }
     }
 }

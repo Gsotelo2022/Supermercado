@@ -76,5 +76,32 @@ namespace Datos
             //Al devolver filar afectadas, se puede usar para la excepcion
             objConexion.LeerPorStoreProcedure("sp_CrearProducto", parametros);
         }
+
+
+        public DataTable BuscarProductoPorId(int unId)
+        {
+            SqlParameter[] parametros = new SqlParameter[1];
+
+            parametros[0] = objConexion.crearParametro("@Id", unId.ToString());
+
+            return objConexion.LeerPorStoreProcedure("sp_BuscarProductoVenta", parametros);
+        }
+
+        public void ActualizarStockDeProducto(E_OrdenDeCompra objEOrdenDeCompra)
+        {
+
+            foreach (E_OrdenDetalle unOrden in objEOrdenDeCompra.Detalle)
+            {
+                SqlParameter[] parameteros = new SqlParameter[2];
+
+                parameteros[0] = objConexion.crearParametro("@IdProducto", unOrden.Producto.IdProducto.ToString());
+                parameteros[1] = objConexion.crearParametro("@Cantidad", unOrden.Cantidad.ToString());
+
+                objConexion.LeerPorStoreProcedure("sp_ActualizarStockDeProducto", parameteros);
+
+            }
+
+        }
+
     }
 }

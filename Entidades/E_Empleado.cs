@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class E_Empleado
-    {
+    public class E_Empleado : E_Persona
+	{
 		private int _legajo;
 
 		public int Legajo

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -26,6 +27,13 @@ namespace Negocio
             Datos.D_Usuario objDatos = new Datos.D_Usuario();
             string mensaje = objDatos.CrearUsuario(legajo, permiso, nombreUsuario, contrasenia);
             return mensaje;
+        }
+
+        public DataTable ValidarUsuario(string unNombre, string Passw)
+        {
+            D_Usuario dUsuario = new D_Usuario();
+
+            return dUsuario.BuscarUsuario(unNombre, Passw);
         }
     }
 }

@@ -42,8 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExcepcionesProductos\Exproductos.cs" />
+    <Compile Include="N_Cajero.cs" />
     <Compile Include="N_Encargado.cs" />
+    <Compile Include="N_Factura.cs" />
     <Compile Include="N_Gerente.cs" />
+    <Compile Include="N_OrdenDeCompra.cs" />
+    <Compile Include="N_OrdenDetalle.cs" />
     <Compile Include="N_Producto.cs" />
     <Compile Include="N_Rol.cs" />
     <Compile Include="N_Usuario.cs" />

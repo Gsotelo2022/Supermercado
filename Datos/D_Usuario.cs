@@ -51,5 +51,17 @@ namespace Datos
 
             return mensaje;
         }
+
+        public DataTable BuscarUsuario(string unNombre, string Passw)
+        {
+            SqlParameter[] parametros = new SqlParameter[2];
+
+            parametros[0] = objConexion.crearParametro("@Nombre", unNombre);
+            parametros[1] = objConexion.crearParametro("@Pass", Passw);
+
+            DataTable dtFactura = objConexion.LeerPorStoreProcedure("sp_BuscarUsuario", parametros);
+
+            return dtFactura;
+        }
     }
 }

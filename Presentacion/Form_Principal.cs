@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
@@ -17,42 +18,57 @@ namespace Supermercado
 {
     public partial class Form_Principal : Form
     {
-
+        E_Cliente objECliente = new E_Cliente();
+        E_Usuario objEUsuario;
         /// <summary>
         /// Constructor
         /// </summary>
-        public Form_Principal(int codigo)
+        public Form_Principal(E_Usuario unUsuario)
         {
             InitializeComponent();
+            this.objEUsuario = unUsuario;
 
-            switch (codigo)
+
+            if (unUsuario.Rol == "ADMINISTRADOR")
             {
-                case 1:
-                    this.tabControl1.TabPages.Remove(tabGerente);
-                    this.tabControl1.TabPages.Remove(tabAdmin);
-                    this.tabControl1.TabPages.Remove(tabEncargado);
-                    break;
-                case 2:
-                    //Funcionalidad Gerente:
 
-                    this.tabControl1.TabPages.Remove(tabVendedor);
-                    this.tabControl1.TabPages.Remove(tabAdmin);
-                    this.tabControl1.TabPages.Remove(tabEncargado);
 
-                    CargarDatosEnGerente();
+                this.tabControl1.TabPages.Remove(tabVendedor);
+                this.tabControl1.TabPages.Remove(tabGerente);
+                this.tabControl1.TabPages.Remove(tabEncargado);
 
-                    break;
-                case 3:
-                    this.tabControl1.TabPages.Remove(tabGerente);
-                    this.tabControl1.TabPages.Remove(tabVendedor);
-                    this.tabControl1.TabPages.Remove(tabAdmin);
-                    break;
-                case 4:
-                    this.tabControl1.TabPages.Remove(tabGerente);
-                    this.tabControl1.TabPages.Remove(tabVendedor);
-                    this.tabControl1.TabPages.Remove(tabEncargado);
-                    break;
-                default: break;
+                unUsuario = new E_Administrador();
+            }
+            else if (unUsuario.Rol == "GERENTE")
+            {
+
+
+                this.tabControl1.TabPages.Remove(tabVendedor);
+                this.tabControl1.TabPages.Remove(tabAdmin);
+                this.tabControl1.TabPages.Remove(tabEncargado);
+
+                unUsuario = new E_Gerente();
+            }
+            else if (unUsuario.Rol == "ENCARGADO")
+            {
+
+
+                this.tabControl1.TabPages.Remove(tabGerente);
+                this.tabControl1.TabPages.Remove(tabVendedor);
+                this.tabControl1.TabPages.Remove(tabAdmin);
+
+                unUsuario = new E_Encargado();
+            }
+            else if (unUsuario.Rol == "CAJERO")
+            {
+
+                this.tabControl1.TabPages.Remove(tabGerente);
+                this.tabControl1.TabPages.Remove(tabAdmin);
+                this.tabControl1.TabPages.Remove(tabEncargado);
+
+                unUsuario = new E_Cajero();
+
+
             }
         }
 
@@ -633,6 +649,217 @@ namespace Supermercado
             this.Hide();
             Form_Login loginForm = new Form_Login();
             loginForm.ShowDialog();
+        }
+
+        private void benerarCliente_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modificarcliente_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iniciarVenta_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarCliente_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void benerarCliente_btn_Click_1(object sender, EventArgs e)
+        {
+            string apellidoTxt = this.apellidoCliente_tbx.Text;
+            string nombreTxt = this.nombrCliente_tbx.Text;
+            string dniTxt = this.dniCliente_tbx.Text;
+            string cuilTxt = this.cuitCliente_tbx.Text;
+            string telefonoTxt = this.telefonoCliente_tbx.Text;
+            string direccionTxt = this.direccionCliente_tbx.Text;
+
+
+            if (!this.ValidarApellYNombre(apellidoTxt))
+            {
+                MessageBox.Show("Apellido solo admite caracteres!!!");
+                this.apellidoCliente_tbx.Text = " ";
+                return;
+            }
+
+            if (!this.ValidarApellYNombre(nombreTxt))
+            {
+                MessageBox.Show("Nombre solo admite caracteres!!!");
+                this.nombrCliente_tbx.Text = " ";
+                return;
+            }
+
+            if (!this.validarDireccion(direccionTxt))
+            {
+                MessageBox.Show("Direccion solo admite caracteres!!!");
+                this.direccionCliente_tbx.Text = " ";
+                return;
+            }
+
+            try
+            {
+                long.Parse(dniTxt);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Dni solo admite digitos!!!");
+                this.dniCliente_tbx.Text = " ";
+                return;
+            }
+
+            try
+            {
+                long.Parse(cuilTxt);
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Cuil solo admite digitos!!!");
+                this.cuitCliente_tbx.Text = " ";
+                return;
+            }
+
+            try
+            {
+                int.Parse(telefonoTxt);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Telefonio solo admite digitos!!!");
+                this.telefonoCliente_tbx.Text = " ";
+                return;
+            }
+
+            E_Cliente nuevoCliente = new E_Cliente();
+
+            nuevoCliente.Apellido = apellidoTxt;
+            nuevoCliente.Nombre = nombreTxt;
+            nuevoCliente.Dni = int.Parse(dniTxt);
+            nuevoCliente.Cuil = int.Parse(cuilTxt);
+            nuevoCliente.Telefono = int.Parse(telefonoTxt);
+            nuevoCliente.Direccion = direccionTxt;
+
+
+            objECliente = nuevoCliente;
+
+
+
+
+            N_Cajero objNCajero = new N_Cajero();
+
+            objNCajero.CrearCliente(nuevoCliente);
+
+            MessageBox.Show("Se registró a " + nuevoCliente.Nombre + " " + nuevoCliente.Apellido + " con exito!!!");
+
+            this.BorrarFormulario();
+        }
+
+        private void buscarCliente_btn_Click_1(object sender, EventArgs e)
+        {
+            string dniTxt = this.dni_tbx.Text;
+            int dniCliente;
+
+            if (String.IsNullOrWhiteSpace(dniTxt))
+            {
+                MessageBox.Show("Campo DNI con espacios o nulo!!!!");
+                this.dni_tbx.Text = " ";
+                return;
+            }
+
+            try
+            {
+                dniCliente = int.Parse(dniTxt);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Campo DNI solo admite dígitos!!!!");
+                this.dni_tbx.Text = " ";
+                return;
+            }
+
+
+            N_Cajero objNCajero = new N_Cajero();
+
+            DataTable dtCliente = objNCajero.ValidarCliente(dniCliente);
+
+            if (dtCliente.Rows.Count == 0)
+            {
+                MessageBox.Show("La búsqueda no obtuvo Resultados!!!");
+                this.dni_tbx.Text = " ";
+
+                this.BorrarFormulario();
+                return;
+            }
+
+            this.dbDatosCliente_dg.DataSource = dtCliente;
+
+            DataRow fila = dtCliente.Rows[0];
+
+            objECliente.Dni = Convert.ToInt32(fila["Dni"]);
+            objECliente.Apellido = fila["Apellido"].ToString();
+            objECliente.Nombre = fila["Nombre"].ToString();
+            objECliente.Direccion = fila["Direccion"].ToString();
+            objECliente.Telefono = Convert.ToInt32(fila["Telefono"]);
+            objECliente.Cuil = Convert.ToInt32(fila["Cuil"]);
+        }
+
+        private void iniciarVenta_btn_Click_1(object sender, EventArgs e)
+        {
+            //AGREGAR CLIENTE GENÉRICO CON DNI = 1 y DESCOMENTAR
+
+            /*if (String.IsNullOrEmpty(this.dniClienteBusqueda_tbx.Text)
+                || String.IsNullOrWhiteSpace(this.dniClienteBusqueda_tbx.Text))
+            {
+                MessageBox.Show("Debe seleccionar un cliente!!!");
+                return;
+            }*/
+
+            new Form_Ventas(objEUsuario, objECliente).ShowDialog();
+        }
+
+        private void modificarcliente_btn_Click_1(object sender, EventArgs e)
+        {
+            if (this.dbDatosCliente_dg.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un cliente!!!!!");
+                return;
+            }
+            else
+            {
+                this.dbDatosCliente_dg.Rows.Remove(this.dbDatosCliente_dg.CurrentRow);
+                new Form_ModCliente(objECliente).Show();
+            }
+        }
+        private void BorrarFormulario()
+        {
+            this.apellidoCliente_tbx.Text = " ";
+            this.nombrCliente_tbx.Text = " ";
+            this.dniCliente_tbx.Text = " ";
+            this.telefonoCliente_tbx.Text = " ";
+            this.cuitCliente_tbx.Text = " ";
+            this.direccionCliente_tbx.Text = " ";
+        }
+
+        private bool ValidarApellYNombre(string unString)
+        {
+
+            string patronNomApellido = @"^[A-Za-z\s]*$";
+
+            return Regex.IsMatch(unString, patronNomApellido);
+        }
+
+
+        private bool validarDireccion(string unString)
+        {
+            string patronDireccion = @"^[A-Za-z0-9\s]*$";
+
+            return Regex.IsMatch(unString, patronDireccion);
         }
     }
 }
