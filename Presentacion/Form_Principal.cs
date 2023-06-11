@@ -42,12 +42,13 @@ namespace Supermercado
             else if (unUsuario.Rol == "GERENTE")
             {
 
-
                 this.tabControl1.TabPages.Remove(tabVendedor);
                 this.tabControl1.TabPages.Remove(tabAdmin);
                 this.tabControl1.TabPages.Remove(tabEncargado);
 
                 unUsuario = new E_Gerente();
+
+                CargarDatosEnGerente();
             }
             else if (unUsuario.Rol == "ENCARGADO")
             {
