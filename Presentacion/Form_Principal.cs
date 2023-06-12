@@ -741,8 +741,8 @@ namespace Supermercado
 
             nuevoCliente.Apellido = apellidoTxt;
             nuevoCliente.Nombre = nombreTxt;
-            nuevoCliente.Dni = int.Parse(dniTxt);
-            nuevoCliente.Cuil = int.Parse(cuilTxt);
+            nuevoCliente.Dni = long.Parse(dniTxt);
+            nuevoCliente.Cuil = long.Parse(cuilTxt);
             nuevoCliente.Telefono = int.Parse(telefonoTxt);
             nuevoCliente.Direccion = direccionTxt;
 
@@ -802,24 +802,23 @@ namespace Supermercado
 
             DataRow fila = dtCliente.Rows[0];
 
-            objECliente.Dni = Convert.ToInt32(fila["Dni"]);
+            objECliente.Dni = Convert.ToInt64(fila["Dni"]);
             objECliente.Apellido = fila["Apellido"].ToString();
             objECliente.Nombre = fila["Nombre"].ToString();
             objECliente.Direccion = fila["Direccion"].ToString();
             objECliente.Telefono = Convert.ToInt32(fila["Telefono"]);
-            objECliente.Cuil = Convert.ToInt32(fila["Cuil"]);
+            objECliente.Cuil = Convert.ToInt64(fila["Cuil"]);
         }
 
         private void iniciarVenta_btn_Click_1(object sender, EventArgs e)
         {
-            //AGREGAR CLIENTE GENÉRICO CON DNI = 1 y DESCOMENTAR
-
-            /*if (String.IsNullOrEmpty(this.dniClienteBusqueda_tbx.Text)
-                || String.IsNullOrWhiteSpace(this.dniClienteBusqueda_tbx.Text))
+            if (String.IsNullOrEmpty(this.dni_tbx.Text)
+                || String.IsNullOrWhiteSpace(this.dni_tbx.Text)
+                || this.dbDatosCliente_dg.Rows.Count == 0)
             {
                 MessageBox.Show("Debe seleccionar un cliente!!!");
                 return;
-            }*/
+            }
 
             new Form_Ventas(objEUsuario, objECliente).ShowDialog();
         }

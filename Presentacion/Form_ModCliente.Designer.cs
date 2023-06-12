@@ -57,6 +57,7 @@ namespace Supermercado
             this.modCliente_btn.TabIndex = 27;
             this.modCliente_btn.Text = "Modificar";
             this.modCliente_btn.UseVisualStyleBackColor = true;
+            this.modCliente_btn.Click += new System.EventHandler(this.modCliente_btn_Click);
             // 
             // button1
             // 
@@ -73,7 +74,7 @@ namespace Supermercado
             this.direccionModCliente_lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionModCliente_lbl.Location = new System.Drawing.Point(11, 236);
             this.direccionModCliente_lbl.Name = "direccionModCliente_lbl";
-            this.direccionModCliente_lbl.Size = new System.Drawing.Size(65, 19);
+            this.direccionModCliente_lbl.Size = new System.Drawing.Size(57, 15);
             this.direccionModCliente_lbl.TabIndex = 25;
             this.direccionModCliente_lbl.Text = "Direccion";
             // 
@@ -83,7 +84,7 @@ namespace Supermercado
             this.telefonoModCliente_lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefonoModCliente_lbl.Location = new System.Drawing.Point(9, 195);
             this.telefonoModCliente_lbl.Name = "telefonoModCliente_lbl";
-            this.telefonoModCliente_lbl.Size = new System.Drawing.Size(60, 19);
+            this.telefonoModCliente_lbl.Size = new System.Drawing.Size(52, 15);
             this.telefonoModCliente_lbl.TabIndex = 24;
             this.telefonoModCliente_lbl.Text = "Telefono";
             // 
@@ -93,7 +94,7 @@ namespace Supermercado
             this.cuilModCliente_lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuilModCliente_lbl.Location = new System.Drawing.Point(9, 152);
             this.cuilModCliente_lbl.Name = "cuilModCliente_lbl";
-            this.cuilModCliente_lbl.Size = new System.Drawing.Size(39, 19);
+            this.cuilModCliente_lbl.Size = new System.Drawing.Size(32, 15);
             this.cuilModCliente_lbl.TabIndex = 23;
             this.cuilModCliente_lbl.Text = "CUIL";
             // 
@@ -103,7 +104,7 @@ namespace Supermercado
             this.apellidoModcliente_lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apellidoModcliente_lbl.Location = new System.Drawing.Point(11, 108);
             this.apellidoModcliente_lbl.Name = "apellidoModcliente_lbl";
-            this.apellidoModcliente_lbl.Size = new System.Drawing.Size(58, 19);
+            this.apellidoModcliente_lbl.Size = new System.Drawing.Size(51, 15);
             this.apellidoModcliente_lbl.TabIndex = 22;
             this.apellidoModcliente_lbl.Text = "Apellido";
             // 
@@ -113,7 +114,7 @@ namespace Supermercado
             this.nombreModCliente_lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreModCliente_lbl.Location = new System.Drawing.Point(10, 67);
             this.nombreModCliente_lbl.Name = "nombreModCliente_lbl";
-            this.nombreModCliente_lbl.Size = new System.Drawing.Size(59, 19);
+            this.nombreModCliente_lbl.Size = new System.Drawing.Size(51, 15);
             this.nombreModCliente_lbl.TabIndex = 21;
             this.nombreModCliente_lbl.Text = "Nombre";
             // 
@@ -123,7 +124,7 @@ namespace Supermercado
             this.dniModCliente_lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dniModCliente_lbl.Location = new System.Drawing.Point(9, 24);
             this.dniModCliente_lbl.Name = "dniModCliente_lbl";
-            this.dniModCliente_lbl.Size = new System.Drawing.Size(33, 19);
+            this.dniModCliente_lbl.Size = new System.Drawing.Size(27, 15);
             this.dniModCliente_lbl.TabIndex = 20;
             this.dniModCliente_lbl.Text = "DNI";
             // 
@@ -141,7 +142,7 @@ namespace Supermercado
             this.telefonoModCliente_tbx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefonoModCliente_tbx.Location = new System.Drawing.Point(100, 192);
             this.telefonoModCliente_tbx.Name = "telefonoModCliente_tbx";
-            this.telefonoModCliente_tbx.Size = new System.Drawing.Size(138, 25);
+            this.telefonoModCliente_tbx.Size = new System.Drawing.Size(138, 23);
             this.telefonoModCliente_tbx.TabIndex = 18;
             // 
             // cuilModCliente_tbx
@@ -150,7 +151,7 @@ namespace Supermercado
             this.cuilModCliente_tbx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuilModCliente_tbx.Location = new System.Drawing.Point(100, 149);
             this.cuilModCliente_tbx.Name = "cuilModCliente_tbx";
-            this.cuilModCliente_tbx.Size = new System.Drawing.Size(138, 25);
+            this.cuilModCliente_tbx.Size = new System.Drawing.Size(138, 23);
             this.cuilModCliente_tbx.TabIndex = 17;
             // 
             // apellidoModCliente_tbx
@@ -159,7 +160,7 @@ namespace Supermercado
             this.apellidoModCliente_tbx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apellidoModCliente_tbx.Location = new System.Drawing.Point(102, 105);
             this.apellidoModCliente_tbx.Name = "apellidoModCliente_tbx";
-            this.apellidoModCliente_tbx.Size = new System.Drawing.Size(136, 25);
+            this.apellidoModCliente_tbx.Size = new System.Drawing.Size(136, 23);
             this.apellidoModCliente_tbx.TabIndex = 16;
             // 
             // nombreModCliente_tbx
@@ -168,7 +169,7 @@ namespace Supermercado
             this.nombreModCliente_tbx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreModCliente_tbx.Location = new System.Drawing.Point(101, 64);
             this.nombreModCliente_tbx.Name = "nombreModCliente_tbx";
-            this.nombreModCliente_tbx.Size = new System.Drawing.Size(137, 25);
+            this.nombreModCliente_tbx.Size = new System.Drawing.Size(137, 23);
             this.nombreModCliente_tbx.TabIndex = 15;
             // 
             // dniModCliente_tbx
@@ -177,7 +178,7 @@ namespace Supermercado
             this.dniModCliente_tbx.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dniModCliente_tbx.Location = new System.Drawing.Point(100, 24);
             this.dniModCliente_tbx.Name = "dniModCliente_tbx";
-            this.dniModCliente_tbx.Size = new System.Drawing.Size(138, 25);
+            this.dniModCliente_tbx.Size = new System.Drawing.Size(138, 23);
             this.dniModCliente_tbx.TabIndex = 14;
             // 
             // buscarCliente_gbx

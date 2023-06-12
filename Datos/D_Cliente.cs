@@ -37,7 +37,7 @@ namespace Datos
             parametros[4] = unaConexion.crearParametro("@Cuil", nuevoCliente.Cuil.ToString());
             parametros[5] = unaConexion.crearParametro("@Direccion", nuevoCliente.Direccion);
 
-            unaConexion.LeerPorStoreProcedure("sp_Crearcliente", parametros);
+            unaConexion.LeerPorStoreProcedure("sp_Nuevocliente", parametros);
         }
 
         public void ModificarCliente(E_Cliente unCliente)
